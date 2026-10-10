@@ -617,6 +617,7 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
 .transcript summary{cursor:pointer; font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ash);}
 .transcript p{color:var(--ash); max-width:60ch; font-size:.95rem;}
 .voice-note{font-family:var(--mono); font-size:.62rem; letter-spacing:.06em; color:#8F807B; margin-top:10px;}
+.voice-note a{color:var(--flare); text-decoration:underline; text-underline-offset:3px;}
 .btn-intro{padding:7px 16px 7px 7px; border-color:rgba(232,69,46,.65); color:var(--bone); background:rgba(122,13,12,.4);}
 .btn-intro:hover{background:rgba(196,30,23,.55); border-color:var(--flare);}
 .btn-intro img{width:30px; height:30px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 2px var(--crimson); flex:none;}
@@ -683,7 +684,7 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
       <div class="vs-name" aria-hidden="true">Subham</div>
       <div class="vs-embers" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
       <div class="vs-charwrap"><img class="vs-char" id="voiceAvatar" src="assets/anime-cut.webp" width="800" height="992" alt="Anime avatar of Subham Pandey in a navy suit and black glasses"></div>
-      <video class="vs-video" id="introVideo" playsinline preload="none" aria-hidden="true"></video>
+      <video class="vs-video" id="introVideo" playsinline preload="none" aria-hidden="true" data-src="assets/intro-avatar.mp4" data-poster="assets/intro-avatar-poster.webp"></video>
       <span class="vs-tag">My anime avatar</span>
       <span class="vs-live" aria-hidden="true"><b></b>On air</span>
       <span class="vs-bigplay" aria-hidden="true"></span>
@@ -693,12 +694,12 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
     <div class="voice-copy rv">
       <span class="label red">Press play &middot; 35 sec</span>
       <h2 class="h2">Hear it <em>from me</em></h2>
-      <p class="voice-sub">My anime avatar tells you who I am in 35 seconds. Subtitles follow every word.</p>
+      <p class="voice-sub">My anime avatar tells you who I am in 35 seconds, lip-synced to the voice. Subtitles follow every word.</p>
       <button class="play" id="playIntro" type="button" aria-pressed="false"><span class="pi" aria-hidden="true"></span><span class="pl">Play my intro</span></button>
       <div class="vprog" aria-hidden="true"><i id="vprogBar"></i></div>
       <p class="caption" id="voiceCaption" aria-live="polite">Hi, I'm Subham Pandey.</p>
       <details class="transcript"><summary>Read the transcript</summary><p id="voiceText"></p></details>
-      <p class="voice-note" id="voiceNote">Avatar and voice made with AI tools. Script written by me.</p>
+      <p class="voice-note" id="voiceNote">Avatar, voice and lip-sync made with AI tools. Script and edit by me. <a href="assets/subham-pandey-intro.mp4" download>Download the video</a></p>
     </div>
   </div>
   <audio id="introAudio" src="assets/intro-voice.mp3" preload="auto"></audio>
@@ -1852,7 +1853,7 @@ document.getElementById('copy').addEventListener('click', function(){
   var audio = document.getElementById('introAudio'), video = document.getElementById('introVideo');
   document.getElementById('voiceText').textContent = LINES.join(' ');
   var media = audio, useVideo = false;
-  if (video && video.dataset.src && video.canPlayType('video/mp4')) {
+  if (video && video.dataset.src && video.canPlayType('video/mp4; codecs="avc1.640028, mp4a.40.2"')) {
     video.src = video.dataset.src; video.preload = 'metadata'; media = video; useVideo = true;
     if (video.dataset.poster) video.poster = video.dataset.poster;
   }
@@ -1879,9 +1880,13 @@ document.getElementById('copy').addEventListener('click', function(){
     btn.setAttribute('aria-pressed', state === 'playing' ? 'true' : 'false');
     btn.querySelector('.pl').textContent = state === 'playing' ? 'Pause' : state === 'paused' ? 'Resume' : 'Play my intro';
   }
-  media.addEventListener('playing', function(){ setUI('playing'); if (useVideo) stage.classList.add('has-video'); cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); });
-  media.addEventListener('pause', function(){ if (!media.ended) setUI('paused'); });
-  media.addEventListener('ended', function(){ setUI('idle'); stage.style.setProperty('--amp', 0); bar.style.width = '100%'; words.forEach(function(s){ s.classList.add('on'); }); });
+  [audio, video].forEach(function(el){
+    if (!el) return;
+    el.addEventListener('playing', function(){ if (el !== media) return; setUI('playing'); stage.classList.toggle('has-video', useVideo); cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); });
+    el.addEventListener('pause', function(){ if (el === media && !el.ended) setUI('paused'); });
+    el.addEventListener('ended', function(){ if (el !== media) return; setUI('idle'); stage.style.setProperty('--amp', 0); bar.style.width = '100%'; words.forEach(function(s){ s.classList.add('on'); }); });
+  });
+  if (useVideo) video.addEventListener('error', function(){ var wasPlaying = !video.paused; media = audio; useVideo = false; stage.classList.remove('has-video'); if (wasPlaying || sec.classList.contains('playing')) audio.play().catch(function(){}); });
   function captionsOnly(){
     note.textContent = 'Audio could not start on this browser, so here are the subtitles.';
     var i = 0; setUI('playing'); clearInterval(fallbackTimer);
