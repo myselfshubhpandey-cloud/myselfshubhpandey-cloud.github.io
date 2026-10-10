@@ -1,0 +1,1503 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Subham Pandey</title>
+<meta name="description" content="Subham Pandey: MBA in Operations and Marketing at AKGIM. Strategy, AI product management, operations and marketing.">
+<meta property="og:title" content="Subham Pandey | Associate Product Manager">
+<meta property="og:description" content="Projects, experience, research and resumes.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/headshot.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@600;800;900&family=Instrument+Serif:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Layout: a red studio stage with the name set behind the subject, then black chapters broken by red bands, like a film poster opening into a dossier. */
+:root{
+  --ink:#0B0707; --coal:#140C0B; --char:#1C1210;
+  --blood:#7A0D0C; --crimson:#C41E17; --flare:#E8452E;
+  --bone:#F3ECE7; --ash:#A69591; --line:rgba(243,236,231,.12);
+  --display:'Big Shoulders Display', 'Arial Narrow', Impact, sans-serif;
+  --serif:'Instrument Serif', Georgia, 'Times New Roman', serif;
+  --sans:'IBM Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --mono:'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+  --ease:cubic-bezier(.2,.75,.15,1);
+  color-scheme:dark;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth; scroll-padding-top:72px;}
+body{margin:0; background:var(--ink); color:var(--bone); font-family:var(--sans); font-size:16px; line-height:1.65; -webkit-font-smoothing:antialiased; overflow-x:hidden;}
+::selection{background:var(--crimson); color:var(--bone);}
+a{color:inherit;}
+a:focus-visible, button:focus-visible{outline:2px solid var(--flare); outline-offset:3px;}
+img{max-width:100%; display:block;}
+.wrap{max-width:1180px; margin:0 auto; padding-inline:24px;}
+h1,h2,h3{margin:0; font-weight:800; text-wrap:balance;}
+.label{font-family:var(--mono); font-size:.72rem; letter-spacing:.16em; text-transform:uppercase; color:var(--ash);}
+.label.red{color:var(--flare);}
+section{padding-block:110px; position:relative;}
+.grain::after{content:""; position:absolute; inset:0; pointer-events:none; opacity:.07; mix-blend-mode:overlay;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)'/%3E%3C/svg%3E");}
+
+/* nav */
+nav{position:fixed; top:0; left:0; right:0; z-index:60; padding-top:env(safe-area-inset-top,0px); background:linear-gradient(180deg, rgba(11,7,7,.85), rgba(11,7,7,.55)); backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); border-bottom:1px solid var(--line); transition:transform .4s ease;}
+nav.hide{transform:translateY(-100%);}
+nav .wrap{display:flex; align-items:center; justify-content:space-between; height:60px; gap:16px;}
+.wordmark{font-family:var(--display); font-weight:900; font-size:1.35rem; letter-spacing:.04em; text-decoration:none; text-transform:uppercase;}
+.wordmark i{font-style:normal; color:var(--crimson);}
+.navlinks{display:flex; gap:24px; list-style:none; margin:0; padding:0;}
+.navlinks a{text-decoration:none; color:var(--ash); font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; transition:color .2s;}
+.navlinks a:hover{color:var(--bone);}
+.navcta{font-family:var(--mono); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; text-decoration:none; background:var(--crimson); color:var(--bone); padding:9px 15px; transition:background .2s;}
+.navcta:hover{background:var(--flare);}
+@media (max-width:900px){.navlinks{display:none;}}
+
+/* ===== intro stage ===== */
+.intro{position:relative; overflow:hidden; background:#120404; padding:0;}
+.stage-box{position:relative; height:clamp(640px, 94svh, 920px); overflow:hidden;}
+.intro .red{position:absolute; inset:0; background:radial-gradient(55% 70% at 64% 40%, #D02A20 0%, #9C1410 30%, #5A0909 62%, #1A0505 100%);
+  animation:lightOn 1.6s steps(1,end) .15s both, breathe 9s ease-in-out 2.4s infinite alternate;}
+@keyframes lightOn{0%{opacity:.15}12%{opacity:.7}18%{opacity:.2}30%{opacity:.85}36%{opacity:.4}50%,100%{opacity:1}}
+@keyframes breathe{from{filter:brightness(1)}to{filter:brightness(1.12)}}
+.intro .floor{position:absolute; left:0; right:0; bottom:0; height:38%; background:linear-gradient(0deg, rgba(10,3,3,.85), rgba(10,3,3,0)); z-index:3; pointer-events:none;}
+.intro .sweep{position:absolute; top:-20%; bottom:-20%; width:30%; left:-40%; z-index:4; pointer-events:none; background:linear-gradient(100deg, rgba(255,230,220,0) 0%, rgba(255,230,220,.10) 50%, rgba(255,230,220,0) 100%); transform:skewX(-14deg); animation:sweep 2.2s var(--ease) 2.1s both;}
+@keyframes sweep{to{left:120%;}}
+.intro .bars::before,.intro .bars::after{content:""; position:absolute; left:0; right:0; height:12%; background:#000; z-index:8; animation:barsOpen 1.3s var(--ease) .1s both;}
+.intro .bars::before{top:0;} .intro .bars::after{bottom:0;}
+@keyframes barsOpen{from{height:50%;} to{height:0;}}
+
+.namebig{position:absolute; left:clamp(16px,4vw,56px); top:clamp(78px,13%,130px); z-index:1; font-family:var(--display); font-weight:900; text-transform:uppercase; line-height:.8; letter-spacing:-.01em; pointer-events:none; will-change:transform;}
+.namebig span{display:block; font-size:clamp(6.5rem, 21vw, 21rem);}
+.namebig .n1{color:var(--bone); opacity:.94;}
+.namebig .n2{color:transparent; -webkit-text-stroke:1.5px rgba(243,236,231,.55);}
+.namebig span{animation:nameIn 1.2s var(--ease) both;}
+.namebig .n1{animation-delay:.9s;} .namebig .n2{animation-delay:1.05s;}
+@keyframes nameIn{from{transform:translateY(30%); opacity:0; letter-spacing:.08em;} to{transform:none; letter-spacing:-.01em;}}
+
+.person{position:absolute; bottom:0; left:64%; height:91%; -webkit-mask-image:linear-gradient(180deg,#000 62%,transparent 99%), linear-gradient(90deg,transparent 0,#000 15%,#000 85%,transparent 100%); -webkit-mask-composite:source-in; mask-image:linear-gradient(180deg,#000 62%,transparent 99%), linear-gradient(90deg,transparent 0,#000 15%,#000 85%,transparent 100%); mask-composite:intersect; width:auto; max-width:none; z-index:2; transform:translateX(-50%); filter:drop-shadow(0 30px 40px rgba(0,0,0,.55)); will-change:transform;}
+.person-in{position:absolute; inset:0; z-index:2; animation:personIn 1.5s var(--ease) 1.3s both;}
+@keyframes personIn{from{transform:translateY(14%) scale(1.05); opacity:0; filter:blur(6px);} to{transform:none; opacity:1; filter:none;}}
+
+.hud{position:absolute; left:clamp(16px,4vw,56px); bottom:clamp(28px,7%,64px); z-index:5; max-width:440px;}
+.hud .role{font-family:var(--mono); font-size:.74rem; letter-spacing:.16em; text-transform:uppercase; color:#F0C9C2; margin:0 0 12px;}
+.hud .headline{font-family:var(--serif); font-style:italic; font-size:clamp(1.5rem,2.4vw,2.1rem); line-height:1.15; margin:0 0 20px; color:var(--bone);}
+.hud .headline b{font-style:normal; font-family:var(--display); font-weight:800; text-transform:uppercase; letter-spacing:.02em;}
+.hud{animation:fadeUp 1s var(--ease) 2s both;}
+@keyframes fadeUp{from{transform:translateY(20px); opacity:.2;} to{transform:none; opacity:1;}}
+.ctas{display:flex; flex-wrap:wrap; gap:10px;}
+.btn{display:inline-flex; align-items:center; gap:10px; font-family:var(--mono); font-size:.76rem; letter-spacing:.12em; text-transform:uppercase; padding:14px 20px; text-decoration:none; border:1px solid transparent; cursor:pointer; transition:transform .25s var(--ease), background .25s, color .25s, border-color .25s;}
+.btn:hover{transform:translateY(-2px);}
+.btn-red{background:var(--crimson); color:var(--bone);}
+.btn-red:hover{background:var(--flare);}
+.btn-bone{background:var(--bone); color:var(--ink);}
+.btn-line{border-color:rgba(243,236,231,.4); color:var(--bone); background:rgba(11,7,7,.25);}
+.btn-line:hover{border-color:var(--bone); background:rgba(11,7,7,.5);}
+
+.sub{position:absolute; left:50%; bottom:clamp(20px,5%,48px); transform:translateX(-50%); z-index:6; width:min(560px, calc(100% - 32px)); text-align:center; pointer-events:none;}
+.sub .who{font-family:var(--mono); font-size:.66rem; letter-spacing:.2em; text-transform:uppercase; color:var(--flare); display:block; margin-bottom:6px;}
+.sub .line{display:inline; font-family:var(--serif); font-size:clamp(1.15rem,2vw,1.55rem); line-height:1.35; color:#fff; background:rgba(8,3,3,.62); padding:4px 12px; box-decoration-break:clone; -webkit-box-decoration-break:clone;}
+.sub .caret{display:inline-block; width:2px; height:1.1em; background:var(--flare); vertical-align:-3px; margin-left:3px; animation:blink .9s steps(1) infinite;}
+@keyframes blink{50%{opacity:0;}}
+.replay{position:absolute; right:clamp(16px,3vw,40px); bottom:clamp(20px,5%,48px); z-index:7; font-family:var(--mono); font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; background:rgba(8,3,3,.5); color:var(--bone); border:1px solid rgba(243,236,231,.35); padding:8px 12px; cursor:pointer;}
+.replay:hover{background:var(--bone); color:var(--ink);}
+.intro.replaying .red, .intro.replaying .sweep, .intro.replaying .bars::before, .intro.replaying .bars::after,
+.intro.replaying .namebig span, .intro.replaying .person-in, .intro.replaying .hud{animation:none;}
+
+@media (min-width:821px){ .sub{left:auto; right:clamp(16px,3vw,40px); transform:none; bottom:clamp(70px,13%,120px); text-align:right; width:min(420px, 34vw);} }
+@media (max-width:820px){
+  .stage-box{height:clamp(540px, 80svh, 700px);}
+  .namebig{left:0; right:0; text-align:center; top:80px;}
+  .namebig span{font-size:clamp(4.6rem, 23vw, 11rem);}
+  .person{left:50%; height:78%;}
+  .hud{position:static; max-width:none; animation:none;}
+  .hud-wrap{background:var(--ink); padding:28px 20px 36px; border-bottom:1px solid var(--line);}
+  .sub{bottom:58px;}
+  .replay{bottom:16px; right:16px; padding:6px 10px;}
+}
+@media (min-width:821px){ .hud-wrap{display:contents;} }
+
+
+.hero-meta{display:flex; flex-wrap:wrap; gap:8px; margin:-6px 0 20px; padding:0;}
+.hero-meta span{font-family:var(--mono); font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; color:#F3D9D4; border:1px solid rgba(243,236,231,.28); background:rgba(11,7,7,.3); padding:6px 9px;}
+.proof{background:var(--ink); padding-block:90px; border-bottom:1px solid var(--line);}
+.proof-grid{display:grid; grid-template-columns:1fr 1.25fr; gap:64px; align-items:start;}
+@media (max-width:900px){.proof-grid{grid-template-columns:1fr; gap:34px;}}
+.proof-grid > *{min-width:0;}
+.proof-line{font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:clamp(2.2rem,4.6vw,3.8rem); line-height:.92; margin:14px 0 0;}
+.proof-line em{font-family:var(--serif); font-weight:400; font-style:italic; text-transform:none; color:var(--crimson);}
+.proof-pts{display:grid; gap:0; border-top:1px solid var(--line);}
+.proof-pts div{display:grid; grid-template-columns:220px 1fr; gap:20px; padding:20px 0; border-bottom:1px solid var(--line);}
+@media (max-width:620px){.proof-pts div{grid-template-columns:1fr; gap:6px;}}
+.proof-pts b{font-family:var(--display); font-weight:800; font-size:1.45rem; text-transform:uppercase; letter-spacing:.02em; line-height:1;}
+.proof-pts p{margin:0; color:var(--ash);}
+
+/* red reel */
+.reel{background:var(--crimson); color:var(--ink); overflow:hidden; padding-block:14px; border-block:1px solid #000;}
+.reel .track{display:flex; width:max-content; animation:slide 34s linear infinite;}
+.reel span{font-family:var(--display); font-weight:900; font-size:clamp(1.6rem,3.4vw,2.6rem); text-transform:uppercase; letter-spacing:.02em; white-space:nowrap; padding-right:34px; display:flex; align-items:center; gap:34px;}
+.reel span::after{content:""; width:12px; height:12px; background:var(--ink); transform:rotate(45deg);}
+@keyframes slide{to{transform:translateX(-50%);}}
+
+/* headings with a red wipe when they enter */
+.sec-head{display:flex; justify-content:space-between; align-items:flex-end; gap:24px; flex-wrap:wrap; margin-bottom:48px;}
+.sec-head > *{min-width:0;}
+.sec-head p{color:var(--ash); max-width:42ch; margin:0;}
+.h2{font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:clamp(2.6rem,6.4vw,5.2rem); line-height:.9; letter-spacing:.005em; margin-top:14px; position:relative; display:inline-block;}
+.h2 em{font-family:var(--serif); font-weight:400; font-style:italic; text-transform:none; color:var(--flare); letter-spacing:0;}
+.h2::after{content:""; position:absolute; inset:-2px -6px; background:var(--crimson); transform:scaleX(0); transform-origin:left;}
+.in .h2::after, .h2.in::after{animation:wipe 1s var(--ease) both;}
+@keyframes wipe{0%{transform:scaleX(0); transform-origin:left;} 45%{transform:scaleX(1); transform-origin:left;} 55%{transform:scaleX(1); transform-origin:right;} 100%{transform:scaleX(0); transform-origin:right;}}
+
+.rv{transition:transform .9s var(--ease), opacity .9s;}
+.js .rv.pending{transform:translateY(28px); opacity:.35;}
+
+/* about */
+.about{background:var(--ink);}
+.about-grid{display:grid; grid-template-columns:.95fr 1.05fr; gap:72px; align-items:center;}
+@media (max-width:900px){.about-grid{grid-template-columns:1fr; gap:40px;}}
+.about-grid > *{min-width:0;}
+.frame-wrap{perspective:1000px;}
+.frame{position:relative; aspect-ratio:4/5; width:100%; max-width:520px; overflow:hidden; background:radial-gradient(70% 60% at 40% 35%, #B3201A 0%, #6A0B0A 48%, #1A0606 100%); border:1px solid rgba(243,236,231,.14); transition:transform .5s var(--ease); transform-style:preserve-3d;}
+.frame img{position:absolute; bottom:0; left:50%; height:96%; width:auto; max-width:none; transform:translateX(-50%) translateZ(30px); transition:transform .6s var(--ease);}
+.frame:hover img{transform:translateX(-50%) translateZ(30px) scale(1.03);}
+.frame::before{content:"RECORD 02 · THE THINKER"; position:absolute; top:14px; left:16px; z-index:3; font-family:var(--mono); font-size:.64rem; letter-spacing:.18em; color:rgba(243,236,231,.75);}
+.frame::after{content:""; position:absolute; inset:0; z-index:2; background:linear-gradient(0deg, rgba(11,7,7,.9) 0%, rgba(11,7,7,0) 40%); pointer-events:none;}
+.frame .glint{position:absolute; top:-10%; bottom:-10%; width:40%; left:-60%; z-index:3; background:linear-gradient(100deg, transparent, rgba(255,235,225,.12), transparent); transform:skewX(-12deg); transition:left 1.1s var(--ease);}
+.frame:hover .glint{left:130%;}
+.statement{font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:clamp(2.6rem,5.6vw,4.6rem); line-height:.92; margin:16px 0 18px;}
+.statement span{color:var(--crimson);}
+.subline{font-family:var(--serif); font-style:italic; font-size:clamp(1.3rem,2vw,1.6rem); line-height:1.35; color:#E9DCD6; margin:0 0 24px; max-width:34ch;}
+.about p.body{color:var(--ash); max-width:60ch; margin:0 0 16px;}
+.facts{display:grid; grid-template-columns:repeat(2,1fr); gap:0; border-top:1px solid var(--line); margin-top:28px;}
+.facts div{padding:16px 16px 16px 0; border-bottom:1px solid var(--line);}
+.facts b{display:block; font-family:var(--display); font-weight:800; font-size:1.35rem; text-transform:uppercase; letter-spacing:.02em;}
+.facts span{font-size:.86rem; color:var(--ash);}
+
+/* capabilities */
+.caps-sec{background:var(--coal);}
+.caps{display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line);}
+@media (max-width:960px){.caps{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:540px){.caps{grid-template-columns:1fr;}}
+.cap{padding:30px 24px 32px 0; border-bottom:1px solid var(--line); min-width:0; position:relative;}
+.cap h3{font-family:var(--display); font-weight:800; font-size:1.7rem; text-transform:uppercase; letter-spacing:.02em; margin:14px 0 12px;}
+.cap ul{margin:0; padding:0; list-style:none; color:var(--ash); font-size:.93rem;}
+.cap li{padding:5px 0; border-bottom:1px dashed rgba(243,236,231,.07);}
+
+/* work */
+.work{background:var(--ink);}
+.feature{display:grid; grid-template-columns:1.1fr .9fr; border:1px solid var(--line); background:linear-gradient(135deg, #1C1210 0%, #120B0A 100%); margin-bottom:44px; overflow:hidden;}
+@media (max-width:860px){.feature{grid-template-columns:1fr;}}
+.feature-body{padding:42px; min-width:0; display:flex; flex-direction:column; gap:16px;}
+@media (max-width:540px){.feature-body{padding:26px;}}
+.feature-body h3{font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:clamp(2.4rem,4.6vw,3.6rem); line-height:.9;}
+.feature-body p{color:var(--ash); margin:0; max-width:56ch;}
+.chips{display:flex; flex-wrap:wrap; gap:8px;}
+.chip{font-family:var(--mono); font-size:.68rem; letter-spacing:.08em; border:1px solid var(--line); padding:5px 10px; color:#D7C9C4;}
+.links{display:flex; flex-wrap:wrap; gap:10px; margin-top:6px;}
+.feature-visual{position:relative; min-height:300px; background:radial-gradient(80% 80% at 70% 30%, #8E1410 0%, #3A0707 60%, #160505 100%); overflow:hidden;}
+@media (max-width:860px){.feature-visual{min-height:240px;}}
+.mock{position:absolute; inset:34px 34px -20px 34px; background:#140D0C; border:1px solid rgba(243,236,231,.18); display:grid; grid-template-columns:28% 1fr; box-shadow:0 30px 60px -20px rgba(0,0,0,.7); transform:rotate(-2deg) translateY(10px); transition:transform .8s var(--ease);}
+.feature:hover .mock{transform:rotate(0) translateY(0);}
+.mock .side{border-right:1px solid rgba(243,236,231,.1); padding:16px 12px; display:flex; flex-direction:column; gap:10px;}
+.mock .side i{display:block; height:7px; background:rgba(243,236,231,.12);}
+.mock .side i:first-child{background:var(--crimson); height:12px; width:70%; margin-bottom:8px;}
+.mock .main{padding:16px; display:flex; flex-direction:column; gap:12px; min-width:0;}
+.mock .row{display:grid; grid-template-columns:repeat(3,1fr); gap:10px;}
+.mock .row b{display:block; height:46px; border:1px solid rgba(243,236,231,.1); background:rgba(243,236,231,.03);}
+.mock .bar{height:8px; background:rgba(243,236,231,.1); position:relative; overflow:hidden;}
+.mock .bar::after{content:""; position:absolute; inset:0 auto 0 0; width:var(--w); background:var(--crimson); animation:fill 2.4s var(--ease) both;}
+@keyframes fill{from{width:0;}}
+.mock .ttl{font-family:var(--display); font-weight:800; text-transform:uppercase; letter-spacing:.06em; font-size:1rem;}
+
+.filters{display:flex; flex-wrap:wrap; gap:8px; margin-bottom:26px;}
+.fbtn{font-family:var(--mono); font-size:.7rem; letter-spacing:.14em; text-transform:uppercase; background:transparent; color:var(--ash); border:1px solid var(--line); padding:10px 14px; cursor:pointer; transition:background .2s, color .2s, border-color .2s;}
+.fbtn:hover{color:var(--bone); border-color:rgba(243,236,231,.4);}
+.fbtn[aria-pressed="true"]{background:var(--crimson); color:var(--bone); border-color:var(--crimson);}
+.projects{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+@media (max-width:960px){.projects{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:620px){.projects{grid-template-columns:1fr;}}
+.proj{position:relative; background:var(--ink); padding:30px 28px; display:flex; flex-direction:column; gap:12px; min-width:0; overflow:hidden; isolation:isolate;}
+.proj::before{content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(160deg, #A31A14 0%, #5E0A09 100%); transform:scaleY(0); transform-origin:bottom; transition:transform .55s var(--ease);}
+.proj:hover::before{transform:scaleY(1);}
+.proj:hover .label, .proj:hover p, .proj:hover .foot{color:#F6DDD7;}
+.proj h3{font-family:var(--display); font-weight:800; font-size:1.75rem; text-transform:uppercase; line-height:.95; letter-spacing:.01em;}
+.proj p{color:var(--ash); font-size:.93rem; margin:0; flex-grow:1; transition:color .3s;}
+.proj .label{color:var(--flare); transition:color .3s;}
+.proj .foot{font-family:var(--mono); font-size:.68rem; letter-spacing:.08em; color:var(--ash); border-top:1px solid var(--line); padding-top:14px; transition:color .3s;}
+.proj.pop{animation:pop .5s var(--ease) both;}
+@keyframes pop{from{opacity:.2; transform:translateY(14px);} to{opacity:1; transform:none;}}
+
+/* campus band */
+.campus{background:radial-gradient(70% 90% at 75% 30%, #C02219 0%, #8A110E 40%, #3A0606 100%); overflow:hidden;}
+.campus .label{color:#F5C7BF;}
+.campus .sec-head p{color:#F1D3CD;}
+.campus .h2::after{background:var(--ink);}
+.campus .h2 em{color:var(--ink);}
+.camp{display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid rgba(243,236,231,.25);}
+@media (max-width:760px){.camp{grid-template-columns:1fr;}}
+.camp > div{padding:30px 30px 32px 0; border-bottom:1px solid rgba(243,236,231,.25); min-width:0;}
+.camp h3{font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:clamp(2rem,3.6vw,2.8rem); line-height:.9; margin:12px 0 12px;}
+.camp p{color:#F6E2DD; margin:0; max-width:50ch;}
+.campus .ghost{position:absolute; right:-2vw; bottom:-4vw; font-family:var(--display); font-weight:900; font-size:22vw; line-height:.8; text-transform:uppercase; color:transparent; -webkit-text-stroke:1px rgba(243,236,231,.16); pointer-events:none; white-space:nowrap;}
+
+/* experience + education */
+.exp{background:var(--ink);}
+.tl{position:relative; padding-left:36px;}
+.tl::before{content:""; position:absolute; left:6px; top:8px; bottom:8px; width:1px; background:var(--line);}
+.tl .progress{position:absolute; left:6px; top:8px; width:1px; height:0; background:var(--crimson); box-shadow:0 0 0 0 transparent;}
+.ti{position:relative; display:grid; grid-template-columns:200px 1fr; gap:28px; padding-block:28px; border-bottom:1px solid var(--line);}
+.ti:last-child{border-bottom:0;}
+.ti::before{content:""; position:absolute; left:-34px; top:38px; width:9px; height:9px; background:var(--crimson); transform:rotate(45deg);}
+@media (max-width:640px){.ti{grid-template-columns:1fr; gap:6px;}}
+.ti > div{min-width:0;}
+.ti .when{font-family:var(--mono); font-size:.74rem; letter-spacing:.08em; color:var(--ash); padding-top:6px;}
+.ti h3{font-family:var(--display); font-weight:800; font-size:1.8rem; text-transform:uppercase; line-height:1;}
+.ti .org{color:var(--flare); font-size:.92rem; margin:4px 0 10px;}
+.ti p{color:var(--ash); margin:0; max-width:64ch; font-size:.95rem;}
+.edu{display:grid; grid-template-columns:repeat(2,1fr); border-top:1px solid var(--line); margin-top:8px;}
+@media (max-width:700px){.edu{grid-template-columns:1fr;}}
+.edu > div{padding:26px 24px 26px 0; border-bottom:1px solid var(--line); min-width:0;}
+.edu .yr{font-family:var(--mono); font-size:.72rem; color:var(--flare); letter-spacing:.08em;}
+.edu h3{font-family:var(--display); font-weight:800; font-size:1.5rem; text-transform:uppercase; margin:8px 0 4px; line-height:1;}
+.edu span{color:var(--ash); font-size:.92rem;}
+
+/* resume */
+.resume{background:var(--coal);}
+.resumes{display:grid; grid-template-columns:repeat(3,1fr); gap:20px;}
+@media (max-width:860px){.resumes{grid-template-columns:1fr;}}
+.res{border:1px solid var(--line); padding:28px; display:flex; flex-direction:column; gap:14px; background:var(--char); min-width:0; transition:border-color .3s;}
+.res:hover{border-color:var(--crimson);}
+.res .doc{height:130px; background:#F3ECE7; padding:16px; display:flex; flex-direction:column; gap:8px; transition:transform .45s var(--ease); transform:rotate(-1.5deg);}
+.res:hover .doc{transform:rotate(0) translateY(-6px);}
+.res .doc i{display:block; height:6px; background:rgba(20,10,10,.18);}
+.res .doc i:first-child{width:52%; height:11px; background:var(--crimson); margin-bottom:6px;}
+.res .doc i:nth-child(3){width:82%;} .res .doc i:nth-child(4){width:64%;}
+.res h3{font-family:var(--display); font-weight:800; font-size:1.7rem; text-transform:uppercase; line-height:1;}
+.res p{color:var(--ash); font-size:.92rem; margin:0; flex-grow:1;}
+.res .btn{justify-content:center;}
+
+/* contact */
+.contact{background:radial-gradient(60% 80% at 30% 40%, #C41E17 0%, #7A0D0C 45%, #220505 100%); overflow:hidden;}
+.contact .label{color:#F5C7BF;}
+.contact .big{font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:clamp(4rem,14vw,12rem); line-height:.82; margin:18px 0 34px;}
+.contact .big em{font-family:var(--serif); font-weight:400; font-style:italic; text-transform:none; color:var(--ink);}
+.mailbox{display:flex; flex-wrap:wrap; align-items:center; gap:14px; border-top:1px solid rgba(243,236,231,.3); border-bottom:1px solid rgba(243,236,231,.3); padding-block:24px;}
+.mail{font-family:var(--serif); font-size:clamp(1.3rem,3.6vw,2.3rem); text-decoration:none; color:var(--bone); word-break:break-all; user-select:all;}
+.copy{margin-left:auto;}
+.copied{font-family:var(--mono); font-size:.72rem; color:var(--bone); min-height:1em; margin-top:12px;}
+footer{background:#000; padding-block:26px;}
+footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; font-family:var(--mono); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; color:#7D706C;}
+
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto;}
+  *,*::before,*::after{animation:none!important; transition:none!important;}
+  .js .rv.pending{transform:none; opacity:1;}
+}
+
+/* AI product lab: concept write-up beside a live dashboard (dashboards keep analytical colour) */
+.lab{background:var(--coal);}
+.case{display:grid; grid-template-columns:.82fr 1.18fr; border:1px solid var(--line); background:var(--ink); margin-bottom:44px;}
+@media (max-width:1000px){.case{grid-template-columns:1fr;}}
+.case > *{min-width:0;}
+.case-copy{padding:36px 34px; border-right:1px solid var(--line); display:flex; flex-direction:column; gap:16px;}
+@media (max-width:1000px){.case-copy{border-right:0; border-bottom:1px solid var(--line);}}
+@media (max-width:540px){.case-copy{padding:26px 22px;}}
+.case-copy h3{font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:clamp(2.3rem,4.2vw,3.3rem); line-height:.88;}
+.case-copy h3 span{display:block; color:var(--crimson);}
+.case-copy .lead{font-family:var(--serif); font-style:italic; font-size:1.3rem; line-height:1.35; color:#E9DCD6; margin:0;}
+.pm{display:grid; gap:0; border-top:1px solid var(--line);}
+.pm div{padding:12px 0; border-bottom:1px solid var(--line);}
+.pm b{display:block; font-family:var(--mono); font-weight:500; font-size:.66rem; letter-spacing:.16em; text-transform:uppercase; color:var(--flare); margin-bottom:4px;}
+.pm p{margin:0; color:var(--ash); font-size:.92rem;}
+.disclaimer{margin:4px 0 0; font-family:var(--mono); font-size:.66rem; letter-spacing:.04em; line-height:1.5; color:#8F807B; border:1px dashed rgba(243,236,231,.18); padding:9px 11px;}
+
+.viz{--surface:#161010; --t1:#F3ECE7; --t2:#C9BAB5; --t3:#8F807B; --grid:rgba(243,236,231,.08);
+  --s1:#3987e5; --s2:#d95926; --s3:#199e70;}
+.dash{padding:26px; background:var(--surface); position:relative;}
+@media (max-width:540px){.dash{padding:18px 14px;}}
+.dash-head{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; margin-bottom:16px;}
+.dash-title{font-weight:600; font-size:1rem; color:var(--t1);}
+.dash-title small{display:block; font-weight:400; font-size:.78rem; color:var(--t3);}
+.seg{display:flex; flex-wrap:wrap; border:1px solid var(--line);}
+.seg button{font-family:var(--mono); font-size:.66rem; letter-spacing:.1em; text-transform:uppercase; background:transparent; color:var(--t2); border:0; padding:9px 12px; cursor:pointer; transition:background .2s, color .2s;}
+.seg button:hover{color:var(--t1);}
+.seg button[aria-pressed="true"]{background:var(--t1); color:#0B0707;}
+.kpis{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-bottom:16px;}
+@media (max-width:620px){.kpis{grid-template-columns:repeat(2,1fr);}}
+.kpi{background:var(--surface); padding:13px 14px; min-width:0;}
+.kpi span{display:block; font-family:var(--mono); font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--t3);}
+.kpi b small{font-family:var(--sans); font-weight:500; font-size:.5em; color:var(--t2); margin-left:3px;}
+.kpi b{display:block; white-space:nowrap; font-family:var(--display); font-weight:800; font-size:clamp(1.45rem,2.4vw,1.9rem); line-height:1.1; margin-top:4px; color:var(--t1); font-variant-numeric:tabular-nums;}
+.charts{display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+@media (max-width:640px){.charts{grid-template-columns:1fr;}}
+.chart{border:1px solid var(--line); padding:12px 12px 6px; min-width:0; position:relative;}
+.chart.wide{grid-column:1 / -1;}
+.chart h4{margin:0 0 6px; font-size:.82rem; font-weight:600; color:var(--t1);}
+.chart h4 small{font-weight:400; color:var(--t3);}
+.plot{position:relative; width:100%;}
+.plot svg{display:block; width:100%; overflow:visible;}
+.plot .ax{fill:var(--t3); font-family:var(--mono); font-size:10px; font-variant-numeric:tabular-nums;}
+.plot .dl{fill:var(--t2); font-family:var(--sans); font-size:11px; font-variant-numeric:tabular-nums;}
+.plot .gl{stroke:var(--grid); stroke-width:1;}
+.plot .base{stroke:rgba(243,236,231,.22); stroke-width:1;}
+.legend{display:flex; flex-wrap:wrap; gap:14px; font-size:.74rem; color:var(--t2); margin:2px 0 6px;}
+.legend i{display:inline-block; width:16px; height:0; border-top:2px solid; vertical-align:middle; margin-right:6px;}
+.legend i.ls-dash{border-top-style:dashed;}
+.tip{position:absolute; left:0; top:0; pointer-events:none; background:var(--t1); color:#0B0707; font-size:.76rem; line-height:1.4; padding:6px 9px; transform:translate(-50%, calc(-100% - 10px)); white-space:nowrap; opacity:0; transition:opacity .12s; z-index:5; font-variant-numeric:tabular-nums; box-shadow:0 6px 18px rgba(0,0,0,.4);}
+.tip.on{opacity:1;}
+.tip b{font-weight:600;}
+.insight{margin:14px 0 0; padding:13px 15px; border-left:3px solid var(--crimson); background:rgba(196,30,23,.09); color:#E9DCD6; font-size:.92rem;}
+.tbl{margin-top:10px;}
+.tbl summary{cursor:pointer; font-family:var(--mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--t2); padding:6px 0;}
+.tbl .scroll{overflow-x:auto; max-height:260px; overflow-y:auto; border:1px solid var(--line);}
+.tbl table{border-collapse:collapse; width:100%; font-size:.8rem; font-variant-numeric:tabular-nums;}
+.tbl th,.tbl td{padding:6px 10px; text-align:right; border-bottom:1px solid var(--line); color:var(--t2); white-space:nowrap;}
+.tbl th:first-child,.tbl td:first-child{text-align:left;}
+.tbl th{color:var(--t1); font-weight:600; position:sticky; top:0; background:var(--surface);}
+
+.tools{display:flex; flex-wrap:wrap; gap:8px; margin-top:34px;}
+.tools span{font-family:var(--mono); font-size:.7rem; letter-spacing:.08em; border:1px solid var(--line); padding:7px 11px; color:#D7C9C4;}
+
+
+/* concept badge: animated, replaces the old boilerplate box */
+.concept{display:inline-flex; align-items:center; gap:9px; align-self:flex-start; position:relative; overflow:hidden; font-family:var(--mono); font-size:.64rem; letter-spacing:.16em; text-transform:uppercase; color:var(--bone); border:1px solid rgba(232,69,46,.55); background:rgba(196,30,23,.12); padding:7px 12px 7px 10px;}
+.concept i{width:7px; height:7px; border-radius:50%; background:var(--flare); box-shadow:0 0 0 0 rgba(232,69,46,.7); animation:ping 2s ease-out infinite;}
+.concept::after{content:""; position:absolute; top:0; bottom:0; width:40%; left:-50%; background:linear-gradient(100deg, transparent, rgba(255,235,225,.28), transparent); animation:shine 3.6s ease-in-out infinite;}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(232,69,46,.7);} 80%,100%{box-shadow:0 0 0 9px rgba(232,69,46,0);}}
+@keyframes shine{0%,55%{left:-50%;} 100%{left:130%;}}
+
+/* PM toolkit tabs under each case */
+.kit{grid-column:1 / -1; border-top:1px solid var(--line); background:#100A09;}
+.kit-tabs{display:flex; overflow-x:auto; border-bottom:1px solid var(--line); scrollbar-width:none;}
+.kit-tabs::-webkit-scrollbar{display:none;}
+.kit-tabs .kt-label{font-family:var(--mono); font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--flare); padding:16px 18px 14px 26px; white-space:nowrap; border-right:1px solid var(--line); display:flex; align-items:center;}
+.kit-tabs button{position:relative; flex:0 0 auto; font-family:var(--mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; background:transparent; color:var(--ash); border:0; border-right:1px solid var(--line); padding:16px 18px 14px; cursor:pointer; transition:color .2s, background .2s;}
+.kit-tabs button::after{content:""; position:absolute; left:0; right:0; bottom:-1px; height:2px; background:var(--crimson); transform:scaleX(0); transform-origin:left; transition:transform .35s var(--ease);}
+.kit-tabs button:hover{color:var(--bone);}
+.kit-tabs button[aria-selected="true"]{color:var(--bone); background:rgba(196,30,23,.08);}
+.kit-tabs button[aria-selected="true"]::after{transform:scaleX(1);}
+.kit-panel{padding:26px 26px 30px; animation:kitIn .45s var(--ease) both;}
+@media (max-width:540px){.kit-panel{padding:20px 18px 24px;}}
+@keyframes kitIn{from{opacity:.2; transform:translateY(8px);} to{opacity:1; transform:none;}}
+.kit-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:0 40px;}
+@media (max-width:760px){.kit-grid{grid-template-columns:1fr;}}
+.kit-grid > div{min-width:0; padding:12px 0; border-bottom:1px solid var(--line);}
+.kit-grid b{display:block; font-family:var(--mono); font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--flare); margin-bottom:5px;}
+.kit-grid p{margin:0; color:#D9CCC7; font-size:.93rem;}
+.kit-big{font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:clamp(1.7rem,3vw,2.4rem); line-height:.95; margin:0 0 6px; color:var(--bone);}
+.rice{width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums; font-size:.86rem;}
+.rice-wrap{overflow-x:auto;}
+.rice th{font-family:var(--mono); font-weight:500; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ash); text-align:right; padding:8px 10px; border-bottom:1px solid var(--line); white-space:nowrap;}
+.rice td{padding:11px 10px; border-bottom:1px solid var(--line); text-align:right; color:#D9CCC7; white-space:nowrap;}
+.rice th:first-child,.rice td:first-child{text-align:left; white-space:normal; min-width:180px;}
+.rice td.score{color:var(--bone); font-weight:600; width:34%;}
+.rice .sbar{display:flex; align-items:center; gap:10px; justify-content:flex-end;}
+.rice .sbar i{display:block; height:6px; background:var(--crimson); border-radius:0 3px 3px 0; width:0; transition:width 1.1s var(--ease);}
+.kit.on .rice .sbar i{width:var(--w);}
+.rice tr.win td:first-child{color:var(--bone); font-weight:600;}
+.rice tr.win td:first-child::after{content:"  Build first"; font-family:var(--mono); font-size:.58rem; letter-spacing:.12em; text-transform:uppercase; color:var(--flare); margin-left:8px;}
+.kit-note{margin:12px 0 0; font-size:.8rem; color:var(--ash);}
+.road{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+@media (max-width:700px){.road{grid-template-columns:1fr;}}
+.road div{background:#100A09; padding:18px; min-width:0;}
+.road b{display:block; font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:1.5rem; line-height:1; margin-bottom:8px;}
+.road div:first-child b{color:var(--crimson);}
+.road p{margin:0; color:#D9CCC7; font-size:.92rem;}
+
+
+.hero-tag{font-family:var(--mono); font-size:.72rem; letter-spacing:.12em; text-transform:uppercase; color:#F0C9C2; margin:-8px 0 14px;}
+/* analytics casebook */
+.casebook{background:var(--ink);}
+.brief{display:grid; grid-template-columns:1.15fr .85fr; border:1px solid var(--line); background:linear-gradient(135deg,#1C1210 0%,#120B0A 100%); margin-bottom:20px;}
+@media (max-width:900px){.brief{grid-template-columns:1fr;}}
+.brief > *{min-width:0;}
+.brief-copy{padding:34px; border-right:1px solid var(--line); display:flex; flex-direction:column; gap:14px;}
+@media (max-width:900px){.brief-copy{border-right:0; border-bottom:1px solid var(--line);}}
+@media (max-width:540px){.brief-copy{padding:24px 20px;}}
+.brief-copy h3{font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:clamp(2.3rem,4.4vw,3.4rem); line-height:.88;}
+.brief-copy h3 span{display:block; color:var(--crimson);}
+.brief-copy p{margin:0; color:#E0D3CE; max-width:58ch;}
+.brief-copy .brief-note{font-family:var(--mono); font-size:.66rem; letter-spacing:.06em; color:var(--ash);}
+.brief-stats{display:grid;}
+.bs{padding:20px 26px; border-bottom:1px solid var(--line);}
+.bs:last-child{border-bottom:0;}
+.bs b{display:block; font-family:var(--display); font-weight:800; font-size:clamp(1.6rem,2.8vw,2.2rem); margin-top:4px; font-variant-numeric:tabular-nums;}
+.bs b em{font-style:normal; font-family:var(--mono); font-weight:500; font-size:.42em; letter-spacing:.06em; color:var(--flare); vertical-align:middle; margin-left:6px;}
+.steps{border-top:1px solid var(--line);}
+.step{display:grid; grid-template-columns:160px 1fr; gap:32px; padding-block:46px; border-bottom:1px solid var(--line);}
+@media (max-width:760px){.step{grid-template-columns:1fr; gap:12px; padding-block:34px;}}
+.step > *{min-width:0;}
+.step-no{font-family:var(--display); font-weight:900; font-size:clamp(3.4rem,6vw,5rem); line-height:.8; color:transparent; -webkit-text-stroke:1.5px var(--crimson);}
+.step-no small{display:block; font-family:var(--mono); font-weight:500; font-size:.64rem; letter-spacing:.16em; text-transform:uppercase; -webkit-text-stroke:0; color:var(--ash); margin-top:12px;}
+.step h3{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:clamp(1.7rem,3vw,2.3rem); line-height:1; margin-bottom:12px;}
+.step p{color:var(--ash); max-width:66ch; margin:0 0 12px;}
+.step p.say{font-family:var(--serif); font-style:italic; font-size:1.35rem; color:#E9DCD6;}
+.formula{font-family:var(--mono); font-size:clamp(.78rem,1.5vw,.98rem); background:#161010; border:1px solid var(--line); padding:16px 18px; color:var(--bone); overflow-x:auto; white-space:nowrap; margin-top:6px;}
+.formula b{color:var(--flare); font-weight:500;}
+.viz-box{border:1px solid var(--line); background:#161010; padding:16px 14px 8px; margin-top:16px; position:relative;}
+.tree{margin-top:20px; display:grid; gap:26px; justify-items:center;}
+.tree .root{width:min(300px,100%);}
+.tree .kids{width:100%; display:grid; grid-template-columns:repeat(4,1fr); gap:12px; position:relative; padding-top:22px;}
+.tree .kids::before{content:""; position:absolute; top:0; left:12.5%; right:12.5%; height:1px; background:rgba(243,236,231,.3); transform:scaleX(0); transition:transform .8s var(--ease) .25s;}
+.tree .root::after{content:""; position:absolute; left:50%; bottom:-27px; height:26px; width:1px; background:rgba(243,236,231,.3);}
+.tree .kids .node::before{content:""; position:absolute; top:-23px; left:50%; width:1px; height:22px; background:rgba(243,236,231,.3);}
+@media (max-width:700px){.tree .kids{grid-template-columns:repeat(2,1fr); padding-top:0;} .tree .kids::before,.tree .kids .node::before,.tree .root::after{display:none;}}
+.node{position:relative; border:1px solid var(--line); background:#161010; padding:14px 10px; text-align:center; min-width:0;}
+.node .nl{display:block; font-family:var(--mono); font-size:.6rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ash);}
+.node .nv{display:block; font-family:var(--display); font-weight:800; font-size:clamp(1.05rem,1.8vw,1.35rem); margin:6px 0 2px; font-variant-numeric:tabular-nums;}
+.node .nd{font-family:var(--mono); font-size:.7rem; color:var(--flare);}
+.node.root .nv{font-size:clamp(1.6rem,3vw,2.1rem);}
+.node.leak{border-color:var(--crimson); background:rgba(196,30,23,.16);}
+.node.leak::after{content:"Biggest leak"; position:absolute; top:-9px; right:8px; font-family:var(--mono); font-size:.56rem; letter-spacing:.12em; text-transform:uppercase; background:var(--crimson); color:var(--bone); padding:2px 6px;}
+.js .tree .node{opacity:.2; transform:translateY(12px); transition:opacity .6s var(--ease) var(--d), transform .6s var(--ease) var(--d);}
+.tree.on .node{opacity:1; transform:none;}
+.tree.on .kids::before{transform:scaleX(1);}
+.fixes{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:8px;}
+@media (max-width:860px){.fixes{grid-template-columns:1fr;}}
+.fix{background:#161010; padding:20px; display:flex; flex-direction:column; gap:8px; min-width:0;}
+.fix b{font-family:var(--mono); font-weight:500; font-size:.62rem; letter-spacing:.16em; text-transform:uppercase; color:var(--flare);}
+.fix h4{margin:0; font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:1.4rem; line-height:1;}
+.fix p{margin:0; color:var(--ash); font-size:.92rem; flex-grow:1;}
+.fix .imp{align-self:flex-start; font-family:var(--mono); font-size:.68rem; letter-spacing:.06em; color:var(--bone); background:rgba(196,30,23,.3); padding:5px 9px;}
+.mk-chips{margin-top:18px;}
+@media (prefers-reduced-motion: reduce){.js .tree .node{opacity:1; transform:none;}}
+
+</style>
+</head>
+<body>
+<nav id="nav">
+  <div class="wrap">
+    <a class="wordmark" href="#top">Subham <i>Pandey</i></a>
+    <ul class="navlinks">
+      <li><a href="#about">Intro</a></li>
+      <li><a href="#lab">AI Lab</a></li>
+      <li><a href="#casebook">Casebook</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#campus">Campus</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#resume">Resume</a></li>
+    </ul>
+    <a class="navcta" href="#contact">Hire me</a>
+  </div>
+</nav>
+
+<header id="top" class="intro grain" aria-label="Introduction">
+  <div class="stage-box">
+  <div class="red"></div>
+  <div class="namebig" id="namebig" aria-hidden="true"><span class="n1">Subham</span><span class="n2">Pandey</span></div>
+  <div class="person-in"><img class="person" id="person" src="assets/subham-cut.webp" alt="Subham Pandey in a navy suit"></div>
+  <div class="floor"></div>
+  <div class="sweep"></div>
+  <div class="bars"></div>
+  <div class="sub" aria-live="polite"><span class="who">Subham</span><span class="line" id="subLine">Hi, I'm Subham. Strategy and AI are my home ground.</span><span class="caret" id="caret"></span></div>
+  <button class="replay" id="replay" type="button">Replay intro</button>
+  </div>
+  <div class="hud-wrap">
+    <div class="hud">
+      <h1 class="role">Subham Pandey &middot; Associate Product Manager &middot; MBA &rsquo;27</h1>
+      <p class="headline">Give me the <b>hardest problem</b> in the room.</p>
+      <p class="hero-tag">Engineer by training. MBA by choice. Product manager by instinct.</p>
+      <p class="hero-meta"><span>B.Tech IT</span><span>Cloud QA, healthcare SaaS</span><span>MBA Ops &amp; Marketing, AKGIM &rsquo;27</span></p>
+      <div class="ctas">
+        <a class="btn btn-red" href="#lab">See my AI product work &rarr;</a>
+        <a class="btn btn-line" href="#resume">Resume</a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="reel" aria-hidden="true">
+  <div class="track">
+    <span>Strategy</span><span>AI Product</span><span>Operations</span><span>Marketing</span><span>Analytics</span><span>Consulting</span>
+    <span>Strategy</span><span>AI Product</span><span>Operations</span><span>Marketing</span><span>Analytics</span><span>Consulting</span>
+  </div>
+</div>
+
+
+<section class="proof" aria-label="Why hire me">
+  <div class="wrap proof-grid">
+    <div class="proof-lead rv">
+      <span class="label red">In one line</span>
+      <p class="proof-line">An MBA candidate who <em>thinks</em> like a product manager and <em>builds</em> like an engineer.</p>
+    </div>
+    <div class="proof-pts">
+      <div class="rv"><b>Speaks both languages</b><p>Hands-on cloud quality assurance on a healthcare platform, then straight into an MBA in Operations and Marketing. I can sit between engineers, business teams and users and translate.</p></div>
+      <div class="rv"><b>Ships, not just plans</b><p>Career Studio is live and in daily use. KaushalSetu-AI and SantHire AI went from idea to working prototype.</p></div>
+      <div class="rv"><b>Runs towards hard problems</b><p>I like challenges. The messier the brief, the more I want it. Every case on this page starts with a question nobody had a clean answer to.</p></div>
+      <div class="rv"><b>Measures what matters</b><p>Every concept below comes with the metrics and dashboard I would use to judge it: success rate, fill rate, time to value.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap about-grid">
+    <div class="frame-wrap rv">
+      <div class="frame tilt" id="frame">
+        <img src="assets/subham-candid-cut.webp" alt="Subham at his desk, thinking through a problem">
+        <span class="glint"></span>
+      </div>
+    </div>
+    <div class="rv">
+      <span class="label red">Introduction</span>
+      <h2 class="statement">I turn ambiguity into <span>roadmaps.</span></h2>
+      <p class="subline">Engineer, analyst and MBA candidate. Hand me a messy business problem and I'll find the system behind it, the data that explains it, and the product that fixes it.</p>
+      <p class="body">I'm Subham, an MBA candidate in Operations and Marketing at Ajay Kumar Garg Institute of Management. Right before business school I worked as a Cloud Quality Analyst at KareXpert Technologies from February to August 2025, validating production releases of a healthcare SaaS platform on AWS. That job taught me what users feel when software fails them, and that great products are won in the details.</p>
+      <p class="body">Today I work where strategy meets AI. I've taken AI prototypes from idea to working demo, researched agentic systems for real business decisions, and I write the PRDs, metrics and experiments you'll find in my AI Product Lab. I'm looking for an Associate Product Manager role where I can own a problem end to end and be measured on outcomes.</p>
+      <div class="facts">
+        <div><b>B.Tech IT</b><span>Galgotias, 2019 to 2022</span></div>
+        <div><b>Cloud QA</b><span>Healthcare SaaS on AWS</span></div>
+        <div><b>MBA</b><span>Ops &amp; Marketing, AKGIM</span></div>
+        <div><b>IEEE</b><span>IC-BRIGHT 2025 research</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="capabilities" class="caps-sec">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label red">Capabilities</span><br><h2 class="h2">The <em>toolkit</em></h2></div>
+      <p>Strategy is sharper with data, and data matters more when you know the system behind it.</p>
+    </div>
+    <div class="caps">
+      <div class="cap rv"><span class="label red">Product</span><h3>AI Product &amp; Strategy</h3><ul><li>Product strategy and roadmaps</li><li>PRDs and user stories</li><li>RICE, MoSCoW, JTBD, North Star</li><li>A/B test design</li><li>PESTLE, Porter's Five Forces, SWOT</li></ul></div>
+      <div class="cap rv"><span class="label red">Analytics</span><h3>Business &amp; Data Analytics</h3><ul><li>Python, NumPy, Pandas</li><li>SQL</li><li>Power BI and Advanced Excel</li><li>Google Analytics</li><li>Funnel, cohort and driver analysis</li></ul></div>
+      <div class="cap rv"><span class="label red">AI</span><h3>AI &amp; Vibe Coding</h3><ul><li>ChatGPT, Claude, Gemini</li><li>Claude Code and GitHub Copilot</li><li>LangChain and RAG</li><li>Wispr Flow</li><li>React prototypes</li></ul></div>
+      <div class="cap rv"><span class="label red">Ops</span><h3>Operations &amp; Tech</h3><ul><li>Cloud QA and UAT on AWS</li><li>Jenkins, Docker, Kubernetes</li><li>Terraform, Linux (RHCSA)</li><li>Agile and Scrum</li><li>Process and supply chain thinking</li></ul></div>
+    </div>
+    <div class="tools rv" aria-label="Tools I use">
+      <span>Python</span><span>NumPy</span><span>Pandas</span><span>SQL</span><span>Power BI</span><span>Advanced Excel</span><span>Google Analytics</span><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Claude Code</span><span>GitHub Copilot</span><span>Wispr Flow</span><span>LangChain</span><span>React</span><span>GitHub</span><span>AWS</span><span>Agile / Scrum</span>
+    </div>
+  </div>
+</section>
+
+<section id="lab" class="lab">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label red">AI Product Lab</span><br><h2 class="h2">Product <em>concepts</em></h2></div>
+      <p>Independent AI product management case studies across food delivery, quick commerce, fintech, healthcare and supply chain. Each pairs a product concept with the operations dashboard I'd use to measure it. Filter the dashboards and hover the charts.</p>
+    </div>
+
+    <article class="case rv" id="caseSwiggy">
+      <div class="case-copy">
+        <span class="concept"><i></i>Self-initiated product concept</span>
+        <span class="label red">Food delivery &middot; AI personalisation</span>
+        <h3>Swiggy <span>Smart Reorder</span></h3>
+        <p class="lead">Repeat customers order the same few dishes, yet they still browse for minutes at dinner peak. Let the app remember for them.</p>
+        <div class="pm">
+          <div><b>Problem</b><p>Dinner hours carry the most orders and the slowest deliveries. Long browsing at checkout and late kitchen signals add minutes to every order.</p></div>
+          <div><b>Users</b><p>Repeat customers ordering three or more times a month, and restaurant partners who need predictable peak demand.</p></div>
+          <div><b>AI solution</b><p>A one tap reorder card ranked by a model using order history, time of day and kitchen prep time, plus an early demand signal to the restaurant when a reorder is likely.</p></div>
+          <div><b>Success metrics</b><p>Time to checkout, reorder conversion, peak hour delivery time, cancellation rate.</p></div>
+          <div><b>MVP</b><p>Top three reorder suggestions for repeat users in one city, A/B tested against the current home screen for four weeks.</p></div>
+          <div><b>Risks &amp; guardrails</b><p>Stale menus, repetitive suggestions and privacy expectations. Show why each suggestion appears and keep an easy opt out.</p></div>
+        </div>
+      </div>
+      <div class="dash viz" id="dashS">
+        <div class="dash-head">
+          <span class="dash-title">Delivery operations baseline<small>Simulated data &middot; average day</small></span>
+          <div class="seg" role="group" aria-label="City" id="segS"></div>
+        </div>
+        <div class="kpis" id="kpiS"></div>
+        <div class="charts">
+          <div class="chart wide"><h4>Orders by hour of day</h4><div class="plot" id="sOrders"></div></div>
+          <div class="chart"><h4>Average delivery time <small>minutes</small></h4><div class="plot" id="sTime"></div></div>
+          <div class="chart"><h4>Why orders get cancelled <small>% of cancels</small></h4><div class="plot" id="sCancel"></div></div>
+        </div>
+        <p class="insight" id="sInsight"></p>
+        <details class="tbl"><summary>View as table</summary><div class="scroll" id="sTable"></div></details>
+      </div>
+
+      <div class="kit"><div class="kit-tabs" role="tablist" aria-label="PM toolkit"><span class="kt-label">PM toolkit</span><button type="button" role="tab" id="swiggy-t0" aria-controls="swiggy-p0" aria-selected="true">North Star</button><button type="button" role="tab" id="swiggy-t1" aria-controls="swiggy-p1" aria-selected="false">RICE</button><button type="button" role="tab" id="swiggy-t2" aria-controls="swiggy-p2" aria-selected="false">AI model</button><button type="button" role="tab" id="swiggy-t3" aria-controls="swiggy-p3" aria-selected="false">Experiment</button><button type="button" role="tab" id="swiggy-t4" aria-controls="swiggy-p4" aria-selected="false">Roadmap</button></div><div class="kit-panel" role="tabpanel" id="swiggy-p0" aria-labelledby="swiggy-t0"><p class="kit-big">Weekly repeat orders per active user</p><div class="kit-grid"><div><b>Hypothesis</b><p>If repeat customers see their likely order first at dinner time, time to checkout drops by a third, and kitchens start earlier because they get the signal sooner.</p></div><div><b>Persona</b><p>Ananya, 27, Bengaluru. Orders dinner four times a week, usually from the same three places. Wants food fast after a long day, not more choice.</p></div><div><b>Job to be done</b><p>When I get home tired, I want my usual dinner on the way in seconds, so I can stop thinking about food.</p></div></div></div><div class="kit-panel" role="tabpanel" id="swiggy-p1" aria-labelledby="swiggy-t1" hidden><div class="rice-wrap"><table class="rice"><thead><tr><th>Feature</th><th>Reach</th><th>Impact</th><th>Confidence</th><th>Effort</th><th>RICE score</th></tr></thead><tbody><tr class="win"><td>One tap reorder card</td><td>2,000</td><td>2</td><td>80%</td><td>3</td><td class="score"><span class="sbar"><i style="--w:100%"></i>1,067</span></td></tr><tr><td>Early kitchen signal for likely reorders</td><td>1,200</td><td>1</td><td>60%</td><td>4</td><td class="score"><span class="sbar"><i style="--w:17%"></i>180</span></td></tr><tr><td>Smart refill reminders</td><td>800</td><td>0.5</td><td>50%</td><td>2</td><td class="score"><span class="sbar"><i style="--w:9%"></i>100</span></td></tr></tbody></table></div><p class="kit-note">Reach in thousands of users per quarter. Impact on a 0.25 to 3 scale. Effort in person months. Score = Reach &times; Impact &times; Confidence &divide; Effort.</p></div><div class="kit-panel" role="tabpanel" id="swiggy-p2" aria-labelledby="swiggy-t2" hidden><div class="kit-grid"><div><b>Inputs</b><p>Order history, time of day, day of week, restaurant open status and prep time, past response to suggestions.</p></div><div><b>Approach</b><p>Generate candidate dishes from the user&#x27;s history, then rank them with a gradient boosted ranking model.</p></div><div><b>Offline evaluation</b><p>Precision at 3 and NDCG on held out weeks of orders.</p></div><div><b>Cold start and fallback</b><p>New users see what is popular nearby at that hour. Closed or slow restaurants are filtered out.</p></div></div></div><div class="kit-panel" role="tabpanel" id="swiggy-p3" aria-labelledby="swiggy-t3" hidden><div class="kit-grid"><div><b>Design</b><p>50/50 A/B test among repeat users in Bengaluru for four weeks.</p></div><div><b>Primary metric</b><p>Time to checkout for dinner orders.</p></div><div><b>Guardrails</b><p>Average order value, cancellation rate, support complaints.</p></div><div><b>Ship rule</b><p>Roll out if checkout time falls by 15% or more with no guardrail getting worse.</p></div></div></div><div class="kit-panel" role="tabpanel" id="swiggy-p4" aria-labelledby="swiggy-t4" hidden><div class="road"><div><b>Now</b><p>Reorder card for repeat users in one city.</p></div><div><b>Next</b><p>Early kitchen signal for the top restaurants.</p></div><div><b>Later</b><p>Group orders and festival pre-orders.</p></div></div></div></div>
+    </article>
+
+    <article class="case rv" id="caseBlinkit">
+      <div class="case-copy">
+        <span class="concept"><i></i>Self-initiated product concept</span>
+        <span class="label red">Quick commerce &middot; AI forecasting</span>
+        <h3>Blinkit <span>Stock Sense</span></h3>
+        <p class="lead">Ten minute delivery breaks the moment a dark store runs out of milk at 8 am. Predict it two hours earlier.</p>
+        <div class="pm">
+          <div><b>Problem</b><p>Fast moving items stock out at predictable peaks, so orders get split, delayed or cancelled exactly when demand is highest.</p></div>
+          <div><b>Users</b><p>Dark store managers who plan replenishment, and customers who expect what they want to be in stock.</p></div>
+          <div><b>AI solution</b><p>Hour level demand forecasts per category for each store, feeding a restock alert two hours before a predicted stockout.</p></div>
+          <div><b>Success metrics</b><p>Fill rate, stockout risk hours, share of orders delivered under 10 minutes, forecast accuracy.</p></div>
+          <div><b>MVP</b><p>Forecast the top 200 items for three stores, push alerts to the store manager app, and compare against manual planning.</p></div>
+          <div><b>Risks &amp; guardrails</b><p>Weather and festival spikes, and new items with no history. Fall back to simple rules when the model is unsure.</p></div>
+        </div>
+      </div>
+      <div class="dash viz" id="dashB">
+        <div class="dash-head">
+          <span class="dash-title">Dark store health<small>Simulated data &middot; one store, last two weeks</small></span>
+          <div class="seg" role="group" aria-label="Category" id="segB"></div>
+        </div>
+        <div class="kpis" id="kpiB"></div>
+        <div class="charts">
+          <div class="chart wide"><h4>Stockout risk by hour <small>% chance, last week</small></h4><div class="plot" id="bHeat"></div></div>
+          <div class="chart"><h4>Forecast vs actual demand <small>units per day</small></h4>
+            <div class="legend"><span><i style="border-color:var(--s1)"></i>Actual</span><span><i class="ls-dash" style="border-color:var(--s2)"></i>Forecast</span></div>
+            <div class="plot" id="bLine"></div></div>
+          <div class="chart"><h4>Fill rate by category <small>%</small></h4><div class="plot" id="bFill"></div></div>
+        </div>
+        <p class="insight" id="bInsight"></p>
+        <details class="tbl"><summary>View as table</summary><div class="scroll" id="bTable"></div></details>
+      </div>
+
+      <div class="kit"><div class="kit-tabs" role="tablist" aria-label="PM toolkit"><span class="kt-label">PM toolkit</span><button type="button" role="tab" id="blinkit-t0" aria-controls="blinkit-p0" aria-selected="true">North Star</button><button type="button" role="tab" id="blinkit-t1" aria-controls="blinkit-p1" aria-selected="false">RICE</button><button type="button" role="tab" id="blinkit-t2" aria-controls="blinkit-p2" aria-selected="false">AI model</button><button type="button" role="tab" id="blinkit-t3" aria-controls="blinkit-p3" aria-selected="false">Experiment</button><button type="button" role="tab" id="blinkit-t4" aria-controls="blinkit-p4" aria-selected="false">Roadmap</button></div><div class="kit-panel" role="tabpanel" id="blinkit-p0" aria-labelledby="blinkit-t0"><p class="kit-big">Share of orders delivered complete in under 10 minutes</p><div class="kit-grid"><div><b>Hypothesis</b><p>Alerting store managers two hours before a predicted stockout lifts fill rate by two points and under 10 minute deliveries by five points in pilot stores.</p></div><div><b>Persona</b><p>Ravi, 34, dark store manager in Gurugram. Runs replenishment from experience and a spreadsheet. Finds out about stockouts from angry order notes.</p></div><div><b>Job to be done</b><p>When demand is about to spike, I want to know which shelves will run empty, so I can restock before customers notice.</p></div></div></div><div class="kit-panel" role="tabpanel" id="blinkit-p1" aria-labelledby="blinkit-t1" hidden><div class="rice-wrap"><table class="rice"><thead><tr><th>Feature</th><th>Reach</th><th>Impact</th><th>Confidence</th><th>Effort</th><th>RICE score</th></tr></thead><tbody><tr class="win"><td>Restock alert two hours ahead</td><td>900</td><td>2</td><td>70%</td><td>3</td><td class="score"><span class="sbar"><i style="--w:100%"></i>420</span></td></tr><tr><td>Auto substitution suggestions</td><td>600</td><td>1</td><td>60%</td><td>2</td><td class="score"><span class="sbar"><i style="--w:43%"></i>180</span></td></tr><tr><td>Festival demand planner</td><td>400</td><td>2</td><td>40%</td><td>5</td><td class="score"><span class="sbar"><i style="--w:15%"></i>64</span></td></tr></tbody></table></div><p class="kit-note">Reach in thousands of orders per week. Impact on a 0.25 to 3 scale. Effort in person months. Score = Reach &times; Impact &times; Confidence &divide; Effort.</p></div><div class="kit-panel" role="tabpanel" id="blinkit-p2" aria-labelledby="blinkit-t2" hidden><div class="kit-grid"><div><b>Inputs</b><p>Hourly sales history, current stock, day of week, weather, festivals and running promotions.</p></div><div><b>Approach</b><p>Gradient boosted time series forecast per store, category and hour, turned into a stockout probability.</p></div><div><b>Offline evaluation</b><p>WAPE on held out weeks, plus recall on real stockout events.</p></div><div><b>Fallback</b><p>Simple reorder points for new items or when the model is unsure.</p></div></div></div><div class="kit-panel" role="tabpanel" id="blinkit-p3" aria-labelledby="blinkit-t3" hidden><div class="kit-grid"><div><b>Design</b><p>Three pilot stores against three matched control stores for six weeks.</p></div><div><b>Primary metric</b><p>Fill rate on forecasted items.</p></div><div><b>Guardrails</b><p>Wastage from expired stock, and the share of alerts managers actually act on.</p></div><div><b>Ship rule</b><p>Scale to the city if fill rate rises two points without wastage going up.</p></div></div></div><div class="kit-panel" role="tabpanel" id="blinkit-p4" aria-labelledby="blinkit-t4" hidden><div class="road"><div><b>Now</b><p>Alerts for the top 200 items in three stores.</p></div><div><b>Next</b><p>Auto drafted purchase orders.</p></div><div><b>Later</b><p>Stock balancing between nearby stores.</p></div></div></div></div>
+    </article>
+
+    <article class="case rv" id="casePaytm">
+      <div class="case-copy">
+        <span class="concept"><i></i>Self-initiated product concept</span>
+        <span class="label red">Fintech &middot; AI reliability</span>
+        <h3>Paytm <span>Smart Retry</span></h3>
+        <p class="lead">A failed UPI payment at a shop counter costs more than one sale. It costs trust in the app and in the merchant.</p>
+        <div class="pm">
+          <div><b>Problem</b><p>Many UPI failures are not the user's fault. Bank server downtime and timeouts fail payments at busy hours, and the user is left guessing whether to pay again.</p></div>
+          <div><b>Users</b><p>Everyday UPI users paying at shops, and small merchants who lose sales and time when a payment fails at the counter.</p></div>
+          <div><b>AI solution</b><p>A model that scores the health of each bank route in real time, warns the user before paying through a struggling bank, and offers a one tap retry through another linked account or UPI Lite.</p></div>
+          <div><b>Success metrics</b><p>Payment success rate, failed payments recovered, time to pay, and repeat failures per user.</p></div>
+          <div><b>MVP</b><p>Merchant QR payments in two cities: a bank health warning plus a one tap retry, measured against a control group for four weeks.</p></div>
+          <div><b>Risks &amp; guardrails</b><p>Wrong warnings and double payments. The retry only happens when the user taps, the status of the first payment is always shown, and the flow follows NPCI rules.</p></div>
+        </div>
+      </div>
+      <div class="dash viz" id="dashP">
+        <div class="dash-head">
+          <span class="dash-title">UPI payment health<small>Simulated data &middot; average day</small></span>
+          <div class="seg" role="group" aria-label="Payment type" id="segP"></div>
+        </div>
+        <div class="kpis" id="kpiP"></div>
+        <div class="charts">
+          <div class="chart wide"><h4>Success rate by hour <small>% of payments that went through</small></h4><div class="plot" id="pRate"></div></div>
+          <div class="chart"><h4>Why payments fail <small>% of failures</small></h4><div class="plot" id="pFail"></div></div>
+          <div class="chart"><h4>Payment funnel <small>% of started payments</small></h4><div class="plot" id="pFunnel"></div></div>
+        </div>
+        <p class="insight" id="pInsight"></p>
+        <details class="tbl"><summary>View as table</summary><div class="scroll" id="pTable"></div></details>
+      </div>
+
+      <div class="kit"><div class="kit-tabs" role="tablist" aria-label="PM toolkit"><span class="kt-label">PM toolkit</span><button type="button" role="tab" id="paytm-t0" aria-controls="paytm-p0" aria-selected="true">North Star</button><button type="button" role="tab" id="paytm-t1" aria-controls="paytm-p1" aria-selected="false">RICE</button><button type="button" role="tab" id="paytm-t2" aria-controls="paytm-p2" aria-selected="false">AI model</button><button type="button" role="tab" id="paytm-t3" aria-controls="paytm-p3" aria-selected="false">Experiment</button><button type="button" role="tab" id="paytm-t4" aria-controls="paytm-p4" aria-selected="false">Roadmap</button></div><div class="kit-panel" role="tabpanel" id="paytm-p0" aria-labelledby="paytm-t0"><p class="kit-big">Successful payments per active user per week</p><div class="kit-grid"><div><b>Hypothesis</b><p>Warning users about unhealthy bank routes and offering a one tap retry recovers 30% of retryable failures, without adding time to the average payment.</p></div><div><b>Persona</b><p>Imran, 41, runs a chai stall in Lucknow. Takes 200 QR payments a day. A failed payment means an awkward wait and sometimes a lost sale.</p></div><div><b>Job to be done</b><p>When a customer&#x27;s payment fails at my counter, I want it to go through on the next tap, so the queue keeps moving.</p></div></div></div><div class="kit-panel" role="tabpanel" id="paytm-p1" aria-labelledby="paytm-t1" hidden><div class="rice-wrap"><table class="rice"><thead><tr><th>Feature</th><th>Reach</th><th>Impact</th><th>Confidence</th><th>Effort</th><th>RICE score</th></tr></thead><tbody><tr class="win"><td>One tap retry through another bank or UPI Lite</td><td>3,000</td><td>2</td><td>70%</td><td>3</td><td class="score"><span class="sbar"><i style="--w:100%"></i>1,400</span></td></tr><tr><td>Bank health warning before paying</td><td>3,000</td><td>1</td><td>60%</td><td>2</td><td class="score"><span class="sbar"><i style="--w:64%"></i>900</span></td></tr><tr><td>Failed payment status tracker</td><td>1,500</td><td>1</td><td>80%</td><td>2</td><td class="score"><span class="sbar"><i style="--w:43%"></i>600</span></td></tr></tbody></table></div><p class="kit-note">Reach in thousands of users per quarter. Impact on a 0.25 to 3 scale. Effort in person months. Score = Reach &times; Impact &times; Confidence &divide; Effort.</p></div><div class="kit-panel" role="tabpanel" id="paytm-p2" aria-labelledby="paytm-t2" hidden><div class="kit-grid"><div><b>Inputs</b><p>Live success rate per bank and route, time of day, amount, network quality, the user&#x27;s recent failures.</p></div><div><b>Approach</b><p>A real time classifier that predicts the chance a payment will fail before the user enters the PIN.</p></div><div><b>Evaluation</b><p>Precision and recall at the warning threshold, tuned for precision so users are not warned for nothing.</p></div><div><b>Fallback</b><p>If the score is unavailable, the normal payment flow runs unchanged.</p></div></div></div><div class="kit-panel" role="tabpanel" id="paytm-p3" aria-labelledby="paytm-t3" hidden><div class="kit-grid"><div><b>Design</b><p>10% holdout group on merchant QR payments in two cities for four weeks.</p></div><div><b>Primary metric</b><p>Payment success rate.</p></div><div><b>Guardrails</b><p>Duplicate payment complaints and median time to pay.</p></div><div><b>Ship rule</b><p>Expand if success rate rises with no increase in duplicate payment complaints.</p></div></div></div><div class="kit-panel" role="tabpanel" id="paytm-p4" aria-labelledby="paytm-t4" hidden><div class="road"><div><b>Now</b><p>One tap retry for merchant QR payments.</p></div><div><b>Next</b><p>P2P transfers and bill payments.</p></div><div><b>Later</b><p>Bank health alerts for merchants on their own devices.</p></div></div></div></div>
+    </article>
+
+    <article class="case rv" id="casePracto">
+      <div class="case-copy">
+        <span class="concept"><i></i>Self-initiated product concept</span>
+        <span class="label red">Healthcare &middot; AI operations</span>
+        <h3>Practo <span>No-Show Shield</span></h3>
+        <p class="lead">An empty slot in a doctor's day is care one patient didn't get and income the clinic didn't earn.</p>
+        <div class="pm">
+          <div><b>Problem</b><p>Patients book OPD appointments and don't turn up, while others wait days for a slot. Clinics find out only when the chair stays empty.</p></div>
+          <div><b>Users</b><p>Patients booking appointments, clinic front desks managing the day's schedule, and doctors who want full, predictable days.</p></div>
+          <div><b>AI solution</b><p>A no-show risk score for every booking. High risk patients get a WhatsApp reminder with one tap rescheduling, and freed slots go to the waitlist automatically.</p></div>
+          <div><b>Success metrics</b><p>No-show rate, slots refilled, days a patient waits for the next slot, and doctor utilisation.</p></div>
+          <div><b>MVP</b><p>Fifty clinics in one city across three specialities, with reminders and waitlist refills, measured against control clinics.</p></div>
+          <div><b>Risks &amp; guardrails</b><p>The score never changes who gets care, no medical records go into the model, patients can opt out of reminders, and data handling follows India's DPDP Act.</p></div>
+        </div>
+      </div>
+      <div class="dash viz" id="dashH">
+        <div class="dash-head">
+          <span class="dash-title">Clinic schedule health<small>Simulated data &middot; clinic network, average weekday</small></span>
+          <div class="seg" role="group" aria-label="Speciality" id="segH"></div>
+        </div>
+        <div class="kpis" id="kpiH"></div>
+        <div class="charts">
+          <div class="chart wide"><h4>Appointments by hour</h4><div class="plot" id="hAppts"></div></div>
+          <div class="chart"><h4>No-show rate by how early they booked <small>%</small></h4><div class="plot" id="hLead"></div></div>
+          <div class="chart"><h4>Why patients miss appointments <small>% of no-shows</small></h4><div class="plot" id="hWhy"></div></div>
+        </div>
+        <p class="insight" id="hInsight"></p>
+        <details class="tbl"><summary>View as table</summary><div class="scroll" id="hTable"></div></details>
+      </div>
+
+      <div class="kit"><div class="kit-tabs" role="tablist" aria-label="PM toolkit"><span class="kt-label">PM toolkit</span><button type="button" role="tab" id="practo-t0" aria-controls="practo-p0" aria-selected="true">North Star</button><button type="button" role="tab" id="practo-t1" aria-controls="practo-p1" aria-selected="false">RICE</button><button type="button" role="tab" id="practo-t2" aria-controls="practo-p2" aria-selected="false">AI model</button><button type="button" role="tab" id="practo-t3" aria-controls="practo-p3" aria-selected="false">Experiment</button><button type="button" role="tab" id="practo-t4" aria-controls="practo-p4" aria-selected="false">Roadmap</button></div><div class="kit-panel" role="tabpanel" id="practo-p0" aria-labelledby="practo-t0"><p class="kit-big">Completed consultations per doctor per week</p><div class="kit-grid"><div><b>Hypothesis</b><p>Risk based reminders with one tap rescheduling, plus automatic waitlist refills, cut no-shows by a quarter in pilot clinics.</p></div><div><b>Persona</b><p>Dr. Mehta, general physician in Pune. Sees 30 patients a day, loses four or five slots to no-shows, while other patients wait three days for an appointment.</p></div><div><b>Job to be done</b><p>When a patient is not going to come, I want to know early, so someone who needs the slot can have it.</p></div></div></div><div class="kit-panel" role="tabpanel" id="practo-p1" aria-labelledby="practo-t1" hidden><div class="rice-wrap"><table class="rice"><thead><tr><th>Feature</th><th>Reach</th><th>Impact</th><th>Confidence</th><th>Effort</th><th>RICE score</th></tr></thead><tbody><tr class="win"><td>Risk based reminders with one tap reschedule</td><td>500</td><td>2</td><td>80%</td><td>2</td><td class="score"><span class="sbar"><i style="--w:100%"></i>400</span></td></tr><tr><td>Automatic waitlist refill</td><td>300</td><td>2</td><td>60%</td><td>3</td><td class="score"><span class="sbar"><i style="--w:30%"></i>120</span></td></tr><tr><td>Smart overbooking suggestions</td><td>200</td><td>1</td><td>40%</td><td>4</td><td class="score"><span class="sbar"><i style="--w:5%"></i>20</span></td></tr></tbody></table></div><p class="kit-note">Reach in thousands of appointments per month. Impact on a 0.25 to 3 scale. Effort in person months. Score = Reach &times; Impact &times; Confidence &divide; Effort.</p></div><div class="kit-panel" role="tabpanel" id="practo-p2" aria-labelledby="practo-t2" hidden><div class="kit-grid"><div><b>Inputs</b><p>Booking lead time, past attendance, slot time, distance to clinic, booking channel and weather. No diagnosis or medical records.</p></div><div><b>Approach</b><p>An explainable classifier, gradient boosting with clear feature reasons, scoring each booking&#x27;s no-show risk.</p></div><div><b>Evaluation</b><p>AUC, recall in the top 20% risk band, and a fairness check across age, gender and area.</p></div><div><b>Rule</b><p>The score only decides who gets an extra reminder. It never affects who gets care.</p></div></div></div><div class="kit-panel" role="tabpanel" id="practo-p3" aria-labelledby="practo-t3" hidden><div class="kit-grid"><div><b>Design</b><p>Clinic level randomisation, 25 pilot clinics against 25 control clinics for six weeks.</p></div><div><b>Primary metric</b><p>No-show rate.</p></div><div><b>Guardrails</b><p>Reminder opt outs and patient complaints.</p></div><div><b>Ship rule</b><p>Expand if no-shows fall by 15% or more with opt outs under 3%.</p></div></div></div><div class="kit-panel" role="tabpanel" id="practo-p4" aria-labelledby="practo-t4" hidden><div class="road"><div><b>Now</b><p>Risk based reminders and one tap rescheduling.</p></div><div><b>Next</b><p>Automatic waitlist refills.</p></div><div><b>Later</b><p>Schedule optimiser for each doctor.</p></div></div></div></div>
+    </article>
+
+    <article class="case rv" id="caseDelhivery">
+      <div class="case-copy">
+        <span class="concept"><i></i>Self-initiated product concept</span>
+        <span class="label red">Supply chain &middot; AI risk scoring</span>
+        <h3>Delhivery <span>RTO Shield</span></h3>
+        <p class="lead">Every parcel that comes back is paid for twice: once on the way out, once on the way home.</p>
+        <div class="pm">
+          <div><b>Problem</b><p>Cash on delivery orders that are refused or undeliverable return to origin. RTO burns two way shipping, ties up stock for weeks and eats the margin of small D2C sellers.</p></div>
+          <div><b>Users</b><p>D2C sellers shipping through Delhivery, and last mile teams who make the failed delivery attempts.</p></div>
+          <div><b>AI solution</b><p>An RTO risk score on every order at the moment it is placed. Risky COD orders get an address check, a prepaid nudge or a WhatsApp delivery slot confirmation before they ship.</p></div>
+          <div><b>Success metrics</b><p>RTO rate, cost per delivered order, first attempt delivery rate, and orders lost to the extra step.</p></div>
+          <div><b>MVP</b><p>COD orders for two seller categories, risk based checks against no checks, for six weeks.</p></div>
+          <div><b>Risks &amp; guardrails</b><p>Genuine buyers in smaller towns must not be punished. Checks stay light, the seller sees why an order was flagged, and COD is never switched off.</p></div>
+        </div>
+      </div>
+      <div class="dash viz" id="dashD">
+        <div class="dash-head">
+          <span class="dash-title">Returns to origin<small>Simulated data &middot; seller network, last 12 weeks</small></span>
+          <div class="seg" role="group" aria-label="Category" id="segD"></div>
+        </div>
+        <div class="kpis" id="kpiD"></div>
+        <div class="charts">
+          <div class="chart wide"><h4>RTO rate by week <small>% of shipped orders</small></h4><div class="plot" id="dWeek"></div></div>
+          <div class="chart"><h4>RTO rate by segment <small>%</small></h4><div class="plot" id="dSeg"></div></div>
+          <div class="chart"><h4>Why parcels come back <small>% of RTO</small></h4><div class="plot" id="dWhy"></div></div>
+        </div>
+        <p class="insight" id="dInsight"></p>
+        <details class="tbl"><summary>View as table</summary><div class="scroll" id="dTable"></div></details>
+      </div>
+
+      <div class="kit"><div class="kit-tabs" role="tablist" aria-label="PM toolkit"><span class="kt-label">PM toolkit</span><button type="button" role="tab" id="delhivery-t0" aria-controls="delhivery-p0" aria-selected="true">North Star</button><button type="button" role="tab" id="delhivery-t1" aria-controls="delhivery-p1" aria-selected="false">RICE</button><button type="button" role="tab" id="delhivery-t2" aria-controls="delhivery-p2" aria-selected="false">AI model</button><button type="button" role="tab" id="delhivery-t3" aria-controls="delhivery-p3" aria-selected="false">Experiment</button><button type="button" role="tab" id="delhivery-t4" aria-controls="delhivery-p4" aria-selected="false">Roadmap</button></div><div class="kit-panel" role="tabpanel" id="delhivery-p0" aria-labelledby="delhivery-t0"><p class="kit-big">Orders delivered on the first attempt, per 100 shipped</p><div class="kit-grid"><div><b>Hypothesis</b><p>Scoring RTO risk when an order is placed, and asking high risk COD buyers to confirm their address or switch to prepaid, cuts RTO by a fifth while losing under 2% of orders.</p></div><div><b>Persona</b><p>Neha, 30, runs a D2C fashion label from Jaipur. Ships 300 orders a day. A quarter of her COD parcels come back, and each one costs shipping both ways plus stock she can no longer sell.</p></div><div><b>Job to be done</b><p>When a risky order comes in, I want to know before I ship it, so I don&#x27;t pay twice for a parcel that comes back.</p></div></div></div><div class="kit-panel" role="tabpanel" id="delhivery-p1" aria-labelledby="delhivery-t1" hidden><div class="rice-wrap"><table class="rice"><thead><tr><th>Feature</th><th>Reach</th><th>Impact</th><th>Confidence</th><th>Effort</th><th>RICE score</th></tr></thead><tbody><tr><td>RTO risk score with address check for risky COD orders</td><td>1,800</td><td>2</td><td>70%</td><td>3</td><td class="score"><span class="sbar"><i style="--w:93%"></i>840</span></td></tr><tr class="win"><td>Prepaid nudge with a small discount</td><td>1,500</td><td>1</td><td>60%</td><td>1</td><td class="score"><span class="sbar"><i style="--w:100%"></i>900</span></td></tr><tr><td>Delivery slot confirmation on WhatsApp</td><td>1,200</td><td>1</td><td>70%</td><td>2</td><td class="score"><span class="sbar"><i style="--w:47%"></i>420</span></td></tr></tbody></table></div><p class="kit-note">Reach in thousands of COD orders per month. Impact on a 0.25 to 3 scale. Effort in person months. Score = Reach &times; Impact &times; Confidence &divide; Effort.</p></div><div class="kit-panel" role="tabpanel" id="delhivery-p2" aria-labelledby="delhivery-t2" hidden><div class="kit-grid"><div><b>Inputs</b><p>Address completeness, pin code history, the buyer&#x27;s past orders and returns, payment mode, order value and time of order.</p></div><div><b>Approach</b><p>A gradient boosted classifier that scores RTO risk at order time, with reasons the seller can read.</p></div><div><b>Evaluation</b><p>Precision and recall in the top risk band, and RTO avoided per 100 flagged orders.</p></div><div><b>Fallback</b><p>Orders below the threshold ship as normal. COD is never blocked outright.</p></div></div></div><div class="kit-panel" role="tabpanel" id="delhivery-p3" aria-labelledby="delhivery-t3" hidden><div class="kit-grid"><div><b>Design</b><p>Seller level test: 40 sellers on the new flow against 40 matched sellers for six weeks.</p></div><div><b>Primary metric</b><p>RTO rate on COD orders.</p></div><div><b>Guardrails</b><p>Checkout cancellations and delivery time.</p></div><div><b>Ship rule</b><p>Roll out if RTO falls 15% or more and lost orders stay under 2%.</p></div></div></div><div class="kit-panel" role="tabpanel" id="delhivery-p4" aria-labelledby="delhivery-t4" hidden><div class="road"><div><b>Now</b><p>Risk score and address check for COD orders.</p></div><div><b>Next</b><p>Prepaid nudges and delivery slot confirmation.</p></div><div><b>Later</b><p>Shared risk signals across the seller network.</p></div></div></div></div>
+    </article>
+  </div>
+</section>
+
+
+<section id="casebook" class="casebook">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label red">Analytics Casebook</span><br><h2 class="h2">Break it <em>down</em></h2></div>
+      <p>One marketing analytics problem, solved the way I would solve it at work: frame it, split it into pieces, size each piece, find the leak, then fix it and prove it.</p>
+    </div>
+
+    <div class="brief rv">
+      <div class="brief-copy">
+        <span class="label red">Marketing analytics &middot; Practice case</span>
+        <h3>D2C skincare <span>ROAS drop</span></h3>
+        <p>A D2C skincare brand spends &#8377;10 lakh a month on Meta ads. Over one quarter, revenue from those ads fell from &#8377;38 lakh to &#8377;26 lakh while spend stayed flat. The founder's question is simple: what broke, and what do we fix first?</p>
+        <p class="brief-note">Sample numbers, built to practise the full method end to end.</p>
+      </div>
+      <div class="brief-stats">
+        <div class="bs"><span class="label">Monthly ad spend</span><b>&#8377;10L <em>flat</em></b></div>
+        <div class="bs"><span class="label">Revenue from ads</span><b>&#8377;38L &rarr; &#8377;26L</b></div>
+        <div class="bs"><span class="label">Return on ad spend</span><b>3.8 &rarr; 2.6 <em>&minus;32%</em></b></div>
+      </div>
+    </div>
+
+    <div class="steps">
+      <div class="step rv">
+        <div class="step-no">01<small>Frame it</small></div>
+        <div class="step-body">
+          <h3>Turn the complaint into a formula</h3>
+          <p class="say">"Ads aren't working" is a feeling, not a problem.</p>
+          <p>ROAS is revenue divided by ad spend, and it splits cleanly into four levers I can measure one at a time.</p>
+          <div class="formula">ROAS = <b>CTR</b> &times; <b>Conversion rate</b> &times; <b>Order value</b> &divide; <b>Cost per 1,000 impressions</b> &times; 1,000</div>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="step-no">02<small>Break it down</small></div>
+        <div class="step-body">
+          <h3>Put a number on every lever</h3>
+          <p>Same campaigns, start of the quarter against the end of it. Three levers got worse. One got a lot worse.</p>
+          <div class="tree" id="tree">
+            <div class="node root" style="--d:0ms"><span class="nl">ROAS</span><span class="nv">3.8 &rarr; 2.6</span><span class="nd">&minus;32%</span></div>
+            <div class="kids">
+              <div class="node" style="--d:150ms"><span class="nl">Click through rate</span><span class="nv">1.6% &rarr; 1.5%</span><span class="nd">&minus;6%</span></div>
+              <div class="node leak" style="--d:300ms"><span class="nl">Conversion rate</span><span class="nv">3.0% &rarr; 2.4%</span><span class="nd">&minus;20%</span></div>
+              <div class="node" style="--d:450ms"><span class="nl">Order value</span><span class="nv">&#8377;1,425 &rarr; &#8377;1,400</span><span class="nd">&minus;2%</span></div>
+              <div class="node" style="--d:600ms"><span class="nl">Cost per 1,000 views</span><span class="nv">&#8377;180 &rarr; &#8377;195</span><span class="nd">+8%, worse</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="step-no">03<small>Size it</small></div>
+        <div class="step-body">
+          <h3>Which lever cost the most?</h3>
+          <p>Splitting the 1.2 point fall across the four levers shows conversion rate alone explains about 0.7 of it. Costlier impressions and a tired creative explain most of the rest. So conversion is where I dig first.</p>
+          <div class="viz-box viz"><div class="plot" id="mkWater"></div></div>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="step-no">04<small>Find the leak</small></div>
+        <div class="step-body">
+          <h3>Split conversion until the cause shows up</h3>
+          <p>By device, desktop conversion holds steady near 3.6%. Mobile falls from 2.8% to 1.9% in week 7, the same week a new landing page went live. Mobile load time had gone from 2.1 to 4.6 seconds. Seven in ten visitors are on mobile, so that one page change drags the whole account down.</p>
+          <div class="viz-box viz">
+            <div class="legend"><span><i style="border-color:var(--s1)"></i>Mobile</span><span><i style="border-color:var(--s2)"></i>Desktop</span></div>
+            <div class="plot" id="mkCvr"></div>
+          </div>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="step-no">05<small>Fix and prove</small></div>
+        <div class="step-body">
+          <h3>Fix the biggest leak first, then prove it</h3>
+          <div class="fixes">
+            <div class="fix"><b>Fix 1</b><h4>Speed up mobile</h4><p>Test the old, faster landing page against the new one on half of mobile traffic, and compress the heavy hero images.</p><span class="imp">ROAS back to about 3.1</span></div>
+            <div class="fix"><b>Fix 2</b><h4>Refresh creatives</h4><p>Frequency had climbed to 4.1, so people kept seeing the same ad and clicked less. Rotate three new creatives.</p><span class="imp">About 3.3 with both fixes</span></div>
+            <div class="fix"><b>Fix 3</b><h4>Watch it daily</h4><p>A small dashboard with mobile conversion, page load time, frequency and CPM, and an alert when mobile conversion drops below 2.4%.</p><span class="imp">Catch the next leak in days</span></div>
+          </div>
+          <div class="chips mk-chips"><span class="chip">Driver tree</span><span class="chip">Contribution analysis</span><span class="chip">Segmentation</span><span class="chip">A/B testing</span><span class="chip">Google Analytics</span><span class="chip">Excel</span><span class="chip">Python, Pandas</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="work">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label red">Work</span><br><h2 class="h2">Shipped &amp; <em>researched</em></h2></div>
+      <p>Products I built, research I led, and the operations and marketing work behind them. The first one is live, so you can try it right now.</p>
+    </div>
+
+    <article class="feature rv">
+      <div class="feature-body">
+        <span class="label red">AI Product &middot; Live</span>
+        <h3>Career Studio</h3>
+        <p>A private career workspace I designed and built for my own job search. Resume and cover letter drafts, an application tracker, job description skill matching, interview prep and a learning roadmap, all in one place. Built with React and Vite, it installs on an iPad as a home screen app and keeps all data on the device, with no paid APIs.</p>
+        <div class="chips"><span class="chip">React</span><span class="chip">Vite</span><span class="chip">PWA</span><span class="chip">Local first</span><span class="chip">GitHub Pages</span></div>
+        <div class="links">
+          <a class="btn btn-red" href="https://myselfshubhpandey-cloud.github.io/Personal-career-Assistant-AI/" target="_blank" rel="noopener">Open live app &rarr;</a>
+          <a class="btn btn-line" href="https://github.com/myselfshubhpandey-cloud/Personal-career-Assistant-AI" target="_blank" rel="noopener">View code</a>
+        </div>
+      </div>
+      <div class="feature-visual" aria-hidden="true">
+        <div class="mock">
+          <div class="side"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          <div class="main">
+            <span class="ttl">Overview</span>
+            <div class="row"><b></b><b></b><b></b></div>
+            <div class="bar" style="--w:72%"></div>
+            <div class="bar" style="--w:48%"></div>
+            <div class="bar" style="--w:86%"></div>
+            <div class="row"><b></b><b></b><b></b></div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <div class="filters" role="group" aria-label="Filter projects">
+      <button class="fbtn" type="button" aria-pressed="true" data-f="all">All</button>
+      <button class="fbtn" type="button" aria-pressed="false" data-f="ai">AI Product</button>
+      <button class="fbtn" type="button" aria-pressed="false" data-f="ops">Operations</button>
+      <button class="fbtn" type="button" aria-pressed="false" data-f="mkt">Marketing</button>
+      <button class="fbtn" type="button" aria-pressed="false" data-f="data">Analytics</button>
+      <button class="fbtn" type="button" aria-pressed="false" data-f="strat">Strategy</button>
+    </div>
+
+    <div class="projects" id="projects">
+      <article class="proj" data-cat="ai ops">
+        <span class="label">AI Product &middot; Operations</span>
+        <h3>Agentic Enterprise Operating System</h3>
+        <p>Internship research at Madrid Softwares, a New Delhi IT training company. I studied everyday operational decisions such as routing enquiries, allocating trainers and approving fee waivers, and proposed an agentic AI architecture to support them, built on Herbert Simon's idea of programmed and non programmed decisions.</p>
+        <span class="foot">Madrid Softwares &middot; Ongoing</span>
+      </article>
+      <article class="proj" data-cat="ai">
+        <span class="label">AI Product Management</span>
+        <h3>SantHire AI</h3>
+        <p>An AI powered career matching platform, taken end to end as a product management case study: market opportunity, user personas, roadmap, and an interactive prototype of agent driven candidate to job matching.</p>
+        <span class="foot">Independent case study</span>
+      </article>
+      <article class="proj" data-cat="ai">
+        <span class="label">AI Product &middot; Hackathon</span>
+        <h3>KaushalSetu-AI</h3>
+        <p>An AI powered skilling and hiring platform for MSMEs, built under faculty mentorship. I wrote the proposal, built a React prototype with a training ROI calculator and a bilingual Hindi and English interface, and prepared the pitch. Selected for evaluation in the Industry 4.0 and 5.0 track.</p>
+        <span class="foot">MSME Idea Hackathon 6.0</span>
+      </article>
+      <article class="proj" data-cat="mkt">
+        <span class="label">Marketing Research</span>
+        <h3>Engagement &amp; Conversion Study</h3>
+        <p>A study of how customers engage and what moves them to convert. I designed a 28 question research survey, wrote a 3C report covering company, customer and competitors, built the methodology dossier, and reported progress weekly.</p>
+        <span class="foot">Woxen Digital &middot; Internship</span>
+      </article>
+      <article class="proj" data-cat="ops">
+        <span class="label">Operations &middot; Healthcare SaaS</span>
+        <h3>Cloud Quality Assurance</h3>
+        <p>QA and user acceptance testing as the final operational gate for every production release of a healthcare SaaS platform on AWS, with a cross functional team of seven and CI/CD validation across Jenkins, Docker and Kubernetes.</p>
+        <span class="foot">KareXpert Technologies &middot; Feb to Aug 2025</span>
+      </article>
+      <article class="proj" data-cat="data">
+        <span class="label">Analytics &middot; Dashboard</span>
+        <h3>Career Command Center</h3>
+        <p>A multi track dashboard I built to compare career paths across product management, business analysis, GenAI and consulting, and to plan my own learning roadmap from it.</p>
+        <span class="foot">Personal analytics project</span>
+      </article>
+      <article class="proj" data-cat="strat">
+        <span class="label">Strategy &middot; Consulting</span>
+        <h3>Strategic Diagnostic Report</h3>
+        <p>A strategic diagnostic I prepared for a small company run by a contact, looking at where the business stands and where it should focus next.</p>
+        <span class="foot">Independent consulting exercise</span>
+      </article>
+      <article class="proj" data-cat="strat ai">
+        <span class="label">Strategy &middot; Original framework</span>
+        <h3>The Adoption Cliff</h3>
+        <p>An original framework I coined as part of my writing on technology, AI and business adoption.</p>
+        <span class="foot">Write-up coming soon</span>
+      </article>
+      <article class="proj" data-cat="ai data">
+        <span class="label">Research &middot; IEEE</span>
+        <h3>AIOps Research</h3>
+        <p>Research on AI for IT operations, presented at IC-BRIGHT 2025 as an IEEE member.</p>
+        <span class="foot">IC-BRIGHT 2025</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="campus" class="campus grain">
+  <div class="ghost" aria-hidden="true">On stage</div>
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label">Campus &amp; Leadership</span><br><h2 class="h2">On the <em>stage</em></h2></div>
+      <p>The work that doesn't fit in a spreadsheet: speaking, hosting and showing up for the community.</p>
+    </div>
+    <div class="camp">
+      <div class="rv"><span class="label">Stage &amp; Communication</span><h3>Event Anchoring</h3><p>I've anchored college events on stage, hosting programmes in front of students, faculty and guests.</p></div>
+      <div class="rv"><span class="label">Campus Leadership</span><h3>DDSM Tech &amp; IT Club</h3><p>Core team member of AKGIM's tech and IT club, organising technical sessions and activities, and a member of the Management Club.</p></div>
+      <div class="rv"><span class="label">Hackathon</span><h3>MSME Idea Hackathon 6.0</h3><p>KaushalSetu-AI was selected for evaluation in the Industry 4.0 and 5.0 track, built under faculty mentorship.</p></div>
+      <div class="rv"><span class="label">Professional Community</span><h3>IEEE Member</h3><p>Part of the IEEE community, where I presented my AIOps research at IC-BRIGHT 2025.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="exp">
+  <div class="wrap">
+    <div class="sec-head rv"><div><span class="label red">Experience</span><br><h2 class="h2">The <em>record</em></h2></div></div>
+    <div class="tl" id="tl">
+      <div class="progress" id="tlProgress"></div>
+      <div class="ti rv"><span class="when">2026 &middot; Present</span><div><h3>Summer Intern</h3><p class="org">Madrid Softwares</p><p>Researching an Agentic Enterprise Operating System for autonomous business decision making, and writing the project synopsis, methodology and business case.</p></div></div>
+      <div class="ti rv"><span class="when">2026</span><div><h3>Summer Intern</h3><p class="org">Woxen Digital</p><p>A customer engagement and conversion optimisation study, including a 28 question research survey, a 3C report on company, customer and competitors, and weekly progress reporting.</p></div></div>
+      <div class="ti rv"><span class="when">2025</span><div><h3>IC-BRIGHT 2025</h3><p class="org">IEEE conference</p><p>Presented AIOps research as an IEEE member.</p></div></div>
+      <div class="ti rv"><span class="when">Feb 2025 &middot; Aug 2025</span><div><h3>Cloud Quality Analyst</h3><p class="org">KareXpert Technologies, Healthcare SaaS</p><p>Owned cloud quality assurance and user acceptance testing for a healthcare SaaS platform hosted on AWS, validating production releases with a cross functional team of seven engineers and product managers. Coordinated CI/CD validation across Jenkins, Docker and Kubernetes in an Agile SDLC, and ran infrastructure audits with Terraform and Linux (RHCSA). This is where I learned to think about software from the user's side of the screen.</p></div></div>
+    </div>
+    <div class="sec-head rv" id="education" style="margin-top:96px"><div><span class="label red">Education</span><br><h2 class="h2">The <em>foundation</em></h2></div></div>
+    <div class="edu">
+      <div class="rv"><span class="yr">2025 to 2027</span><h3>MBA, Operations &amp; Marketing</h3><span>Ajay Kumar Garg Institute of Management (AKGIM), AKTU. 70% so far.</span></div>
+      <div class="rv"><span class="yr">2019 to 2022</span><h3>B.Tech, Information Technology</h3><span>Galgotias College of Engineering &amp; Technology, AKTU. 70%.</span></div>
+      <div class="rv"><span class="yr">2016</span><h3>Class XII</h3><span>Pandit Jawaharlal Nehru Inter College, Bargahpur Lehra, Maharajganj, UP Board. 80.6%.</span></div>
+      <div class="rv"><span class="yr">2014</span><h3>Class X</h3><span>K.H.S., Bargahpur Lehra, Maharajganj, UP Board. 79.5%.</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="resume" class="resume">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label red">Resume</span><br><h2 class="h2">Pick your <em>version</em></h2></div>
+      <p>Six versions of the same story, each built for a different role and its keywords.</p>
+    </div>
+    <div class="resumes">
+      <article class="res rv"><div class="doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Product Manager</h3><p>For APM and product roles. Shipped products, PRDs, prioritization, fintech and AI product cases.</p><a class="btn btn-red" href="assets/Subham-Pandey-Product-Manager-Resume.pdf" download target="_blank" rel="noopener">Download PDF</a></article>
+      <article class="res rv"><div class="doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Business Analyst</h3><p>For BA roles. Requirements, process mapping, SQL, Python and Power BI analysis.</p><a class="btn btn-red" href="assets/Subham-Pandey-Business-Analyst-Resume.pdf" download target="_blank" rel="noopener">Download PDF</a></article>
+      <article class="res rv"><div class="doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Data Analyst</h3><p>For analytics roles. SQL, Python, Power BI, fintech UPI and supply chain analyses.</p><a class="btn btn-red" href="assets/Subham-Pandey-Data-Analyst-Resume.pdf" download target="_blank" rel="noopener">Download PDF</a></article>
+      <article class="res rv"><div class="doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Marketing</h3><p>For marketing and growth roles. Consumer research, funnel and ROAS analytics.</p><a class="btn btn-red" href="assets/Subham-Pandey-Marketing-Resume.pdf" download target="_blank" rel="noopener">Download PDF</a></article>
+      <article class="res rv"><div class="doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Operations</h3><p>For operations roles. Process excellence, quality, supply chain and KPI dashboards.</p><a class="btn btn-red" href="assets/Subham-Pandey-Operations-Resume.pdf" download target="_blank" rel="noopener">Download PDF</a></article>
+      <article class="res rv"><div class="doc" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div><h3>Marketing &amp; Operations</h3><p>For general management and MBA dual roles. Growth and process together.</p><a class="btn btn-red" href="assets/Subham-Pandey-Marketing-Operations-Resume.pdf" download target="_blank" rel="noopener">Download PDF</a></article>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact grain">
+  <div class="wrap rv">
+    <span class="label">Contact</span>
+    <p class="big">Let's <em>talk.</em></p>
+    <div class="mailbox">
+      <a class="mail" id="mail" href="mailto:2025shubham@akgim.edu.in">2025shubham@akgim.edu.in</a>
+      <button class="btn btn-bone copy" id="copy" type="button">Copy email</button>
+    </div>
+    <p class="copied" id="copied" aria-live="polite"></p>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>&copy; 2026 Subham Pandey</span><span>Ghaziabad, India</span></div></footer>
+
+<script>
+document.documentElement.classList.add('js');
+var REDUCED = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var FINE = window.matchMedia('(pointer: fine)').matches;
+
+/* intro subtitle: typed like a film subtitle */
+(function(){
+  var line = document.getElementById('subLine'), caret = document.getElementById('caret');
+  var full = line.textContent, timer = null;
+  function type(){
+    clearTimeout(timer);
+    if (REDUCED){ line.textContent = full; caret.style.display = 'none'; return; }
+    line.textContent = ''; caret.style.display = 'inline-block';
+    var i = 0;
+    timer = setTimeout(function step(){
+      i++; line.textContent = full.slice(0, i);
+      if (i < full.length) timer = setTimeout(step, full[i - 1] === '.' ? 380 : 42);
+      else timer = setTimeout(function(){ caret.style.display = 'none'; }, 1600);
+    }, 2500);
+  }
+  type();
+  var intro = document.getElementById('top');
+  document.getElementById('replay').addEventListener('click', function(){
+    intro.classList.add('replaying'); void intro.offsetWidth; intro.classList.remove('replaying');
+    window.scrollTo({top:0}); type();
+  });
+})();
+
+/* intro depth: mouse and scroll parallax */
+(function(){
+  if (REDUCED) return;
+  var intro = document.getElementById('top'), person = document.getElementById('person'), name = document.getElementById('namebig');
+  var mx = 0, my = 0, sy = 0, ticking = false;
+  function apply(){
+    ticking = false;
+    person.style.transform = 'translate(calc(-50% + ' + (mx * 14) + 'px), ' + (sy * 0.08 + my * 6) + 'px)';
+    name.style.transform = 'translate(' + (mx * -26) + 'px, ' + (sy * 0.32 + my * -10) + 'px)';
+    name.style.opacity = Math.max(0, 1 - sy / 700);
+  }
+  function req(){ if (!ticking){ ticking = true; requestAnimationFrame(apply); } }
+  if (FINE) intro.addEventListener('pointermove', function(e){
+    var r = intro.getBoundingClientRect(); mx = (e.clientX - r.left) / r.width - 0.5; my = (e.clientY - r.top) / r.height - 0.5; req();
+  });
+  window.addEventListener('scroll', function(){ sy = Math.min(window.scrollY, 900); req(); }, {passive:true});
+})();
+
+/* copy email */
+document.getElementById('copy').addEventListener('click', function(){
+  var out = document.getElementById('copied'), txt = '2025shubham@akgim.edu.in';
+  function fallback(){
+    var r = document.createRange(); r.selectNodeContents(document.getElementById('mail'));
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    out.textContent = 'Selected. Use copy from your keyboard or menu.';
+  }
+  try { navigator.clipboard.writeText(txt).then(function(){ out.textContent = 'Email copied.'; }, fallback); }
+  catch(e){ fallback(); }
+});
+
+/* nav hides on scroll down */
+(function(){
+  var nav = document.getElementById('nav'), lastY = 0;
+  window.addEventListener('scroll', function(){
+    var y = window.scrollY; nav.classList.toggle('hide', y > lastY && y > 400); lastY = y;
+  }, {passive:true});
+})();
+
+/* reveal and heading wipes */
+(function(){
+  if (!('IntersectionObserver' in window) || REDUCED) return;
+  var vh = window.innerHeight;
+  document.querySelectorAll('.rv').forEach(function(el){ if (el.getBoundingClientRect().top > vh * 0.92) el.classList.add('pending'); });
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if (e.isIntersecting){ e.target.classList.remove('pending'); e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {rootMargin:'0px 0px -10% 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ io.observe(el); });
+})();
+
+/* timeline progress */
+(function(){
+  var tl = document.getElementById('tl'), bar = document.getElementById('tlProgress');
+  function upd(){
+    var r = tl.getBoundingClientRect(), vh = window.innerHeight;
+    var p = Math.min(1, Math.max(0, (vh * 0.7 - r.top) / r.height));
+    bar.style.height = (p * (r.height - 16)) + 'px';
+  }
+  window.addEventListener('scroll', upd, {passive:true}); window.addEventListener('resize', upd); upd();
+})();
+
+/* tilt frame */
+(function(){
+  if (REDUCED || !FINE) return;
+  document.querySelectorAll('.tilt').forEach(function(el){
+    el.addEventListener('pointermove', function(e){
+      var r = el.getBoundingClientRect(), px = (e.clientX - r.left) / r.width, py = (e.clientY - r.top) / r.height;
+      el.style.transform = 'rotateX(' + ((0.5 - py) * 9).toFixed(2) + 'deg) rotateY(' + ((px - 0.5) * 11).toFixed(2) + 'deg)';
+    });
+    el.addEventListener('pointerleave', function(){ el.style.transform = ''; });
+  });
+})();
+
+/* project filters */
+(function(){
+  var btns = document.querySelectorAll('.fbtn'), cards = document.querySelectorAll('#projects .proj');
+  btns.forEach(function(b){
+    b.addEventListener('click', function(){
+      var f = b.getAttribute('data-f');
+      btns.forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); });
+      cards.forEach(function(c){
+        var show = f === 'all' || c.getAttribute('data-cat').split(' ').indexOf(f) > -1;
+        c.hidden = !show;
+        if (show){ c.classList.remove('pop'); void c.offsetWidth; c.classList.add('pop'); }
+      });
+    });
+  });
+})();
+
+/* ===== AI product lab: small SVG chart kit + synthetic data ===== */
+(function(){
+  var NS = 'http://www.w3.org/2000/svg';
+  function el(tag, attrs, parent){ var e = document.createElementNS(NS, tag); for (var k in attrs) e.setAttribute(k, attrs[k]); if (parent) parent.appendChild(e); return e; }
+  function rng(seed){ return function(){ seed |= 0; seed = seed + 0x6D2B79F5 | 0; var t = Math.imul(seed ^ seed >>> 15, 1 | seed); t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  function niceStep(v){ var p = Math.pow(10, Math.floor(Math.log10(v))), n = v / p; return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 2.5 ? 2.5 : n <= 5 ? 5 : 10) * p; }
+  function niceMax(v){ var p = Math.pow(10, Math.floor(Math.log10(v))), n = v / p; return (n <= 1 ? 1 : n <= 2 ? 2 : n <= 2.5 ? 2.5 : n <= 5 ? 5 : 10) * p; }
+  function inr(n){ return Math.round(n).toLocaleString('en-IN'); }
+  function hh(h){ var s = h % 12 === 0 ? 12 : h % 12; return s + (h < 12 ? ' am' : ' pm'); }
+  function cssVar(node, name){ return getComputedStyle(node).getPropertyValue(name).trim(); }
+
+  function tipFor(host){
+    var t = host.querySelector('.tip'); if (!t){ t = document.createElement('div'); t.className = 'tip'; host.appendChild(t); }
+    return {
+      show: function(x, y, html){ t.innerHTML = html; t.style.left = x + 'px'; t.style.top = y + 'px';
+        var w = t.offsetWidth, hw = host.clientWidth; var cx = Math.max(w / 2, Math.min(hw - w / 2, x)); t.style.left = cx + 'px'; t.classList.add('on'); },
+      hide: function(){ t.classList.remove('on'); }
+    };
+  }
+  function clear(host){ var s = host.querySelector('svg'); if (s) s.remove(); }
+
+  /* vertical bars, one series */
+  function barV(host, data, o){
+    clear(host); var W = host.clientWidth, H = o.h || 190, m = {l:38, r:6, t:12, b:22};
+    var iw = W - m.l - m.r, ih = H - m.t - m.b, dmax = Math.max.apply(null, data.map(function(d){ return d.v; })), st = niceStep(dmax / 4), nt = Math.ceil(dmax * 1.04 / st), max = st * nt;
+    var svg = el('svg', {viewBox:'0 0 ' + W + ' ' + H, height:H, role:'img', 'aria-label':o.label});
+    host.insertBefore(svg, host.firstChild);
+    for (var i = 0; i <= nt; i++){ var y = m.t + ih - ih * i / nt;
+      el('line', {x1:m.l, x2:W - m.r, y1:y, y2:y, 'class': i ? 'gl' : 'base'}, svg);
+      el('text', {x:m.l - 6, y:y + 3, 'text-anchor':'end', 'class':'ax'}, svg).textContent = o.fmt(st * i); }
+    var bw = iw / data.length, tip = tipFor(host), bars = [];
+    data.forEach(function(d, i){
+      var x = m.l + i * bw + 1, w = Math.max(1, bw - 2), h = ih * d.v / max, y = m.t + ih - h, r = Math.min(4, w / 2, h);
+      var p = el('path', {d:'M' + x + ',' + (m.t + ih) + 'V' + (y + r) + 'Q' + x + ',' + y + ' ' + (x + r) + ',' + y + 'H' + (x + w - r) + 'Q' + (x + w) + ',' + y + ' ' + (x + w) + ',' + (y + r) + 'V' + (m.t + ih) + 'Z', fill:o.color}, svg);
+      bars.push(p);
+      if (i % (o.every || 1) === 0) el('text', {x:x + w / 2, y:H - 6, 'text-anchor':'middle', 'class':'ax'}, svg).textContent = d.l;
+      var hit = el('rect', {x:m.l + i * bw, y:m.t, width:bw, height:ih, fill:'transparent'}, svg);
+      hit.addEventListener('pointerenter', function(){ bars.forEach(function(b, j){ b.style.opacity = j === i ? 1 : .45; }); tip.show(x + w / 2, y, o.tip(d)); });
+      hit.addEventListener('pointerleave', function(){ bars.forEach(function(b){ b.style.opacity = 1; }); tip.hide(); });
+    });
+  }
+
+  /* horizontal bars with direct value labels */
+  function barH(host, data, o){
+    clear(host); var W = host.clientWidth, row = 30, H = data.length * row + 6, lw = Math.min(150, W * 0.42), m = {l:lw, r:44};
+    var iw = W - m.l - m.r, max = o.max || Math.max.apply(null, data.map(function(d){ return d.v; }));
+    var svg = el('svg', {viewBox:'0 0 ' + W + ' ' + H, height:H, role:'img', 'aria-label':o.label});
+    host.insertBefore(svg, host.firstChild);
+    var tip = tipFor(host);
+    data.forEach(function(d, i){
+      var y = i * row + 6, h = 14, w = Math.max(2, iw * (d.v - (o.min || 0)) / (max - (o.min || 0))), r = Math.min(4, h / 2);
+      el('text', {x:0, y:y + 11, 'class':'dl'}, svg).textContent = d.l;
+      el('path', {d:'M' + m.l + ',' + y + 'H' + (m.l + w - r) + 'Q' + (m.l + w) + ',' + y + ' ' + (m.l + w) + ',' + (y + r) + 'V' + (y + h - r) + 'Q' + (m.l + w) + ',' + (y + h) + ' ' + (m.l + w - r) + ',' + (y + h) + 'H' + m.l + 'Z', fill:d.c || o.color, opacity: d.dim ? .45 : 1}, svg);
+      el('text', {x:m.l + w + 6, y:y + 11, 'class':'dl'}, svg).textContent = o.fmt(d.v);
+      var hit = el('rect', {x:0, y:y - 7, width:W, height:row, fill:'transparent'}, svg);
+      hit.addEventListener('pointerenter', function(){ tip.show(m.l + w / 2, y, o.tip(d)); });
+      hit.addEventListener('pointerleave', tip.hide);
+    });
+  }
+
+  /* lines with crosshair */
+  function line(host, labels, series, o){
+    clear(host); var W = host.clientWidth, H = o.h || 190, m = {l:38, r:10, t:12, b:22};
+    var iw = W - m.l - m.r, ih = H - m.t - m.b, all = [];
+    series.forEach(function(s){ all = all.concat(s.v); });
+    var mn = Math.min.apply(null, all), mx = Math.max.apply(null, all), st = niceStep((mx - mn) / 4 || 1), lo = Math.floor(mn / st) * st, hi = Math.ceil(mx / st) * st, nt = Math.round((hi - lo) / st);
+    function X(i){ return m.l + iw * i / (labels.length - 1); } function Y(v){ return m.t + ih - ih * (v - lo) / (hi - lo); }
+    var svg = el('svg', {viewBox:'0 0 ' + W + ' ' + H, height:H, role:'img', 'aria-label':o.label});
+    host.insertBefore(svg, host.firstChild);
+    for (var i = 0; i <= nt; i++){ var v = lo + st * i, y = Y(v);
+      el('line', {x1:m.l, x2:W - m.r, y1:y, y2:y, 'class': i ? 'gl' : 'base'}, svg);
+      el('text', {x:m.l - 6, y:y + 3, 'text-anchor':'end', 'class':'ax'}, svg).textContent = o.fmt(v); }
+    labels.forEach(function(l, i){ if (i % (o.every || 1) === 0) el('text', {x:X(i), y:H - 6, 'text-anchor':'middle', 'class':'ax'}, svg).textContent = l; });
+    series.forEach(function(s){
+      el('path', {d:s.v.map(function(v, i){ return (i ? 'L' : 'M') + X(i) + ',' + Y(v); }).join(''), fill:'none', stroke:s.c, 'stroke-width':2, 'stroke-linejoin':'round', 'stroke-dasharray': s.dash ? '5 4' : 'none'}, svg);
+      var n = s.v.length - 1; el('circle', {cx:X(n), cy:Y(s.v[n]), r:4, fill:s.c, stroke:cssVar(host, '--surface') || '#161010', 'stroke-width':2}, svg);
+    });
+    var cross = el('line', {y1:m.t, y2:m.t + ih, stroke:'rgba(243,236,231,.35)', 'stroke-width':1, opacity:0}, svg);
+    var dots = series.map(function(s){ return el('circle', {r:4, fill:s.c, stroke:'#161010', 'stroke-width':2, opacity:0}, svg); });
+    var hit = el('rect', {x:m.l, y:m.t, width:iw, height:ih, fill:'transparent'}, svg), tip = tipFor(host);
+    hit.addEventListener('pointermove', function(e){
+      var r = svg.getBoundingClientRect(), px = (e.clientX - r.left) * W / r.width;
+      var i = Math.max(0, Math.min(labels.length - 1, Math.round((px - m.l) / iw * (labels.length - 1))));
+      cross.setAttribute('x1', X(i)); cross.setAttribute('x2', X(i)); cross.setAttribute('opacity', 1);
+      dots.forEach(function(d, k){ d.setAttribute('cx', X(i)); d.setAttribute('cy', Y(series[k].v[i])); d.setAttribute('opacity', 1); });
+      tip.show(X(i), Math.min.apply(null, series.map(function(s){ return Y(s.v[i]); })), '<b>' + labels[i] + '</b><br>' + series.map(function(s){ return s.n + ': ' + o.fmt(s.v[i]); }).join('<br>'));
+    });
+    hit.addEventListener('pointerleave', function(){ cross.setAttribute('opacity', 0); dots.forEach(function(d){ d.setAttribute('opacity', 0); }); tip.hide(); });
+  }
+
+  /* heatmap, sequential blue */
+  var RAMP = ['#0d366b', '#184f95', '#256abf', '#3987e5', '#6da7ec', '#9ec5f4'];
+  function ramp(t){ t = Math.max(0, Math.min(1, t)) * (RAMP.length - 1); var i = Math.min(RAMP.length - 2, Math.floor(t)), f = t - i;
+    function h2(c){ return [parseInt(c.slice(1,3),16), parseInt(c.slice(3,5),16), parseInt(c.slice(5,7),16)]; }
+    var a = h2(RAMP[i]), b = h2(RAMP[i + 1]); return 'rgb(' + a.map(function(x, k){ return Math.round(x + (b[k] - x) * f); }).join(',') + ')'; }
+  function heat(host, rows, cols, val, o){
+    clear(host); var W = host.clientWidth, m = {l:34, r:4, t:4, b:30}, iw = W - m.l - m.r, cw = iw / cols.length, ch = Math.max(14, Math.min(24, cw * 1.1)), H = m.t + ch * rows.length + m.b;
+    var svg = el('svg', {viewBox:'0 0 ' + W + ' ' + H, height:H, role:'img', 'aria-label':o.label});
+    host.insertBefore(svg, host.firstChild);
+    var tip = tipFor(host);
+    rows.forEach(function(rl, r){
+      el('text', {x:m.l - 6, y:m.t + r * ch + ch / 2 + 3, 'text-anchor':'end', 'class':'ax'}, svg).textContent = rl;
+      cols.forEach(function(cl, c){
+        var v = val(r, c), x = m.l + c * cw + 1, y = m.t + r * ch + 1;
+        var cell = el('rect', {x:x, y:y, width:Math.max(1, cw - 2), height:ch - 2, rx:2, fill:ramp(v / 100)}, svg);
+        cell.addEventListener('pointerenter', function(){ cell.setAttribute('stroke', '#F3ECE7'); cell.setAttribute('stroke-width', 1.5); tip.show(x + cw / 2, y, '<b>' + rl + ', ' + hh(c) + '</b><br>Stockout risk: ' + Math.round(v) + '%'); });
+        cell.addEventListener('pointerleave', function(){ cell.removeAttribute('stroke'); tip.hide(); });
+      });
+    });
+    cols.forEach(function(cl, c){ if (c % 3 === 0) el('text', {x:m.l + c * cw + cw / 2, y:m.t + rows.length * ch + 13, 'text-anchor':'middle', 'class':'ax'}, svg).textContent = cl; });
+    var lx = W - m.r - 150, ly = H - 8;
+    el('text', {x:lx - 6, y:ly + 3, 'text-anchor':'end', 'class':'ax'}, svg).textContent = 'Low';
+    for (var i = 0; i < 6; i++) el('rect', {x:lx + i * 20, y:ly - 5, width:18, height:8, rx:1, fill:RAMP[i]}, svg);
+    el('text', {x:lx + 126, y:ly + 3, 'class':'ax'}, svg).textContent = 'High';
+  }
+
+  function table(host, head, rows){
+    host.innerHTML = '<table><thead><tr>' + head.map(function(h){ return '<th>' + h + '</th>'; }).join('') + '</tr></thead><tbody>' +
+      rows.map(function(r){ return '<tr>' + r.map(function(c){ return '<td>' + c + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table>';
+  }
+  function seg(host, items, onPick){
+    items.forEach(function(name, i){
+      var b = document.createElement('button'); b.type = 'button'; b.textContent = name; b.setAttribute('aria-pressed', i ? 'false' : 'true');
+      b.addEventListener('click', function(){ host.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', x === b ? 'true' : 'false'); }); onPick(name); });
+      host.appendChild(b);
+    });
+  }
+  function kpis(host, list){ host.innerHTML = list.map(function(k){ return '<div class="kpi"><span>' + k[0] + '</span><b>' + k[1] + (k[2] ? '<small>' + k[2] + '</small>' : '') + '</b></div>'; }).join(''); }
+
+  window.__chartKit = {rng:rng, inr:inr, hh:hh, cssVar:cssVar, barV:barV, barH:barH, line:line, kpis:kpis, seg:seg, table:table};
+
+  /* ---------- Swiggy: delivery operations ---------- */
+  var dashS = document.getElementById('dashS');
+  if (dashS){
+    var SHAPE = [.18,.12,.08,.05,.04,.05,.10,.22,.35,.42,.48,.62,.95,1,.78,.5,.45,.55,.72,.92,1,.88,.6,.32];
+    var CITIES = {'Bengaluru':{base:1.15, seed:11, lat:1.06}, 'Delhi NCR':{base:1, seed:23, lat:1.12}, 'Mumbai':{base:.92, seed:37, lat:1}};
+    var REASONS = [['Restaurant delay',34],['Rider unavailable',26],['Changed mind',18],['Address issue',13],['Payment failure',9]];
+    var cityS = 'Bengaluru';
+    function dataS(name){
+      var c = CITIES[name], r = rng(c.seed), orders = [], time = [];
+      SHAPE.forEach(function(s){ orders.push(Math.round(1800 * c.base * s * (.92 + .16 * r()))); time.push((24 + 11 * s) * c.lat * (.96 + .08 * r())); });
+      var total = orders.reduce(function(a, b){ return a + b; }, 0), avg = 0, ontime = 0;
+      orders.forEach(function(o, h){ avg += o * time[h]; ontime += o * Math.max(0, Math.min(1, 1 - Math.max(0, time[h] - 30) / 22)); });
+      avg /= total; ontime = ontime / total * 100;
+      var rs = REASONS.map(function(x){ return [x[0], x[1] * (.88 + .24 * r())]; }), rt = rs.reduce(function(a, b){ return a + b[1]; }, 0);
+      rs = rs.map(function(x){ return [x[0], x[1] / rt * 100]; }).sort(function(a, b){ return b[1] - a[1]; });
+      return {orders:orders, time:time, total:total, avg:avg, ontime:ontime, cancel:2.8 * c.lat * (.95 + .1 * r()), reasons:rs};
+    }
+    function renderS(){
+      var d = dataS(cityS), s1 = cssVar(dashS, '--s1');
+      kpis(document.getElementById('kpiS'), [['Orders per day', inr(d.total)], ['Avg delivery', d.avg.toFixed(1), 'min'], ['On time', d.ontime.toFixed(1) + '%'], ['Cancelled', d.cancel.toFixed(1) + '%']]);
+      barV(document.getElementById('sOrders'), d.orders.map(function(v, h){ return {l:hh(h).replace(' ', ''), v:v, h:h}; }),
+        {color:s1, every:3, label:'Orders by hour in ' + cityS, fmt:function(v){ return v >= 1000 ? (v / 1000).toFixed(1).replace('.0', '') + 'k' : Math.round(v); }, tip:function(x){ return '<b>' + hh(x.h) + '</b><br>' + inr(x.v) + ' orders'; }});
+      line(document.getElementById('sTime'), SHAPE.map(function(s, h){ return hh(h).replace(' ', ''); }), [{n:'Avg delivery', v:d.time, c:s1}],
+        {every:6, label:'Average delivery time by hour', fmt:function(v){ return Math.round(v); }});
+      barH(document.getElementById('sCancel'), d.reasons.map(function(x){ return {l:x[0], v:x[1]}; }),
+        {color:s1, max:40, label:'Cancellation reasons', fmt:function(v){ return v.toFixed(0) + '%'; }, tip:function(x){ return '<b>' + x.l + '</b><br>' + x.v.toFixed(1) + '% of cancellations'; }});
+      var peak = 0, slow = 0, eve = 0;
+      d.orders.forEach(function(o, h){ if (o > d.orders[peak]) peak = h; if (h >= 19 && h <= 22) eve += o; });
+      d.time.forEach(function(t, h){ if (t > d.time[slow]) slow = h; });
+      document.getElementById('sInsight').textContent = 'In ' + cityS + ', the 7 to 11 pm window carries ' + Math.round(eve / d.total * 100) + '% of daily orders, and delivery time peaks at ' + Math.round(d.time[slow]) + ' minutes around ' + hh(slow) + '. That window is where one tap reorders and earlier kitchen signals would pay off first.';
+      table(document.getElementById('sTable'), ['Hour', 'Orders', 'Avg delivery (min)'], d.orders.map(function(o, h){ return [hh(h), inr(o), d.time[h].toFixed(1)]; }));
+    }
+    seg(document.getElementById('segS'), Object.keys(CITIES), function(n){ cityS = n; renderS(); });
+    renderS();
+    var rtS; window.addEventListener('resize', function(){ clearTimeout(rtS); rtS = setTimeout(renderS, 150); });
+  }
+
+  /* ---------- Blinkit: dark store health ---------- */
+  var dashB = document.getElementById('dashB');
+  if (dashB){
+    var CATS = {'Dairy & Bread':{peaks:[8, 20], fill:93.1, seed:5, base:420}, 'Fruits & Veg':{peaks:[9, 18], fill:89.4, seed:9, base:360}, 'Snacks':{peaks:[17, 22], fill:95.2, seed:13, base:300}, 'Personal Care':{peaks:[12, 20], fill:96.3, seed:17, base:150}};
+    var DAYS = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'], HOURS = []; for (var h = 0; h < 24; h++) HOURS.push(hh(h).replace(' ', ''));
+    var catB = 'Dairy & Bread';
+    function dataB(name){
+      var c = CATS[name], r = rng(c.seed), grid = [];
+      DAYS.forEach(function(dn, d){ var row = [], wk = d >= 5 ? 1.22 : 1;
+        for (var h = 0; h < 24; h++){
+          var dem = 0; c.peaks.forEach(function(p){ dem = Math.max(dem, Math.exp(-Math.pow(h - p, 2) / 5)); });
+          if (h < 6) dem *= .3;
+          row.push(Math.max(2, Math.min(98, (8 + 74 * dem) * wk * (.85 + .3 * r()))));
+        } grid.push(row); });
+      var actual = [], fc = [], labels = [], err = 0;
+      for (var i = 0; i < 14; i++){ var we = (i % 7) >= 5 ? 1.25 : 1;
+        var a = c.base * we * (.88 + .24 * r()), f = c.base * (we === 1 ? 1 : 1.22) * (.97 + .06 * r());
+        actual.push(Math.round(a)); fc.push(Math.round(f)); labels.push(DAYS[i % 7] + (i < 7 ? ' 1' : ' 2')); err += Math.abs(a - f) / a; }
+      var risky = 0; grid.forEach(function(row){ row.forEach(function(v){ if (v >= 70) risky++; }); });
+      var fill = c.fill;
+      return {grid:grid, actual:actual, fc:fc, labels:labels, acc:100 - err / 14 * 100, risky:risky, fill:fill, under10:Math.max(60, Math.min(92, 70 + (fill - 85) * 1.7))};
+    }
+    function renderB(){
+      var d = dataB(catB), s1 = cssVar(dashB, '--s1'), s2 = cssVar(dashB, '--s2');
+      kpis(document.getElementById('kpiB'), [['Fill rate', d.fill.toFixed(1) + '%'], ['High risk hours', d.risky + ' / 168'], ['Under 10 min', d.under10.toFixed(0) + '%'], ['Forecast accuracy', d.acc.toFixed(0) + '%']]);
+      heat(document.getElementById('bHeat'), DAYS, HOURS, function(r, c){ return d.grid[r][c]; }, {label:'Stockout risk by day and hour for ' + catB});
+      line(document.getElementById('bLine'), d.labels, [{n:'Actual', v:d.actual, c:s1}, {n:'Forecast', v:d.fc, c:s2, dash:true}],
+        {every:3, label:'Forecast versus actual demand', fmt:function(v){ return inr(v); }});
+      barH(document.getElementById('bFill'), Object.keys(CATS).map(function(k){ return {l:k, v:CATS[k].fill, dim:k !== catB}; }),
+        {color:s1, min:80, max:100, label:'Fill rate by category', fmt:function(v){ return v.toFixed(1) + '%'; }, tip:function(x){ return '<b>' + x.l + '</b><br>Fill rate ' + x.v.toFixed(1) + '%'; }});
+      var best = {v:0}; d.grid.forEach(function(row, r){ row.forEach(function(v, c){ if (v > best.v) best = {v:v, r:r, c:c}; }); });
+      document.getElementById('bInsight').textContent = catB + ': stockout risk is highest on ' + DAYS[best.r] + ' around ' + hh(best.c) + ' (' + Math.round(best.v) + '%). A restock alert two hours before that window is the first thing I would ship, judged on fill rate and orders delivered under 10 minutes.';
+      table(document.getElementById('bTable'), ['Day', 'Actual units', 'Forecast units', 'Error'], d.actual.map(function(a, i){ return [d.labels[i], inr(a), inr(d.fc[i]), (Math.abs(a - d.fc[i]) / a * 100).toFixed(1) + '%']; }));
+    }
+    seg(document.getElementById('segB'), Object.keys(CATS), function(n){ catB = n; renderB(); });
+    renderB();
+    var rtB; window.addEventListener('resize', function(){ clearTimeout(rtB); rtB = setTimeout(renderB, 150); });
+  }
+
+  /* ---------- Paytm: UPI payment health ---------- */
+  var dashP = document.getElementById('dashP');
+  if (dashP){
+    var PSHAPE = [.10,.06,.04,.03,.03,.05,.12,.30,.55,.70,.78,.82,.90,.85,.80,.78,.80,.88,.95,1,.96,.80,.55,.28];
+    var TYPES = {'Merchant QR':{base:1, seed:41, sr:96.4, t:9.2}, 'P2P transfer':{base:.8, seed:43, sr:95.1, t:11.4}, 'Bill pay':{base:.25, seed:47, sr:93.4, t:14.8}};
+    var FAILS = [['Bank server down',31],['Wrong UPI PIN',24],['Low balance',19],['Timeout',14],['Limit exceeded',8],['Other',4]];
+    var typeP = 'Merchant QR';
+    function dataP(name){
+      var c = TYPES[name], r = rng(c.seed), vol = [], rate = [];
+      PSHAPE.forEach(function(s, h){ vol.push(Math.round(52000 * c.base * s * (.92 + .16 * r())));
+        rate.push(c.sr - 2.8 * s * s * (.8 + .4 * r()) - (h >= 1 && h <= 3 ? 1.3 : 0)); });
+      var total = vol.reduce(function(a, b){ return a + b; }, 0), ok = 0;
+      vol.forEach(function(v, h){ ok += v * rate[h] / 100; });
+      var sr = ok / total * 100;
+      var fs = FAILS.map(function(x){ return [x[0], x[1] * (.85 + .3 * r())]; }), ft = fs.reduce(function(a, b){ return a + b[1]; }, 0);
+      fs = fs.map(function(x){ return [x[0], x[1] / ft * 100]; }).sort(function(a, b){ return b[1] - a[1]; });
+      var retry = fs.filter(function(x){ return x[0] === 'Bank server down' || x[0] === 'Timeout'; }).reduce(function(a, b){ return a + b[1]; }, 0);
+      var confirm = 92 + 3 * r(), pin = confirm - 4 - 3 * r();
+      return {vol:vol, rate:rate, total:total, sr:sr, fails:fs, retry:retry, time:c.t * (.95 + .1 * r()),
+        funnel:[['Started', 100], ['Payee confirmed', confirm], ['PIN entered', pin], ['Successful', pin * sr / 100]]};
+    }
+    function renderP(){
+      var d = dataP(typeP), s1 = cssVar(dashP, '--s1');
+      kpis(document.getElementById('kpiP'), [['Payments per day', inr(d.total)], ['Success rate', d.sr.toFixed(1), '%'], ['Retryable', d.retry.toFixed(0), '%'], ['Time to pay', d.time.toFixed(1), 'sec']]);
+      line(document.getElementById('pRate'), PSHAPE.map(function(s, h){ return hh(h).replace(' ', ''); }), [{n:'Success rate', v:d.rate, c:s1}],
+        {every:3, label:'UPI success rate by hour', fmt:function(v){ return (Math.round(v * 10) / 10) + '%'; }});
+      barH(document.getElementById('pFail'), d.fails.map(function(x){ return {l:x[0], v:x[1]}; }),
+        {color:s1, max:40, label:'Reasons for failed payments', fmt:function(v){ return v.toFixed(0) + '%'; }, tip:function(x){ return '<b>' + x.l + '</b><br>' + x.v.toFixed(1) + '% of failures'; }});
+      barH(document.getElementById('pFunnel'), d.funnel.map(function(x){ return {l:x[0], v:x[1]}; }),
+        {color:s1, min:0, max:100, label:'Payment funnel', fmt:function(v){ return v.toFixed(1) + '%'; }, tip:function(x){ return '<b>' + x.l + '</b><br>' + x.v.toFixed(1) + '% of started payments'; }});
+      var worst = 0; d.rate.forEach(function(v, h){ if (h > 5 && v < d.rate[worst]) worst = h; if (worst <= 5) worst = h; });
+      document.getElementById('pInsight').textContent = 'For ' + typeP + ' payments, bank downtime and timeouts make up ' + Math.round(d.retry) + '% of failures, and both can be retried safely. Success dips to ' + d.rate[worst].toFixed(1) + '% around ' + hh(worst) + ', which is where a bank health warning and one tap retry would recover the most payments.';
+      table(document.getElementById('pTable'), ['Hour', 'Payments', 'Success rate'], d.vol.map(function(v, h){ return [hh(h), inr(v), d.rate[h].toFixed(1) + '%']; }));
+    }
+    seg(document.getElementById('segP'), Object.keys(TYPES), function(n){ typeP = n; renderP(); });
+    renderP();
+    var rtP; window.addEventListener('resize', function(){ clearTimeout(rtP); rtP = setTimeout(renderP, 150); });
+  }
+})();
+
+
+/* ---------- Practo: clinic schedule health, and PM toolkit tabs ---------- */
+(function(){
+  var NS = 'http://www.w3.org/2000/svg';
+  var dashH = document.getElementById('dashH');
+  /* reuse chart kit through a tiny bridge exposed below */
+  if (dashH && window.__chartKit){
+    var K = window.__chartKit;
+    var HSHAPE = [0,0,0,0,0,0,0,.15,.55,.9,1,.95,.8,.45,.35,.5,.7,.85,.9,.75,.45,.15,0,0];
+    var SPEC = {'General Physician':{base:1, seed:61, ns:16.5, wait:2.8}, 'Dermatology':{base:.55, seed:67, ns:21.4, wait:4.6}, 'Paediatrics':{base:.7, seed:71, ns:12.8, wait:2.1}};
+    var LEADS = ['Same day', '1 day', '2 to 3 days', '4 to 7 days', '8+ days'];
+    var WHY = [['Forgot', 33], ['Felt better', 21], ['Work clash', 18], ['Travel or distance', 12], ['Went elsewhere', 10], ['Other', 6]];
+    var spec = 'General Physician';
+    function dataH(name){
+      var c = SPEC[name], r = K.rng(c.seed), appts = [];
+      HSHAPE.forEach(function(s){ appts.push(Math.round(620 * c.base * s * (.9 + .2 * r()))); });
+      var total = appts.reduce(function(a, b){ return a + b; }, 0);
+      var lead = [.35, .7, 1, 1.45, 1.9].map(function(m){ return c.ns * m * (.9 + .2 * r()); });
+      var why = WHY.map(function(x){ return [x[0], x[1] * (.85 + .3 * r())]; }), wt = why.reduce(function(a, b){ return a + b[1]; }, 0);
+      why = why.map(function(x){ return [x[0], x[1] / wt * 100]; }).sort(function(a, b){ return b[1] - a[1]; });
+      return {appts:appts, total:total, lead:lead, why:why, ns:c.ns * (.95 + .1 * r()), refill:18 + 10 * r(), wait:c.wait * (.95 + .1 * r())};
+    }
+    function renderH(){
+      var d = dataH(spec), s1 = K.cssVar(dashH, '--s1');
+      K.kpis(document.getElementById('kpiH'), [['Appointments per day', K.inr(d.total)], ['No-show rate', d.ns.toFixed(1), '%'], ['Slots refilled', d.refill.toFixed(0), '%'], ['Wait for a slot', d.wait.toFixed(1), 'days']]);
+      var hrs = []; d.appts.forEach(function(v, h){ if (h >= 7 && h <= 21) hrs.push({l:K.hh(h).replace(' ', ''), v:v, h:h}); });
+      K.barV(document.getElementById('hAppts'), hrs, {color:s1, every:2, label:'Appointments by hour', fmt:function(v){ return Math.round(v); }, tip:function(x){ return '<b>' + K.hh(x.h) + '</b><br>' + K.inr(x.v) + ' appointments'; }});
+      K.barV(document.getElementById('hLead'), d.lead.map(function(v, i){ return {l:LEADS[i].replace(' to ', '-').replace(' days', 'd').replace(' day', 'd'), v:v, full:LEADS[i]}; }),
+        {color:s1, every:1, label:'No-show rate by booking lead time', fmt:function(v){ return Math.round(v) + '%'; }, tip:function(x){ return '<b>Booked ' + x.full.toLowerCase() + ' ahead</b><br>' + x.v.toFixed(1) + '% no-shows'; }});
+      K.barH(document.getElementById('hWhy'), d.why.map(function(x){ return {l:x[0], v:x[1]}; }), {color:s1, max:40, label:'Reasons for no-shows', fmt:function(v){ return v.toFixed(0) + '%'; }, tip:function(x){ return '<b>' + x.l + '</b><br>' + x.v.toFixed(1) + '% of no-shows'; }});
+      document.getElementById('hInsight').textContent = 'In ' + spec + ', patients who book 8 or more days ahead miss ' + Math.round(d.lead[4]) + '% of appointments, against ' + Math.round(d.lead[0]) + '% for same day bookings, and forgetting is the top reason. A reminder that lands the day before, with a one tap reschedule, targets exactly that group.';
+      K.table(document.getElementById('hTable'), ['Booked ahead', 'No-show rate'], d.lead.map(function(v, i){ return [LEADS[i], v.toFixed(1) + '%']; }));
+    }
+    K.seg(document.getElementById('segH'), Object.keys(SPEC), function(n){ spec = n; renderH(); });
+    renderH();
+    var rtH; window.addEventListener('resize', function(){ clearTimeout(rtH); rtH = setTimeout(renderH, 150); });
+  }
+
+  /* PM toolkit tabs */
+  document.querySelectorAll('.kit').forEach(function(kit){
+    var tabs = Array.prototype.slice.call(kit.querySelectorAll('[role="tab"]'));
+    function pick(t){
+      tabs.forEach(function(x){ var on = x === t; x.setAttribute('aria-selected', on ? 'true' : 'false'); document.getElementById(x.getAttribute('aria-controls')).hidden = !on; });
+    }
+    tabs.forEach(function(t, i){
+      t.addEventListener('click', function(){ pick(t); });
+      t.addEventListener('keydown', function(e){
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft'){ e.preventDefault(); var n = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length]; n.focus(); pick(n); }
+      });
+    });
+    if ('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(en){ if (en[0].isIntersecting){ kit.classList.add('on'); io.disconnect(); } }, {threshold:.2});
+      io.observe(kit);
+    } else kit.classList.add('on');
+  });
+})();
+
+
+/* ---------- Delhivery: returns to origin ---------- */
+(function(){
+  var dashD = document.getElementById('dashD'), K = window.__chartKit;
+  if (!dashD || !K) return;
+  var CATS = {'Fashion':{seed:81, rto:24.5, base:1}, 'Electronics':{seed:83, rto:14.2, base:.5}, 'Beauty':{seed:89, rto:18.1, base:.7}};
+  var SEGS = [['Metro, prepaid', .25], ['Metro, COD', .95], ['Tier 2, prepaid', .35], ['Tier 2, COD', 1.35], ['Tier 3, prepaid', .45], ['Tier 3, COD', 1.75]];
+  var WHY = [['Buyer not available', 32], ['Refused at door', 27], ['Incomplete address', 18], ['Ordered elsewhere', 14], ['Fake or test order', 9]];
+  var cat = 'Fashion';
+  function dataD(name){
+    var c = CATS[name], r = K.rng(c.seed), weeks = [], labels = [];
+    for (var w = 0; w < 12; w++){ var fest = (w === 6 || w === 7) ? 1.16 : 1; weeks.push(c.rto * fest * (.93 + .1 * r())); labels.push('W' + (w + 1)); }
+    var segs = SEGS.map(function(s){ return [s[0], Math.min(60, c.rto * s[1] * (.92 + .16 * r()))]; });
+    var why = WHY.map(function(x){ return [x[0], x[1] * (.85 + .3 * r())]; }), wt = why.reduce(function(a, b){ return a + b[1]; }, 0);
+    why = why.map(function(x){ return [x[0], x[1] / wt * 100]; }).sort(function(a, b){ return b[1] - a[1]; });
+    var ship = Math.round(8400 * c.base * (.95 + .1 * r())), rto = weeks[11];
+    return {weeks:weeks, labels:labels, segs:segs, why:why, ship:ship, rto:rto, first:100 - rto * .9 - 6, cost:ship * rto / 100 * 140};
+  }
+  function renderD(){
+    var d = dataD(cat), s1 = K.cssVar(dashD, '--s1');
+    K.kpis(document.getElementById('kpiD'), [['Shipments per day', K.inr(d.ship)], ['RTO rate', d.rto.toFixed(1), '%'], ['First attempt', d.first.toFixed(0), '%'], ['RTO cost per day', '&#8377;' + K.inr(d.cost)]]);
+    K.line(document.getElementById('dWeek'), d.labels, [{n:'RTO rate', v:d.weeks, c:s1}], {every:1, label:'RTO rate by week for ' + cat, fmt:function(v){ return (Math.round(v * 10) / 10) + '%'; }});
+    var mx = Math.max.apply(null, d.segs.map(function(s){ return s[1]; }));
+    K.barH(document.getElementById('dSeg'), d.segs.map(function(s){ return {l:s[0], v:s[1]}; }), {color:s1, max:Math.ceil(mx / 10) * 10, label:'RTO rate by city tier and payment mode', fmt:function(v){ return v.toFixed(0) + '%'; }, tip:function(x){ return '<b>' + x.l + '</b><br>' + x.v.toFixed(1) + '% come back'; }});
+    K.barH(document.getElementById('dWhy'), d.why.map(function(x){ return {l:x[0], v:x[1]}; }), {color:s1, max:40, label:'Reasons parcels return', fmt:function(v){ return v.toFixed(0) + '%'; }, tip:function(x){ return '<b>' + x.l + '</b><br>' + x.v.toFixed(1) + '% of returns'; }});
+    var t3 = d.segs[5][1], mp = d.segs[0][1];
+    document.getElementById('dInsight').textContent = cat + ': COD orders to tier 3 towns come back ' + Math.round(t3) + '% of the time, ' + (t3 / mp).toFixed(1) + ' times the rate for prepaid metro orders. RTO also climbs in weeks 7 and 8 with festival sales. That segment and that window are where an address check and a small prepaid nudge pay back first.';
+    K.table(document.getElementById('dTable'), ['Week', 'RTO rate'], d.weeks.map(function(v, i){ return [d.labels[i], v.toFixed(1) + '%']; }));
+  }
+  K.seg(document.getElementById('segD'), Object.keys(CATS), function(n){ cat = n; renderD(); });
+  renderD();
+  var rtD; window.addEventListener('resize', function(){ clearTimeout(rtD); rtD = setTimeout(renderD, 150); });
+})();
+
+/* ---------- Casebook: waterfall, device split, driver tree reveal ---------- */
+(function(){
+  var K = window.__chartKit, NS = 'http://www.w3.org/2000/svg';
+  function el(tag, a, parent){ var e = document.createElementNS(NS, tag); for (var k in a) e.setAttribute(k, a[k]); if (parent) parent.appendChild(e); return e; }
+  var tree = document.getElementById('tree');
+  if (tree){
+    if ('IntersectionObserver' in window){ var io = new IntersectionObserver(function(en){ if (en[0].isIntersecting){ tree.classList.add('on'); io.disconnect(); } }, {threshold:.35}); io.observe(tree); }
+    else tree.classList.add('on');
+  }
+  var water = document.getElementById('mkWater'), cvr = document.getElementById('mkCvr');
+  if (!water || !K) return;
+  var STEPS = [['Start', 3.8, 'total'], ['Conversion', -0.71, 'd'], ['Ad cost', -0.25, 'd'], ['Click rate', -0.20, 'd'], ['Order value', -0.06, 'd'], ['Now', 2.58, 'total']];
+  function drawWater(){
+    var old = water.querySelector('svg'); if (old) old.remove();
+    var W = water.clientWidth, H = 220, m = {l:34, r:8, t:22, b:26}, iw = W - m.l - m.r, ih = H - m.t - m.b, max = 4;
+    var s1 = K.cssVar(water, '--s1'), s2 = K.cssVar(water, '--s2');
+    var svg = el('svg', {viewBox:'0 0 ' + W + ' ' + H, height:H, role:'img', 'aria-label':'How each lever changed ROAS from 3.8 to 2.6'});
+    water.appendChild(svg);
+    function Y(v){ return m.t + ih - ih * v / max; }
+    for (var i = 0; i <= 4; i++){ el('line', {x1:m.l, x2:W - m.r, y1:Y(i), y2:Y(i), 'class': i ? 'gl' : 'base'}, svg); el('text', {x:m.l - 6, y:Y(i) + 3, 'text-anchor':'end', 'class':'ax'}, svg).textContent = i; }
+    var bw = iw / STEPS.length, run = 0, prevTop = null;
+    STEPS.forEach(function(s, i){
+      var x = m.l + i * bw + bw * .18, w = bw * .64, top, bot;
+      if (s[2] === 'total'){ top = s[1]; bot = 0; run = s[1]; } else { top = run; bot = run + s[1]; run = bot; }
+      var y1 = Y(top), y2 = Y(bot), r = Math.min(4, w / 2);
+      el('path', {d: s[2] === 'total' ? 'M' + x + ',' + y2 + 'V' + (y1 + r) + 'Q' + x + ',' + y1 + ' ' + (x + r) + ',' + y1 + 'H' + (x + w - r) + 'Q' + (x + w) + ',' + y1 + ' ' + (x + w) + ',' + (y1 + r) + 'V' + y2 + 'Z' : 'M' + x + ',' + y1 + 'H' + (x + w) + 'V' + y2 + 'H' + x + 'Z', fill: s[2] === 'total' ? s1 : s2}, svg);
+      if (prevTop !== null) el('line', {x1:x - bw * .36, x2:x, y1:Y(prevTop), y2:Y(prevTop), stroke:'rgba(243,236,231,.35)', 'stroke-dasharray':'3 3'}, svg);
+      prevTop = s[2] === 'total' ? top : bot;
+      el('text', {x:x + w / 2, y:(s[2] === 'total' ? y1 : y1) - 7, 'text-anchor':'middle', 'class':'dl'}, svg).textContent = s[2] === 'total' ? s[1].toFixed(1) : s[1].toFixed(2);
+      el('text', {x:x + w / 2, y:H - 8, 'text-anchor':'middle', 'class':'ax'}, svg).textContent = s[0];
+    });
+  }
+  var WK = [], MOB = [2.8, 2.85, 2.75, 2.8, 2.82, 2.78, 2.1, 1.95, 1.9, 1.88, 1.92, 1.9], DESK = [3.6, 3.55, 3.62, 3.58, 3.6, 3.57, 3.63, 3.59, 3.6, 3.62, 3.56, 3.6];
+  for (var w = 1; w <= 12; w++) WK.push('W' + w);
+  function drawCvr(){
+    K.line(cvr, WK, [{n:'Mobile', v:MOB, c:K.cssVar(cvr, '--s1')}, {n:'Desktop', v:DESK, c:K.cssVar(cvr, '--s2')}], {every:1, h:200, label:'Conversion rate by week, mobile against desktop', fmt:function(v){ return (Math.round(v * 10) / 10) + '%'; }});
+    var svg = cvr.querySelector('svg'); if (!svg) return;
+    var W = cvr.clientWidth, x = 38 + (W - 48) * 6 / 11;
+    el('line', {x1:x, x2:x, y1:12, y2:178, stroke:'rgba(232,69,46,.8)', 'stroke-width':1, 'stroke-dasharray':'4 4'}, svg);
+    el('text', {x:x + 6, y:24, 'class':'dl'}, svg).textContent = 'New landing page';
+  }
+  drawWater(); drawCvr();
+  var rt; window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(function(){ drawWater(); drawCvr(); }, 150); });
+})();
+
+</script>
+</body>
+</html>
