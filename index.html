@@ -553,36 +553,74 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
 @media (prefers-reduced-motion: reduce){.fb-track i{width:var(--w);}}
 
 
-/* voice intro */
+/* voice intro: anime avatar stage */
 .voice{background:radial-gradient(70% 90% at 25% 50%, #3A0807 0%, #140606 55%, var(--ink) 100%); padding-block:90px; border-bottom:1px solid var(--line);}
-.voice-grid{display:grid; grid-template-columns:.8fr 1.2fr; gap:64px; align-items:center;}
-@media (max-width:860px){.voice-grid{grid-template-columns:1fr; gap:36px; justify-items:center; text-align:center;}}
+.voice-grid{display:grid; grid-template-columns:.85fr 1.15fr; gap:64px; align-items:center;}
+@media (max-width:860px){.voice-grid{grid-template-columns:1fr; gap:34px; justify-items:center; text-align:center;}}
 .voice-grid > *{min-width:0;}
-.voice-avatar{position:relative; width:min(320px,78vw); aspect-ratio:1; margin-inline:auto;}
-.avatar-disc{position:absolute; inset:9%; border-radius:50%; overflow:hidden; background:radial-gradient(60% 60% at 50% 35%, #D02A20 0%, #7A0D0C 60%, #2A0606 100%); box-shadow:0 30px 60px -20px rgba(0,0,0,.8);}
-.avatar-disc img{position:absolute; left:50%; bottom:-4%; height:112%; width:auto; max-width:none; transform:translateX(-50%); transition:transform .4s var(--ease);}
-.voice.playing .avatar-disc img{animation:talk 1.2s ease-in-out infinite;}
-@keyframes talk{0%,100%{transform:translateX(-50%) translateY(0) rotate(0);} 50%{transform:translateX(-50%) translateY(-4px) rotate(-.6deg);}}
-.ring{position:absolute; inset:0; border-radius:50%; background:conic-gradient(from 0deg, var(--crimson), transparent 35%, var(--flare) 60%, transparent 85%, var(--crimson)); -webkit-mask:radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px)); mask:radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px)); animation:spin 9s linear infinite;}
-.voice.playing .ring{animation-duration:2.4s;}
-@keyframes spin{to{transform:rotate(360deg);}}
-.eq{position:absolute; left:50%; bottom:-30px; transform:translateX(-50%); display:flex; gap:4px; align-items:flex-end; height:28px;}
-.eq i{width:4px; height:4px; background:var(--flare); border-radius:2px; transition:height .2s;}
-.voice.playing .eq i{animation:eqb .9s ease-in-out infinite;}
+.vstage{--amp:0; position:relative; width:min(410px,88vw); aspect-ratio:4/5; margin-inline:auto; overflow:hidden; isolation:isolate; container-type:inline-size; cursor:pointer; background:radial-gradient(75% 60% at 50% 36%, #C21D16 0%, #6E0C0A 36%, #250707 70%, #0B0707 100%); border:1px solid rgba(243,236,231,.16); box-shadow:0 40px 80px -30px rgba(0,0,0,.9), 0 0 0 1px rgba(196,30,23,.25) inset;}
+.vstage:focus-visible{outline:2px solid var(--flare); outline-offset:4px;}
+.vstage::after{content:""; position:absolute; inset:0; z-index:3; pointer-events:none; background:linear-gradient(to top, rgba(11,7,7,.96) 0%, rgba(11,7,7,.55) 18%, transparent 36%), radial-gradient(120% 90% at 50% 40%, transparent 55%, rgba(0,0,0,.55) 100%);}
+.vs-rays{position:absolute; width:190%; height:190%; left:-45%; top:-59%; z-index:0; background:repeating-conic-gradient(from 0deg at 50% 50%, rgba(255,110,80,.20) 0deg 3deg, transparent 3deg 12deg); -webkit-mask:radial-gradient(closest-side, #000 12%, transparent 70%); mask:radial-gradient(closest-side, #000 12%, transparent 70%); animation:spin 70s linear infinite; opacity:calc(.5 + var(--amp) * .5);}
+.voice.playing .vs-rays{animation-duration:24s;}
+.vs-name{position:absolute; left:0; right:0; top:4%; z-index:1; text-align:center; font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:26cqw; line-height:.85; letter-spacing:.01em; color:transparent; -webkit-text-stroke:1px rgba(243,236,231,.22); animation:nameDrift 14s ease-in-out infinite alternate;}
+@keyframes nameDrift{from{transform:translateX(-3%);} to{transform:translateX(3%);}}
+.vs-embers{position:absolute; inset:0; z-index:1; pointer-events:none;}
+.vs-embers i{position:absolute; bottom:-8px; width:4px; height:4px; border-radius:50%; background:#FF7A4A; box-shadow:0 0 8px 2px rgba(255,90,40,.65); opacity:0; animation:ember 7s linear infinite;}
+.vs-embers i:nth-child(1){left:8%; animation-delay:-1s;} .vs-embers i:nth-child(2){left:16%; animation-delay:-4.2s; animation-duration:9s;} .vs-embers i:nth-child(3){left:24%; animation-delay:-2.5s;}
+.vs-embers i:nth-child(4){left:33%; animation-delay:-6s; animation-duration:8s;} .vs-embers i:nth-child(5){left:41%; animation-delay:-.4s; width:3px; height:3px;} .vs-embers i:nth-child(6){left:49%; animation-delay:-3.3s; animation-duration:10s;}
+.vs-embers i:nth-child(7){left:57%; animation-delay:-5.1s;} .vs-embers i:nth-child(8){left:64%; animation-delay:-1.8s; animation-duration:8.5s; width:3px; height:3px;} .vs-embers i:nth-child(9){left:71%; animation-delay:-4.6s;}
+.vs-embers i:nth-child(10){left:78%; animation-delay:-2.1s; animation-duration:9.5s;} .vs-embers i:nth-child(11){left:85%; animation-delay:-6.4s;} .vs-embers i:nth-child(12){left:92%; animation-delay:-3.9s; animation-duration:8s; width:3px; height:3px;}
+.vs-embers i:nth-child(13){left:20%; animation-delay:-5.6s; animation-duration:11s;} .vs-embers i:nth-child(14){left:68%; animation-delay:-.9s; animation-duration:10.5s;}
+@keyframes ember{0%{transform:translate(0,0) scale(1); opacity:0;} 12%{opacity:.95;} 70%{opacity:.6;} 100%{transform:translate(26px,-118cqw) scale(.4); opacity:0;}}
+.vs-charwrap{position:absolute; inset:0; z-index:2; animation:breathe 5.5s ease-in-out infinite;}
+@keyframes breathe{0%,100%{transform:translateY(0);} 50%{transform:translateY(-4px);}}
+.vs-char{position:absolute; left:50%; bottom:-1%; height:94%; width:auto; max-width:none; transform-origin:50% 100%; transform:translateX(-50%) translateY(calc(var(--amp) * -3px)) scale(calc(1 + var(--amp) * .01)); filter:drop-shadow(0 0 calc(6px + var(--amp) * 22px) rgba(232,69,46,.55)) drop-shadow(0 24px 30px rgba(0,0,0,.5));}
+.vs-video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; opacity:0; transition:opacity .35s; pointer-events:none;}
+.vstage.has-video .vs-video{opacity:1;}
+.vs-tag,.vs-live{position:absolute; top:14px; z-index:4; font-family:var(--mono); font-size:.6rem; letter-spacing:.14em; text-transform:uppercase; padding:6px 9px; background:rgba(11,7,7,.55); border:1px solid rgba(243,236,231,.22); color:#F3D9D4;}
+.vs-tag{left:14px;}
+.vs-live{right:14px; display:flex; align-items:center; gap:7px; opacity:0; transition:opacity .3s;}
+.vs-live b{width:7px; height:7px; border-radius:50%; background:var(--flare); box-shadow:0 0 0 0 rgba(232,69,46,.7); animation:livePulse 1.2s infinite;}
+@keyframes livePulse{70%{box-shadow:0 0 0 8px rgba(232,69,46,0);} 100%{box-shadow:0 0 0 0 rgba(232,69,46,0);}}
+.voice.playing .vs-live{opacity:1;}
+.vs-bigplay{position:absolute; left:50%; top:62%; z-index:4; width:74px; height:74px; margin:-37px 0 0 -37px; border-radius:50%; background:rgba(196,30,23,.92); box-shadow:0 0 0 10px rgba(196,30,23,.22), 0 18px 40px rgba(0,0,0,.6); transition:transform .3s var(--ease), opacity .3s; animation:bigPulse 2.4s ease-in-out infinite;}
+.vs-bigplay::after{content:""; position:absolute; left:29px; top:23px; border-left:22px solid var(--bone); border-top:14px solid transparent; border-bottom:14px solid transparent;}
+@keyframes bigPulse{0%,100%{box-shadow:0 0 0 8px rgba(196,30,23,.25), 0 18px 40px rgba(0,0,0,.6);} 50%{box-shadow:0 0 0 18px rgba(196,30,23,0), 0 18px 40px rgba(0,0,0,.6);}}
+.vstage:hover .vs-bigplay{transform:scale(1.08);}
+.voice.playing .vs-bigplay,.voice.paused-mid .vs-bigplay{opacity:0; transform:scale(.6);}
+.voice.paused-mid .vs-bigplay{opacity:1; transform:none;}
+.vs-plate{position:absolute; left:16px; bottom:16px; z-index:4; text-align:left; display:flex; flex-direction:column; gap:3px;}
+.vs-plate strong{font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:1.55rem; letter-spacing:.03em; line-height:1; color:#fff;}
+.vs-plate span{font-family:var(--mono); font-size:.6rem; letter-spacing:.1em; text-transform:uppercase; color:var(--ash);}
+.vstage .eq{position:absolute; right:16px; bottom:20px; left:auto; z-index:4; display:flex; gap:3px; align-items:flex-end; height:26px; transform-origin:50% 100%;}
+.vstage .eq i{width:3px; height:3px; background:var(--flare); border-radius:2px;}
+.voice.playing .vstage .eq i{animation:eqb .9s ease-in-out infinite;}
+.voice.playing .vstage .eq{transform:scaleY(calc(.25 + var(--amp) * .95));}
 .eq i:nth-child(3n){animation-delay:-.3s!important;} .eq i:nth-child(3n+1){animation-delay:-.6s!important;} .eq i:nth-child(4n){animation-duration:.7s!important;}
-@keyframes eqb{0%,100%{height:4px;} 50%{height:26px;}}
+@keyframes eqb{0%,100%{height:3px;} 50%{height:26px;}}
+@keyframes spin{to{transform:rotate(360deg);}}
 .voice-sub{color:var(--ash); margin:12px 0 22px;}
 .play{display:inline-flex; align-items:center; gap:14px; background:var(--crimson); color:var(--bone); border:0; padding:14px 22px 14px 16px; cursor:pointer; font-family:var(--mono); font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; transition:background .2s, transform .2s;}
 .play:hover{background:var(--flare); transform:translateY(-2px);}
 .pi{width:30px; height:30px; border-radius:50%; background:var(--bone); position:relative; flex:none;}
 .pi::after{content:""; position:absolute; left:11px; top:8px; border-left:11px solid var(--crimson); border-top:7px solid transparent; border-bottom:7px solid transparent;}
 .play[aria-pressed="true"] .pi::after{left:9px; top:9px; border:0; width:12px; height:12px; background:linear-gradient(90deg, var(--crimson) 0 4px, transparent 4px 8px, var(--crimson) 8px);}
-.caption{font-family:var(--serif); font-size:clamp(1.3rem,2.4vw,1.75rem); line-height:1.35; color:#fff; min-height:2.8em; margin:24px 0 10px; max-width:34ch;}
+.vprog{height:2px; width:min(100%, 420px); background:rgba(243,236,231,.14); margin-top:18px;}
+.vprog i{display:block; height:100%; width:0; background:linear-gradient(90deg, var(--crimson), var(--flare));}
+@media (max-width:860px){.vprog{margin-inline:auto;}}
+.caption{font-family:var(--serif); font-size:clamp(1.3rem,2.4vw,1.75rem); line-height:1.35; color:#fff; min-height:2.8em; margin:20px 0 10px; max-width:34ch;}
+.caption .w{color:rgba(243,236,231,.32); transition:color .18s;}
+.caption .w.on{color:#fff;}
+.caption .w.k.on{color:var(--flare);}
 @media (max-width:860px){.caption{margin-inline:auto;}}
 .transcript summary{cursor:pointer; font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ash);}
 .transcript p{color:var(--ash); max-width:60ch; font-size:.95rem;}
 .voice-note{font-family:var(--mono); font-size:.62rem; letter-spacing:.06em; color:#8F807B; margin-top:10px;}
-@media (prefers-reduced-motion: reduce){.ring,.voice.playing .avatar-disc img,.voice.playing .eq i{animation:none;}}
+.btn-intro{padding:7px 16px 7px 7px; border-color:rgba(232,69,46,.65); color:var(--bone); background:rgba(122,13,12,.4);}
+.btn-intro:hover{background:rgba(196,30,23,.55); border-color:var(--flare);}
+.btn-intro img{width:30px; height:30px; border-radius:50%; object-fit:cover; box-shadow:0 0 0 2px var(--crimson); flex:none;}
+@media (prefers-reduced-motion: reduce){.vs-rays,.vs-name,.vs-embers i,.vs-charwrap,.vs-bigplay,.voice.playing .vstage .eq i{animation:none;} .vs-embers{display:none;}}
 
 </style>
 </head>
@@ -624,6 +662,7 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
       <div class="ctas">
         <a class="btn btn-red" href="#lab">See my AI product work &rarr;</a>
         <a class="btn btn-line" href="#resume">Resume</a>
+        <a class="btn btn-intro" href="#voice" id="heroIntro"><img src="assets/anime-face.webp" width="30" height="30" alt=""><span>Hear my intro</span></a>
       </div>
     </div>
   </div>
@@ -639,21 +678,30 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
 
 <section id="voice" class="voice">
   <div class="wrap voice-grid">
-    <div class="voice-avatar rv">
-      <div class="ring" aria-hidden="true"></div>
-      <div class="avatar-disc"><img id="voiceAvatar" src="assets/subham-cut.webp" alt="Subham Pandey"></div>
-      <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <div class="vstage rv" id="vstage" role="button" tabindex="0" aria-label="Play my 35 second intro">
+      <div class="vs-rays" aria-hidden="true"></div>
+      <div class="vs-name" aria-hidden="true">Subham</div>
+      <div class="vs-embers" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="vs-charwrap"><img class="vs-char" id="voiceAvatar" src="assets/anime-cut.webp" width="800" height="992" alt="Anime avatar of Subham Pandey in a navy suit and black glasses"></div>
+      <video class="vs-video" id="introVideo" playsinline preload="none" aria-hidden="true"></video>
+      <span class="vs-tag">My anime avatar</span>
+      <span class="vs-live" aria-hidden="true"><b></b>On air</span>
+      <span class="vs-bigplay" aria-hidden="true"></span>
+      <div class="vs-plate"><strong>Subham Pandey</strong><span>Associate Product Manager &middot; MBA &rsquo;27</span></div>
+      <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
     </div>
     <div class="voice-copy rv">
-      <span class="label red">Press play</span>
+      <span class="label red">Press play &middot; 35 sec</span>
       <h2 class="h2">Hear it <em>from me</em></h2>
-      <p class="voice-sub">A 30 second introduction, read aloud with live subtitles.</p>
+      <p class="voice-sub">My anime avatar tells you who I am in 35 seconds. Subtitles follow every word.</p>
       <button class="play" id="playIntro" type="button" aria-pressed="false"><span class="pi" aria-hidden="true"></span><span class="pl">Play my intro</span></button>
+      <div class="vprog" aria-hidden="true"><i id="vprogBar"></i></div>
       <p class="caption" id="voiceCaption" aria-live="polite">Hi, I'm Subham Pandey.</p>
       <details class="transcript"><summary>Read the transcript</summary><p id="voiceText"></p></details>
-      <p class="voice-note" id="voiceNote">Voice is generated by your device.</p>
+      <p class="voice-note" id="voiceNote">Avatar and voice made with AI tools. Script written by me.</p>
     </div>
   </div>
+  <audio id="introAudio" src="assets/intro-voice.mp3" preload="auto"></audio>
 </section>
 
 <section class="proof" aria-label="Why hire me">
@@ -1796,49 +1844,61 @@ document.getElementById('copy').addEventListener('click', function(){
 })();
 
 
-/* spoken intro with live subtitles */
+/* spoken intro: anime avatar, pre-recorded voice, word-synced subtitles */
 (function(){
-  var LINES = [
-    "Hi, I'm Subham Pandey.",
-    "I'm an MBA candidate in Operations and Marketing at AKGIM, and an IT engineer by training.",
-    "Before my MBA, I worked as a Cloud Quality Analyst on a healthcare SaaS platform.",
-    "Today I work where strategy meets AI.",
-    "I build products, like my live Career Studio app, and I solve problems across product, analytics, marketing and operations.",
-    "Give me the hardest problem in the room. That's where I do my best work."
-  ];
-  var btn = document.getElementById('playIntro'), cap = document.getElementById('voiceCaption'), sec = document.getElementById('voice'), note = document.getElementById('voiceNote');
+  var LINES = ["Hi, I'm Subham Pandey.", "I'm an MBA candidate in Operations and Marketing at AKGIM, and an IT engineer by training.", "Before my MBA, I worked as a Cloud Quality Analyst on a healthcare SaaS platform.", "Today, I work where strategy meets AI.", "I build products, like my live Career Studio app, and I solve problems across product, analytics, marketing and operations.", "Give me the hardest problem in the room. That's where I do my best work."], TIMES = [[0.35, 1.945], [2.515, 10.353], [10.923, 16.673], [17.243, 19.949], [20.519, 29.243], [29.813, 34.191]], ENV = "000000058888872088888878788768888877653000000000007888873788877888887457888777877258768807788777787777888884487654000000687469971578886787887500078887258886421000000000888737886577886788788888768886676887653000000000006865988888850689886888887643000000001887799710887850657888886357888878867888777774388868884448878788887607875346752200000000000787988871001887897168784788887678888874751888888876542000000000007897699964458887763066406884688888888854787888872887788885787520100000000888888788888404888778887745788770478888872020000038888889886367600007888855888886588887488887887541354000000000005699689868666788888886057888678867887789876420000000058858688868877888887588785478864002000000000000", KEY = /^(hardest|problem|strategy|AI\.?|Career|Studio|AKGIM,?)$/;
+  var sec = document.getElementById('voice'), stage = document.getElementById('vstage'), btn = document.getElementById('playIntro');
+  var cap = document.getElementById('voiceCaption'), bar = document.getElementById('vprogBar'), note = document.getElementById('voiceNote');
+  var audio = document.getElementById('introAudio'), video = document.getElementById('introVideo');
   document.getElementById('voiceText').textContent = LINES.join(' ');
-  var synth = window.speechSynthesis, playing = false, idx = 0, voice = null;
-  function pickVoice(){
-    if (!synth) return;
-    var vs = synth.getVoices(); if (!vs.length) return;
-    voice = vs.find(function(v){ return /en-IN/i.test(v.lang) && /male|ravi|prabhat|rishi/i.test(v.name); })
-      || vs.find(function(v){ return /en-IN/i.test(v.lang); })
-      || vs.find(function(v){ return /en-GB/i.test(v.lang) && /male|daniel|arthur/i.test(v.name); })
-      || vs.find(function(v){ return /^en/i.test(v.lang); }) || vs[0];
+  var media = audio, useVideo = false;
+  if (video && video.dataset.src && video.canPlayType('video/mp4')) {
+    video.src = video.dataset.src; video.preload = 'metadata'; media = video; useVideo = true;
+    if (video.dataset.poster) video.poster = video.dataset.poster;
   }
-  if (synth){ pickVoice(); synth.onvoiceschanged = pickVoice; }
-  function stop(){ playing = false; if (synth) synth.cancel(); sec.classList.remove('playing'); btn.setAttribute('aria-pressed', 'false'); btn.querySelector('.pl').textContent = 'Play my intro'; }
-  function speakNext(){
-    if (!playing) return;
-    if (idx >= LINES.length){ stop(); cap.textContent = LINES[LINES.length - 1]; return; }
-    var u = new SpeechSynthesisUtterance(LINES[idx]);
-    if (voice) u.voice = voice; u.rate = 0.98; u.pitch = 0.95;
-    u.onstart = function(){ cap.textContent = LINES[idx]; };
-    u.onend = function(){ idx++; speakNext(); };
-    u.onerror = function(){ idx++; speakNext(); };
-    synth.speak(u);
+  var lineIdx = -1, words = [], raf = 0, fallbackTimer = 0;
+  function renderLine(i){
+    lineIdx = i; cap.innerHTML = '';
+    words = LINES[i].split(' ').map(function(w){ var s = document.createElement('span'); s.className = 'w' + (KEY.test(w) ? ' k' : ''); s.textContent = w + ' '; cap.appendChild(s); return s; });
   }
+  function frame(){
+    var t = media.currentTime || 0, dur = media.duration || TIMES[TIMES.length - 1][1];
+    var i = 0; for (var k = 0; k < TIMES.length; k++) { if (t >= TIMES[k][0] - 0.05) i = k; }
+    if (i !== lineIdx) renderLine(i);
+    var a = TIMES[i][0], b = TIMES[i][1], f = Math.max(0, Math.min(1, (t - a) / (b - a)));
+    var total = 0; words.forEach(function(s){ total += s.textContent.length; });
+    var acc = 0; words.forEach(function(s){ acc += s.textContent.length; s.classList.toggle('on', acc / total <= f + 0.04 || t > b); });
+    var e = ENV.charCodeAt(Math.min(ENV.length - 1, Math.floor(t * 20))) - 48;
+    stage.style.setProperty('--amp', (Math.max(0, e) / 9).toFixed(2));
+    bar.style.width = Math.min(100, t / dur * 100) + '%';
+    if (!media.paused && !media.ended) raf = requestAnimationFrame(frame);
+  }
+  function setUI(state){
+    sec.classList.toggle('playing', state === 'playing');
+    sec.classList.toggle('paused-mid', state === 'paused');
+    btn.setAttribute('aria-pressed', state === 'playing' ? 'true' : 'false');
+    btn.querySelector('.pl').textContent = state === 'playing' ? 'Pause' : state === 'paused' ? 'Resume' : 'Play my intro';
+  }
+  media.addEventListener('playing', function(){ setUI('playing'); if (useVideo) stage.classList.add('has-video'); cancelAnimationFrame(raf); raf = requestAnimationFrame(frame); });
+  media.addEventListener('pause', function(){ if (!media.ended) setUI('paused'); });
+  media.addEventListener('ended', function(){ setUI('idle'); stage.style.setProperty('--amp', 0); bar.style.width = '100%'; words.forEach(function(s){ s.classList.add('on'); }); });
   function captionsOnly(){
-    var i = 0; sec.classList.add('playing');
-    (function tick(){ if (!playing || i >= LINES.length){ stop(); return; } cap.textContent = LINES[i++]; setTimeout(tick, 3200); })();
+    note.textContent = 'Audio could not start on this browser, so here are the subtitles.';
+    var i = 0; setUI('playing'); clearInterval(fallbackTimer);
+    fallbackTimer = setInterval(function(){ if (i >= LINES.length){ clearInterval(fallbackTimer); setUI('idle'); return; } renderLine(i++); words.forEach(function(s){ s.classList.add('on'); }); }, 3600);
   }
-  btn.addEventListener('click', function(){
-    if (playing){ stop(); return; }
-    playing = true; idx = 0; btn.setAttribute('aria-pressed', 'true'); btn.querySelector('.pl').textContent = 'Stop';
-    if (!synth){ note.textContent = 'Audio is not available on this browser, so here are the subtitles.'; captionsOnly(); return; }
-    synth.cancel(); sec.classList.add('playing'); speakNext();
-  });
+  function toggle(){
+    if (!media.paused && !media.ended){ media.pause(); return; }
+    if (media.ended) media.currentTime = 0;
+    media.volume = 1; media.muted = false;
+    var pr = media.play(); if (pr && pr.catch) pr.catch(function(){ if (media === video){ media = audio; useVideo = false; audio.play().catch(captionsOnly); } else captionsOnly(); });
+  }
+  btn.addEventListener('click', toggle);
+  stage.addEventListener('click', toggle);
+  stage.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); toggle(); } });
+  var hero = document.getElementById('heroIntro');
+  if (hero) hero.addEventListener('click', function(e){ e.preventDefault(); sec.scrollIntoView({behavior: 'smooth', block: 'center'}); if (media.paused) toggle(); });
+  renderLine(0); words.forEach(function(s){ s.classList.add('on'); });
 })();
 
 </script>
