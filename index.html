@@ -176,7 +176,7 @@ nav .wrap{display:flex; align-items:center; justify-content:space-between; heigh
 
 /* capabilities */
 .caps-sec{background:var(--coal);}
-.caps{display:grid; grid-template-columns:repeat(4,1fr); border-top:1px solid var(--line);}
+.caps{display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line);}
 @media (max-width:960px){.caps{grid-template-columns:repeat(2,1fr);}}
 @media (max-width:540px){.caps{grid-template-columns:1fr;}}
 .cap{padding:30px 24px 32px 0; border-bottom:1px solid var(--line); min-width:0; position:relative;}
@@ -463,6 +463,127 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
 .mk-chips{margin-top:18px;}
 @media (prefers-reduced-motion: reduce){.js .tree .node{opacity:1; transform:none;}}
 
+
+/* tracks */
+.tracks{background:var(--coal);}
+.track-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line);}
+@media (max-width:1000px){.track-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.track-grid{grid-template-columns:1fr;}}
+.trk{position:relative; display:flex; flex-direction:column; gap:12px; padding:28px 24px 26px; background:var(--ink); text-decoration:none; color:var(--bone); overflow:hidden; isolation:isolate; min-width:0;}
+.trk::before{content:""; position:absolute; inset:0; z-index:-1; background:linear-gradient(160deg,#A31A14 0%,#5E0A09 100%); transform:scaleY(0); transform-origin:bottom; transition:transform .55s var(--ease);}
+.trk:hover::before{transform:scaleY(1);}
+.trk-no{font-family:var(--display); font-weight:900; font-size:3.4rem; line-height:.8; color:transparent; -webkit-text-stroke:1.5px var(--crimson); transition:-webkit-text-stroke-color .3s;}
+.trk:hover .trk-no{-webkit-text-stroke-color:var(--bone);}
+.trk h3{font-family:var(--display); font-weight:900; text-transform:uppercase; font-size:2rem; line-height:.9;}
+.trk p{margin:0; color:var(--ash); font-size:.93rem; flex-grow:1; transition:color .3s;}
+.trk:hover p,.trk:hover .trk-roles{color:#F6DDD7;}
+.trk-roles{font-family:var(--mono); font-size:.64rem; letter-spacing:.1em; text-transform:uppercase; color:var(--flare); transition:color .3s;}
+.trk-go{font-family:var(--mono); font-size:.7rem; letter-spacing:.12em; text-transform:uppercase; border-top:1px solid var(--line); padding-top:12px;}
+/* campaign */
+.campaign{background:var(--coal);}
+.flow{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin:8px 0 40px;}
+@media (max-width:900px){.flow{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.flow{grid-template-columns:1fr;}}
+.fstep{background:var(--ink); padding:24px; display:flex; flex-direction:column; gap:10px; min-width:0;}
+.fno{font-family:var(--display); font-weight:900; font-size:2.6rem; line-height:.8; color:transparent; -webkit-text-stroke:1.2px var(--crimson);}
+.fstep h4{margin:0; font-family:var(--display); font-weight:800; text-transform:uppercase; font-size:1.5rem; line-height:1;}
+.fstep p{margin:0; color:var(--ash); font-size:.92rem; flex-grow:1;}
+.mycall{font-size:.84rem; color:#F3D9D4; background:rgba(196,30,23,.14); border-left:2px solid var(--crimson); padding:8px 10px;}
+.mycall b{font-family:var(--mono); font-weight:500; font-size:.62rem; letter-spacing:.12em; text-transform:uppercase; color:var(--flare); margin-right:4px;}
+.board{border:1px solid var(--line); background:radial-gradient(80% 90% at 50% 0%, #2A0B09 0%, #120B0A 70%); padding:28px; margin-bottom:24px;}
+@media (max-width:540px){.board{padding:20px 14px;}}
+.board-head{display:flex; justify-content:space-between; align-items:baseline; gap:14px; flex-wrap:wrap; margin-bottom:22px;}
+.board-head p{margin:0; color:var(--ash); font-size:.9rem;}
+.phones{display:grid; grid-template-columns:repeat(3,1fr); gap:22px; justify-items:center;}
+@media (max-width:760px){.phones{grid-template-columns:1fr;}}
+.phone{position:relative; width:100%; max-width:250px; aspect-ratio:9/17; border-radius:26px; border:6px solid #1b1716; background:#000; overflow:hidden; box-shadow:0 30px 60px -24px rgba(0,0,0,.8); animation:float 6s ease-in-out infinite;}
+.ph-b{animation-delay:-2s;} .ph-c{animation-delay:-4s;}
+@keyframes float{0%,100%{transform:translateY(0);} 50%{transform:translateY(-8px);}}
+.ph-bars{position:absolute; top:10px; left:10px; right:10px; z-index:3; display:flex; gap:4px;}
+.ph-bars i{flex:1; height:3px; background:rgba(255,255,255,.3); border-radius:2px; overflow:hidden; position:relative;}
+.ph-bars i::after{content:""; position:absolute; inset:0; background:#fff; transform:scaleX(0); transform-origin:left; animation:story 9s linear infinite;}
+.ph-bars i:nth-child(2)::after{animation-delay:3s;} .ph-bars i:nth-child(3)::after{animation-delay:6s;}
+@keyframes story{0%{transform:scaleX(0);} 33.3%{transform:scaleX(1);} 33.4%,100%{transform:scaleX(1); opacity:0;}}
+.ph-art{position:absolute; inset:0; animation:kb 12s ease-in-out infinite alternate;}
+@keyframes kb{from{transform:scale(1);} to{transform:scale(1.12);}}
+.ph-a .ph-art{background:radial-gradient(60% 40% at 50% 38%, #7FD3C3 0%, #2E7D73 45%, #0E2B28 100%);}
+.ph-a .drops{position:absolute; inset:0; background-image:radial-gradient(circle at 20% 30%, rgba(255,255,255,.55) 0 3px, transparent 4px), radial-gradient(circle at 70% 22%, rgba(255,255,255,.45) 0 2px, transparent 3px), radial-gradient(circle at 40% 60%, rgba(255,255,255,.5) 0 4px, transparent 5px), radial-gradient(circle at 80% 55%, rgba(255,255,255,.4) 0 3px, transparent 4px), radial-gradient(circle at 30% 80%, rgba(255,255,255,.35) 0 2px, transparent 3px); background-size:120px 160px; animation:drip 5s linear infinite;}
+@keyframes drip{to{background-position:0 160px;}}
+.ph-b .ph-art{background:radial-gradient(70% 50% at 40% 35%, #FFD7B5 0%, #E88B5C 50%, #5A2416 100%);}
+.ph-b .day{position:absolute; top:70px; left:18px; font-family:var(--display); font-weight:900; font-size:2.6rem; color:#fff; text-transform:uppercase; line-height:.9;}
+.ph-b .day em{font-style:normal; display:inline-block; animation:daytick 7s steps(1) infinite;}
+.ph-c .ph-art{background:radial-gradient(80% 60% at 50% 40%, #F4E7D2 0%, #C9A27A 55%, #3B2414 100%);}
+.orb{position:absolute; border-radius:50%; background:radial-gradient(circle at 35% 30%, rgba(255,255,255,.95), rgba(255,255,255,.2) 40%, rgba(255,255,255,0) 70%); border:1px solid rgba(255,255,255,.5); animation:bob 4s ease-in-out infinite;}
+.o1{width:70px; height:70px; top:22%; left:18%;} .o2{width:44px; height:44px; top:34%; right:20%; animation-delay:-1.3s;} .o3{width:30px; height:30px; top:14%; right:34%; animation-delay:-2.6s;}
+@keyframes bob{0%,100%{transform:translateY(0);} 50%{transform:translateY(-10px);}}
+.ph-copy{position:absolute; left:14px; right:14px; bottom:62px; z-index:2; color:#fff; text-shadow:0 2px 12px rgba(0,0,0,.5);}
+.ph-copy small{display:block; font-family:var(--mono); font-size:.58rem; letter-spacing:.12em; text-transform:uppercase; opacity:.85; margin-bottom:6px;}
+.ph-copy b{font-family:var(--sans); font-weight:600; font-size:1rem; line-height:1.25;}
+.ph-cta{position:absolute; left:14px; right:14px; bottom:16px; z-index:2; text-align:center; background:#fff; color:#111; font-family:var(--sans); font-weight:600; font-size:.8rem; padding:9px; border-radius:8px;}
+.ph-tag{position:absolute; top:22px; right:12px; z-index:3; font-family:var(--mono); font-size:.52rem; letter-spacing:.1em; text-transform:uppercase; background:rgba(0,0,0,.45); color:#fff; padding:3px 6px; border-radius:4px;}
+.camp-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:24px; margin-bottom:22px;}
+@media (max-width:900px){.camp-grid{grid-template-columns:1fr;}}
+.camp-grid > *{min-width:0;}
+.matrix-box,.kpi-box{border:1px solid var(--line); background:var(--ink); padding:24px;}
+.matrix{display:grid; grid-template-columns:1.2fr repeat(3,1fr); gap:4px; margin-top:16px; overflow-x:auto;}
+.mx-h{font-family:var(--mono); font-size:.6rem; letter-spacing:.08em; text-transform:uppercase; color:var(--ash); padding:4px 2px; align-self:end;}
+.mx-r{font-size:.84rem; color:#E0D3CE; align-self:center;}
+.mx-c{position:relative; text-align:center; padding:16px 4px; font-family:var(--display); font-weight:800; font-size:1.3rem; color:var(--bone); background:rgba(196,30,23,calc(.12 + var(--v) * .75)); font-variant-numeric:tabular-nums;}
+.mx-c.win{outline:2px solid var(--bone); outline-offset:-2px;}
+.mx-c.win::after{content:"Winner"; position:absolute; top:3px; right:5px; font-family:var(--mono); font-weight:500; font-size:.5rem; letter-spacing:.1em; text-transform:uppercase;}
+.mx-note{margin:14px 0 0; color:var(--ash); font-size:.9rem;}
+.kgrid{display:grid; grid-template-columns:repeat(2,1fr); gap:1px; background:var(--line); border:1px solid var(--line); margin-top:14px;}
+.kgrid div{background:#161010; padding:14px;}
+.kgrid b{display:block; font-family:var(--display); font-weight:800; font-size:1.7rem; line-height:1;}
+.kgrid span{font-size:.8rem; color:var(--ash);}
+.guard{margin:8px 0 0; padding-left:18px; color:var(--ash); font-size:.9rem;}
+.guard li{padding:3px 0;}
+/* operations */
+.opscase{background:var(--ink);}
+.flowbar{display:grid; grid-template-columns:56px 1fr 70px; align-items:center; gap:12px; margin:8px 0;}
+.fb-l{font-family:var(--mono); font-size:.66rem; letter-spacing:.12em; text-transform:uppercase; color:var(--ash);}
+.fb-t{font-family:var(--display); font-weight:800; font-size:1.15rem; text-align:right; font-variant-numeric:tabular-nums;}
+.fb-track{display:flex; height:38px; gap:2px; background:rgba(243,236,231,.05);}
+.fb-track i{font-style:normal; display:flex; align-items:center; padding:0 8px; overflow:hidden; white-space:nowrap; font-size:.72rem; color:#0B0707; background:rgba(243,236,231,.75); width:0; transition:width 1.1s var(--ease);}
+.fb-track i:nth-child(odd){background:rgba(243,236,231,.55);}
+.fb-track i.hot{background:var(--crimson); color:var(--bone);}
+.in .fb-track i, .no-io .fb-track i{width:var(--w);}
+.mail2{font-family:var(--mono); font-size:.72rem; letter-spacing:.04em; color:#F3D9D4; margin:12px 0 0;}
+.mail2 span{user-select:all;}
+@media (prefers-reduced-motion: reduce){.fb-track i{width:var(--w);}}
+
+
+/* voice intro */
+.voice{background:radial-gradient(70% 90% at 25% 50%, #3A0807 0%, #140606 55%, var(--ink) 100%); padding-block:90px; border-bottom:1px solid var(--line);}
+.voice-grid{display:grid; grid-template-columns:.8fr 1.2fr; gap:64px; align-items:center;}
+@media (max-width:860px){.voice-grid{grid-template-columns:1fr; gap:36px; justify-items:center; text-align:center;}}
+.voice-grid > *{min-width:0;}
+.voice-avatar{position:relative; width:min(320px,78vw); aspect-ratio:1; margin-inline:auto;}
+.avatar-disc{position:absolute; inset:9%; border-radius:50%; overflow:hidden; background:radial-gradient(60% 60% at 50% 35%, #D02A20 0%, #7A0D0C 60%, #2A0606 100%); box-shadow:0 30px 60px -20px rgba(0,0,0,.8);}
+.avatar-disc img{position:absolute; left:50%; bottom:-4%; height:112%; width:auto; max-width:none; transform:translateX(-50%); transition:transform .4s var(--ease);}
+.voice.playing .avatar-disc img{animation:talk 1.2s ease-in-out infinite;}
+@keyframes talk{0%,100%{transform:translateX(-50%) translateY(0) rotate(0);} 50%{transform:translateX(-50%) translateY(-4px) rotate(-.6deg);}}
+.ring{position:absolute; inset:0; border-radius:50%; background:conic-gradient(from 0deg, var(--crimson), transparent 35%, var(--flare) 60%, transparent 85%, var(--crimson)); -webkit-mask:radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px)); mask:radial-gradient(farthest-side, transparent calc(100% - 3px), #000 calc(100% - 2px)); animation:spin 9s linear infinite;}
+.voice.playing .ring{animation-duration:2.4s;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.eq{position:absolute; left:50%; bottom:-30px; transform:translateX(-50%); display:flex; gap:4px; align-items:flex-end; height:28px;}
+.eq i{width:4px; height:4px; background:var(--flare); border-radius:2px; transition:height .2s;}
+.voice.playing .eq i{animation:eqb .9s ease-in-out infinite;}
+.eq i:nth-child(3n){animation-delay:-.3s!important;} .eq i:nth-child(3n+1){animation-delay:-.6s!important;} .eq i:nth-child(4n){animation-duration:.7s!important;}
+@keyframes eqb{0%,100%{height:4px;} 50%{height:26px;}}
+.voice-sub{color:var(--ash); margin:12px 0 22px;}
+.play{display:inline-flex; align-items:center; gap:14px; background:var(--crimson); color:var(--bone); border:0; padding:14px 22px 14px 16px; cursor:pointer; font-family:var(--mono); font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; transition:background .2s, transform .2s;}
+.play:hover{background:var(--flare); transform:translateY(-2px);}
+.pi{width:30px; height:30px; border-radius:50%; background:var(--bone); position:relative; flex:none;}
+.pi::after{content:""; position:absolute; left:11px; top:8px; border-left:11px solid var(--crimson); border-top:7px solid transparent; border-bottom:7px solid transparent;}
+.play[aria-pressed="true"] .pi::after{left:9px; top:9px; border:0; width:12px; height:12px; background:linear-gradient(90deg, var(--crimson) 0 4px, transparent 4px 8px, var(--crimson) 8px);}
+.caption{font-family:var(--serif); font-size:clamp(1.3rem,2.4vw,1.75rem); line-height:1.35; color:#fff; min-height:2.8em; margin:24px 0 10px; max-width:34ch;}
+@media (max-width:860px){.caption{margin-inline:auto;}}
+.transcript summary{cursor:pointer; font-family:var(--mono); font-size:.66rem; letter-spacing:.14em; text-transform:uppercase; color:var(--ash);}
+.transcript p{color:var(--ash); max-width:60ch; font-size:.95rem;}
+.voice-note{font-family:var(--mono); font-size:.62rem; letter-spacing:.06em; color:#8F807B; margin-top:10px;}
+@media (prefers-reduced-motion: reduce){.ring,.voice.playing .avatar-disc img,.voice.playing .eq i{animation:none;}}
+
 </style>
 </head>
 <body>
@@ -470,12 +591,13 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
   <div class="wrap">
     <a class="wordmark" href="#top">Subham <i>Pandey</i></a>
     <ul class="navlinks">
-      <li><a href="#about">Intro</a></li>
+      <li><a href="#tracks">Tracks</a></li>
       <li><a href="#lab">AI Lab</a></li>
-      <li><a href="#casebook">Casebook</a></li>
+      <li><a href="#casebook">Analytics</a></li>
+      <li><a href="#campaign">Marketing</a></li>
+      <li><a href="#opscase">Operations</a></li>
       <li><a href="#work">Work</a></li>
-      <li><a href="#campus">Campus</a></li>
-      <li><a href="#experience">Experience</a></li>
+            <li><a href="#experience">Experience</a></li>
       <li><a href="#resume">Resume</a></li>
     </ul>
     <a class="navcta" href="#contact">Hire me</a>
@@ -497,8 +619,8 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
     <div class="hud">
       <h1 class="role">Subham Pandey &middot; Associate Product Manager &middot; MBA &rsquo;27</h1>
       <p class="headline">Give me the <b>hardest problem</b> in the room.</p>
-      <p class="hero-tag">Engineer by training. MBA by choice. Product manager by instinct.</p>
-      <p class="hero-meta"><span>B.Tech IT</span><span>Cloud QA, healthcare SaaS</span><span>MBA Ops &amp; Marketing, AKGIM &rsquo;27</span></p>
+      <p class="hero-tag">Engineer by training. MBA by choice. Problem solver by instinct.</p>
+      <p class="hero-meta"><span>B.Tech IT</span><span>Cloud QA, healthcare SaaS</span><span>MBA Ops &amp; Marketing, AKGIM &rsquo;27</span><span>Product &middot; Analytics &middot; Marketing &middot; Ops</span></p>
       <div class="ctas">
         <a class="btn btn-red" href="#lab">See my AI product work &rarr;</a>
         <a class="btn btn-line" href="#resume">Resume</a>
@@ -515,6 +637,25 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
 </div>
 
 
+<section id="voice" class="voice">
+  <div class="wrap voice-grid">
+    <div class="voice-avatar rv">
+      <div class="ring" aria-hidden="true"></div>
+      <div class="avatar-disc"><img id="voiceAvatar" src="assets/subham-cut.webp" alt="Subham Pandey"></div>
+      <div class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    </div>
+    <div class="voice-copy rv">
+      <span class="label red">Press play</span>
+      <h2 class="h2">Hear it <em>from me</em></h2>
+      <p class="voice-sub">A 30 second introduction, read aloud with live subtitles.</p>
+      <button class="play" id="playIntro" type="button" aria-pressed="false"><span class="pi" aria-hidden="true"></span><span class="pl">Play my intro</span></button>
+      <p class="caption" id="voiceCaption" aria-live="polite">Hi, I'm Subham Pandey.</p>
+      <details class="transcript"><summary>Read the transcript</summary><p id="voiceText"></p></details>
+      <p class="voice-note" id="voiceNote">Voice is generated by your device.</p>
+    </div>
+  </div>
+</section>
+
 <section class="proof" aria-label="Why hire me">
   <div class="wrap proof-grid">
     <div class="proof-lead rv">
@@ -526,6 +667,22 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
       <div class="rv"><b>Ships, not just plans</b><p>Career Studio is live and in daily use. KaushalSetu-AI and SantHire AI went from idea to working prototype.</p></div>
       <div class="rv"><b>Runs towards hard problems</b><p>I like challenges. The messier the brief, the more I want it. Every case on this page starts with a question nobody had a clean answer to.</p></div>
       <div class="rv"><b>Measures what matters</b><p>Every concept below comes with the metrics and dashboard I would use to judge it: success rate, fill rate, time to value.</p></div>
+    </div>
+  </div>
+</section>
+
+
+<section id="tracks" class="tracks">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label red">Four tracks</span><br><h2 class="h2">One mind, <em>four</em> lenses</h2></div>
+      <p>Product is where I aim, but the work spans analytics, marketing and operations. Pick the lens you are hiring for.</p>
+    </div>
+    <div class="track-grid">
+      <a class="trk rv" href="#lab"><span class="trk-no">PM</span><h3>Product</h3><p>AI product cases with PRDs, RICE, North Star metrics and A/B test designs, plus a live app I built.</p><span class="trk-roles">Associate Product Manager &middot; Product Analyst</span><span class="trk-go">AI Product Lab &rarr;</span></a>
+      <a class="trk rv" href="#casebook"><span class="trk-no">BA</span><h3>Analytics</h3><p>Driver trees, funnel and cohort analysis, and dashboards across fintech, supply chain and healthcare.</p><span class="trk-roles">Business Analyst &middot; Data Analyst</span><span class="trk-go">Analytics casebook &rarr;</span></a>
+      <a class="trk rv" href="#campaign"><span class="trk-no">MK</span><h3>Marketing</h3><p>Consumer research, performance marketing and AI-made campaigns: copy, images and video at speed, judged by ROAS.</p><span class="trk-roles">Marketing &middot; Growth &middot; Brand</span><span class="trk-go">AI campaign studio &rarr;</span></a>
+      <a class="trk rv" href="#opscase"><span class="trk-no">OP</span><h3>Operations</h3><p>Process mapping, bottleneck hunting, SOPs and supply chain cases on RTO, stockouts and turnaround time.</p><span class="trk-roles">Operations &middot; Supply Chain &middot; Consulting</span><span class="trk-go">Operations casebook &rarr;</span></a>
     </div>
   </div>
 </section>
@@ -561,13 +718,15 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
       <p>Strategy is sharper with data, and data matters more when you know the system behind it.</p>
     </div>
     <div class="caps">
-      <div class="cap rv"><span class="label red">Product</span><h3>AI Product &amp; Strategy</h3><ul><li>Market research and user journey mapping</li><li>PRDs, user stories and roadmaps</li><li>RICE, MoSCoW, JTBD, North Star</li><li>A/B test design</li><li>UI/UX fundamentals</li><li>SWOT, PESTLE, Porter's Five Forces</li></ul></div>
-      <div class="cap rv"><span class="label red">Analytics</span><h3>Business &amp; Data Analytics</h3><ul><li>Advanced Excel</li><li>SQL</li><li>Power BI</li><li>Google Analytics</li><li>Python basics (NumPy, Pandas)</li><li>Funnel, cohort and driver analysis</li></ul></div>
+      <div class="cap rv"><span class="label red">Product</span><h3>AI Product &amp; Strategy</h3><ul><li>Market research and user journey mapping</li><li>PRDs, user stories and roadmaps</li><li>RICE, MoSCoW, JTBD, North Star</li><li>A/B test design</li><li>UI/UX fundamentals</li></ul></div>
+      <div class="cap rv"><span class="label red">Analytics</span><h3>Business &amp; Data Analytics</h3><ul><li>Advanced Excel and SQL</li><li>Power BI and Google Analytics</li><li>Python basics (NumPy, Pandas)</li><li>Funnel, cohort and driver analysis</li><li>KPI design and dashboards</li></ul></div>
+      <div class="cap rv"><span class="label red">Marketing</span><h3>Marketing &amp; Growth</h3><ul><li>Consumer research and survey design</li><li>Performance marketing: CTR, CAC, ROAS</li><li>AI image and video generation for ads</li><li>AI-written copy, tested at scale</li><li>Canva, STP, 4Ps, 3C, SWOT</li></ul></div>
+      <div class="cap rv"><span class="label red">Operations</span><h3>Operations &amp; Supply Chain</h3><ul><li>Process mapping and SOP design</li><li>Root cause analysis: 5 Whys, fishbone</li><li>Lean and DMAIC concepts</li><li>Demand forecasting, inventory, RTO</li><li>Cloud QA and UAT on AWS</li></ul></div>
       <div class="cap rv"><span class="label red">AI</span><h3>AI &amp; Vibe Coding</h3><ul><li>LLMs, RAG and prompt engineering</li><li>Vibe coding with Claude Code and Copilot</li><li>ChatGPT, Claude, Gemini</li><li>Notion AI and Wispr Flow</li><li>LangChain and React prototypes</li></ul></div>
-      <div class="cap rv"><span class="label red">Ways of working</span><h3>Operations &amp; Teams</h3><ul><li>Agile and Scrum</li><li>Jira, Confluence, Notion</li><li>Cross-functional collaboration</li><li>Research and documentation</li><li>Cloud QA and UAT on AWS</li><li>Process and supply chain thinking</li></ul></div>
+      <div class="cap rv"><span class="label red">Ways of working</span><h3>Teams &amp; Delivery</h3><ul><li>Agile and Scrum</li><li>Jira, Confluence, Notion</li><li>Cross-functional collaboration</li><li>Research and documentation</li><li>Stakeholder communication</li></ul></div>
     </div>
     <div class="tools rv" aria-label="Tools I use">
-      <span>Advanced Excel</span><span>SQL</span><span>Power BI</span><span>Google Analytics</span><span>Python (basics)</span><span>Jira</span><span>Confluence</span><span>Notion</span><span>Notion AI</span><span>Canva</span><span>Figma</span><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Claude Code</span><span>GitHub Copilot</span><span>Prompt Engineering</span><span>Vibe Coding</span><span>LangChain</span><span>React</span><span>GitHub</span><span>Wispr Flow</span>
+      <span>Advanced Excel</span><span>SQL</span><span>Power BI</span><span>Google Analytics</span><span>Python (basics)</span><span>Jira</span><span>Confluence</span><span>Notion</span><span>Notion AI</span><span>Canva</span><span>AI Image &amp; Video Generation</span><span>Figma</span><span>ChatGPT</span><span>Claude</span><span>Gemini</span><span>Claude Code</span><span>GitHub Copilot</span><span>Prompt Engineering</span><span>Vibe Coding</span><span>LangChain</span><span>React</span><span>GitHub</span><span>Wispr Flow</span>
     </div>
   </div>
 </section>
@@ -831,6 +990,135 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
   </div>
 </section>
 
+
+<section id="campaign" class="campaign">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label red">Marketing &middot; AI campaign studio</span><br><h2 class="h2">A campaign <em>made with AI</em></h2></div>
+      <p>How I plan and run a performance campaign when AI does the heavy lifting on research, copy, images and video, and people make the calls.</p>
+    </div>
+
+    <div class="brief rv">
+      <div class="brief-copy">
+        <span class="label red">Practice campaign &middot; follows the casebook</span>
+        <h3>Real skin, <span>real weather</span></h3>
+        <p>The skincare brand from my casebook needs fresh creatives: ad frequency hit 4.1 and clicks were sliding. The goal is to lift ROAS from 2.6 back above 3.3 in four weeks, on the same &#8377;10 lakh monthly budget, with AI producing in days what used to take a studio weeks.</p>
+        <p class="brief-note">Sample numbers and targets, built to practise the full campaign workflow.</p>
+      </div>
+      <div class="brief-stats">
+        <div class="bs"><span class="label">Creatives produced</span><b>27 <em>3 hooks &times; 3 visuals &times; 3 cuts</em></b></div>
+        <div class="bs"><span class="label">Time to first ads live</span><b>5 days <em>vs 3 to 4 weeks</em></b></div>
+        <div class="bs"><span class="label">Target ROAS</span><b>2.6 &rarr; 3.3+</b></div>
+      </div>
+    </div>
+
+    <div class="flow">
+      <div class="fstep rv"><span class="fno">01</span><h4>Listen</h4><p>Mine 2,000 customer reviews and comments with an LLM to find the words customers actually use: "non-sticky", "survives humidity", "no white cast".</p><span class="mycall"><b>My call:</b> pick the one insight worth a campaign.</span></div>
+      <div class="fstep rv"><span class="fno">02</span><h4>Concept</h4><p>Generate 30 hook ideas, cluster them into three territories, and score each on clarity, proof and fit with the brand.</p><span class="mycall"><b>My call:</b> cut to three hooks, write the final lines myself.</span></div>
+      <div class="fstep rv"><span class="fno">03</span><h4>Create</h4><p>AI product shots and lifestyle images in Indian homes and streets, 15 second Reels with AI voiceover and captions, and 20 copy variants per hook.</p><span class="mycall"><b>My call:</b> brand, skin tone and claim review on every asset.</span></div>
+      <div class="fstep rv"><span class="fno">04</span><h4>Launch</h4><p>Broad targeting with platform AI optimisation on Instagram Reels and YouTube Shorts, plus a retargeting layer for site visitors and cart abandoners.</p><span class="mycall"><b>My call:</b> 80% budget on proven ads, 20% on new tests.</span></div>
+      <div class="fstep rv"><span class="fno">05</span><h4>Test</h4><p>A clean creative matrix: three hooks across three visual styles, read on hook rate and CTR after 3 days and 5,000 impressions per cell.</p><span class="mycall"><b>My call:</b> kill the bottom third, scale the winner.</span></div>
+      <div class="fstep rv"><span class="fno">06</span><h4>Scale</h4><p>Turn the winning hook into fresh variants every week so frequency stays under 2.5 and the ads never go stale again.</p><span class="mycall"><b>My call:</b> judge on ROAS and CPA, not likes.</span></div>
+    </div>
+
+    <div class="board rv">
+      <div class="board-head"><span class="label red">Storyboard &middot; three hooks</span><p>Phone mockups of the three Reels, as they would appear in the feed.</p></div>
+      <div class="phones">
+        <div class="phone ph-a"><div class="ph-bars"><i></i><i></i><i></i></div><div class="ph-art"><span class="drops"></span></div><div class="ph-copy"><small>Hook A &middot; Humidity test</small><b>Delhi humidity vs my moisturiser. 8 hours later&hellip;</b></div><span class="ph-cta">Shop now</span><span class="ph-tag">AI video &middot; 15s</span></div>
+        <div class="phone ph-b"><div class="ph-bars"><i></i><i></i><i></i></div><div class="ph-art"><span class="day">Day <em>1</em></span></div><div class="ph-copy"><small>Hook B &middot; 7 day diary</small><b>I filmed my skin every morning for a week.</b></div><span class="ph-cta">See day 7</span><span class="ph-tag">AI lifestyle image</span></div>
+        <div class="phone ph-c"><div class="ph-bars"><i></i><i></i><i></i></div><div class="ph-art"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span></div><div class="ph-copy"><small>Hook C &middot; Ingredient close-up</small><b>3 ingredients. Zero stickiness. Here's why.</b></div><span class="ph-cta">Learn more</span><span class="ph-tag">AI product shot</span></div>
+      </div>
+    </div>
+
+    <div class="camp-grid">
+      <div class="matrix-box rv">
+        <span class="label red">Creative test matrix &middot; CTR %</span>
+        <div class="matrix" role="table" aria-label="Click through rate by hook and visual style">
+          <div class="mx-h" role="columnheader"></div><div class="mx-h" role="columnheader">AI product shot</div><div class="mx-h" role="columnheader">AI lifestyle image</div><div class="mx-h" role="columnheader">AI video, 15s</div>
+          <div class="mx-r" role="rowheader">Humidity test</div><div class="mx-c" style="--v:.35">1.4</div><div class="mx-c" style="--v:.6">1.9</div><div class="mx-c win" style="--v:1">2.6</div>
+          <div class="mx-r" role="rowheader">7 day diary</div><div class="mx-c" style="--v:.45">1.6</div><div class="mx-c" style="--v:.68">2.1</div><div class="mx-c" style="--v:.8">2.3</div>
+          <div class="mx-r" role="rowheader">Ingredient close-up</div><div class="mx-c" style="--v:.25">1.2</div><div class="mx-c" style="--v:.4">1.5</div><div class="mx-c" style="--v:.55">1.8</div>
+        </div>
+        <p class="mx-note">Video beats static on every hook, and the humidity hook wins. Next week's budget follows that cell.</p>
+      </div>
+      <div class="kpi-box rv">
+        <span class="label red">How I'd measure it</span>
+        <div class="kgrid">
+          <div><b>30%+</b><span>Hook rate (3 second views)</span></div>
+          <div><b>2.0%+</b><span>Click through rate</span></div>
+          <div><b>&minus;20%</b><span>Cost per acquisition</span></div>
+          <div><b>3.3+</b><span>Return on ad spend</span></div>
+        </div>
+        <span class="label red" style="margin-top:18px; display:block">Guardrails</span>
+        <ul class="guard"><li>AI-generated images and video labelled wherever platforms require it</li><li>Skincare claims checked against ASCI guidelines, no edited before and after shots</li><li>No AI-faked customer testimonials, ever</li><li>A human reviews every asset before it goes live</li></ul>
+      </div>
+    </div>
+    <div class="chips mk-chips rv"><span class="chip">LLM review mining</span><span class="chip">AI copywriting</span><span class="chip">AI image generation</span><span class="chip">AI video generation</span><span class="chip">Canva</span><span class="chip">Creative testing</span><span class="chip">Performance marketing</span><span class="chip">Google Analytics</span></div>
+  </div>
+</section>
+
+
+<section id="opscase" class="opscase">
+  <div class="wrap">
+    <div class="sec-head rv">
+      <div><span class="label red">Operations casebook</span><br><h2 class="h2">Find the <em>bottleneck</em></h2></div>
+      <p>An operations problem solved the way I'd solve it on the floor: map the flow, time every step, find the constraint, fix it, then lock the gain in.</p>
+    </div>
+    <div class="brief rv">
+      <div class="brief-copy">
+        <span class="label red">Operations &middot; Practice case</span>
+        <h3>Dark store <span>turnaround</span></h3>
+        <p>A quick commerce dark store promises 10 minute delivery, but at the evening peak it takes 13 minutes just to get an order out of the door, before the rider even starts. Riders wait, orders stack up and late deliveries climb.</p>
+        <p class="brief-note">Sample timings, built to practise the full method end to end.</p>
+      </div>
+      <div class="brief-stats">
+        <div class="bs"><span class="label">Peak orders per hour</span><b>60</b></div>
+        <div class="bs"><span class="label">In-store time per order</span><b>13.0 &rarr; 7.8 min <em>&minus;40%</em></b></div>
+        <div class="bs"><span class="label">Orders waiting at peak</span><b>13 &rarr; 8 <em>Little's Law</em></b></div>
+      </div>
+    </div>
+    <div class="steps">
+      <div class="step rv">
+        <div class="step-no">01<small>Map it</small></div>
+        <div class="step-body">
+          <h3>Map the flow and time every step</h3>
+          <p>Four steps sit between "order placed" and "rider leaves": waiting for a picker, picking, packing, and handing over to the rider. I time 50 orders at the peak hour. Picking is the biggest block, and nearly half the time is waiting, not working.</p>
+          <div class="viz-box">
+            <div class="flowbar"><span class="fb-l">Before</span><div class="fb-track"><i style="--w:19.2%">Wait 2.5</i><i class="hot" style="--w:42.3%">Pick 5.5</i><i style="--w:15.4%">Pack 2.0</i><i style="--w:23.1%">Handover 3.0</i></div><span class="fb-t">13.0 min</span></div>
+            <div class="flowbar"><span class="fb-l">After</span><div class="fb-track"><i style="--w:7.7%">1.0</i><i class="hot" style="--w:26.9%">Pick 3.5</i><i style="--w:13.8%">Pack 1.8</i><i style="--w:11.5%">1.5</i></div><span class="fb-t">7.8 min</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="step-no">02<small>Find it</small></div>
+        <div class="step-body">
+          <h3>Ask why until the cause shows up</h3>
+          <p>Why is picking slow? Pickers walk the whole store. Why? The 50 fastest selling items are spread across every aisle. Why? Shelves were laid out by category, not by how often items sell. Little's Law confirms the pain: 60 orders an hour at 13 minutes each means about 13 orders are always in progress for 4 pickers.</p>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="step-no">03<small>Fix it</small></div>
+        <div class="step-body">
+          <h3>Fix the constraint, not everything</h3>
+          <div class="fixes">
+            <div class="fix"><b>Fix 1</b><h4>Re-slot fast movers</h4><p>ABC analysis on two weeks of orders. The top 50 items move to a golden zone next to the packing table.</p><span class="imp">Pick 5.5 &rarr; 3.5 min</span></div>
+            <div class="fix"><b>Fix 2</b><h4>Batch at peak</h4><p>From 6 to 10 pm, pickers collect two or three orders per trip from the same zone instead of one.</p><span class="imp">Wait 2.5 &rarr; 1.0 min</span></div>
+            <div class="fix"><b>Fix 3</b><h4>Rider handover bay</h4><p>Packed orders go to numbered slots, and riders scan and leave without waiting for staff.</p><span class="imp">Handover 3.0 &rarr; 1.5 min</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="step rv">
+        <div class="step-no">04<small>Lock it in</small></div>
+        <div class="step-body">
+          <h3>Make the gain stick</h3>
+          <p>A one page SOP for each new step, a daily dashboard of pick time per order and the share of orders out in under 8 minutes, a weekly re-slotting check as demand shifts, and a control chart so a slide back is caught in days, not months.</p>
+          <div class="chips mk-chips"><span class="chip">Process mapping</span><span class="chip">Time study</span><span class="chip">5 Whys</span><span class="chip">Little's Law</span><span class="chip">ABC analysis</span><span class="chip">Slotting</span><span class="chip">Batch picking</span><span class="chip">SOP design</span><span class="chip">Control chart</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="work" class="work">
   <div class="wrap">
     <div class="sec-head rv">
@@ -990,9 +1278,10 @@ footer .wrap{display:flex; justify-content:space-between; gap:16px; flex-wrap:wr
     <span class="label">Contact</span>
     <p class="big">Let's <em>talk.</em></p>
     <div class="mailbox">
-      <a class="mail" id="mail" href="mailto:2025shubham@akgim.edu.in">2025shubham@akgim.edu.in</a>
+      <a class="mail" id="mail" href="mailto:myselfshubhpandey@gmail.com">myselfshubhpandey@gmail.com</a>
       <button class="btn btn-bone copy" id="copy" type="button">Copy email</button>
     </div>
+    <p class="mail2">College email: <span>2025shubham@akgim.edu.in</span></p>
     <p class="copied" id="copied" aria-live="polite"></p>
   </div>
 </section>
@@ -1047,7 +1336,7 @@ var FINE = window.matchMedia('(pointer: fine)').matches;
 
 /* copy email */
 document.getElementById('copy').addEventListener('click', function(){
-  var out = document.getElementById('copied'), txt = '2025shubham@akgim.edu.in';
+  var out = document.getElementById('copied'), txt = 'myselfshubhpandey@gmail.com';
   function fallback(){
     var r = document.createRange(); r.selectNodeContents(document.getElementById('mail'));
     var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
@@ -1496,6 +1785,60 @@ document.getElementById('copy').addEventListener('click', function(){
   }
   drawWater(); drawCvr();
   var rt; window.addEventListener('resize', function(){ clearTimeout(rt); rt = setTimeout(function(){ drawWater(); drawCvr(); }, 150); });
+})();
+
+
+/* day counter in the diary mock, and bars fallback */
+(function(){
+  if (!('IntersectionObserver' in window)) document.documentElement.classList.add('no-io');
+  var em = document.querySelector('.ph-b .day em'); if (!em || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  var d = 1; setInterval(function(){ d = d % 7 + 1; em.textContent = d; }, 1000);
+})();
+
+
+/* spoken intro with live subtitles */
+(function(){
+  var LINES = [
+    "Hi, I'm Subham Pandey.",
+    "I'm an MBA candidate in Operations and Marketing at AKGIM, and an IT engineer by training.",
+    "Before my MBA, I worked as a Cloud Quality Analyst on a healthcare SaaS platform.",
+    "Today I work where strategy meets AI.",
+    "I build products, like my live Career Studio app, and I solve problems across product, analytics, marketing and operations.",
+    "Give me the hardest problem in the room. That's where I do my best work."
+  ];
+  var btn = document.getElementById('playIntro'), cap = document.getElementById('voiceCaption'), sec = document.getElementById('voice'), note = document.getElementById('voiceNote');
+  document.getElementById('voiceText').textContent = LINES.join(' ');
+  var synth = window.speechSynthesis, playing = false, idx = 0, voice = null;
+  function pickVoice(){
+    if (!synth) return;
+    var vs = synth.getVoices(); if (!vs.length) return;
+    voice = vs.find(function(v){ return /en-IN/i.test(v.lang) && /male|ravi|prabhat|rishi/i.test(v.name); })
+      || vs.find(function(v){ return /en-IN/i.test(v.lang); })
+      || vs.find(function(v){ return /en-GB/i.test(v.lang) && /male|daniel|arthur/i.test(v.name); })
+      || vs.find(function(v){ return /^en/i.test(v.lang); }) || vs[0];
+  }
+  if (synth){ pickVoice(); synth.onvoiceschanged = pickVoice; }
+  function stop(){ playing = false; if (synth) synth.cancel(); sec.classList.remove('playing'); btn.setAttribute('aria-pressed', 'false'); btn.querySelector('.pl').textContent = 'Play my intro'; }
+  function speakNext(){
+    if (!playing) return;
+    if (idx >= LINES.length){ stop(); cap.textContent = LINES[LINES.length - 1]; return; }
+    var u = new SpeechSynthesisUtterance(LINES[idx]);
+    if (voice) u.voice = voice; u.rate = 0.98; u.pitch = 0.95;
+    u.onstart = function(){ cap.textContent = LINES[idx]; };
+    u.onend = function(){ idx++; speakNext(); };
+    u.onerror = function(){ idx++; speakNext(); };
+    synth.speak(u);
+  }
+  function captionsOnly(){
+    var i = 0; sec.classList.add('playing');
+    (function tick(){ if (!playing || i >= LINES.length){ stop(); return; } cap.textContent = LINES[i++]; setTimeout(tick, 3200); })();
+  }
+  btn.addEventListener('click', function(){
+    if (playing){ stop(); return; }
+    playing = true; idx = 0; btn.setAttribute('aria-pressed', 'true'); btn.querySelector('.pl').textContent = 'Stop';
+    if (!synth){ note.textContent = 'Audio is not available on this browser, so here are the subtitles.'; captionsOnly(); return; }
+    synth.cancel(); sec.classList.add('playing'); speakNext();
+  });
 })();
 
 </script>
